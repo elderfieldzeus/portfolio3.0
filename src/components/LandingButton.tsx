@@ -1,4 +1,5 @@
 import React from 'react'
+import ShinyButton from './ui/shiny-button';
 
 interface LandingButtonProps {
     children?: React.ReactNode;
@@ -6,9 +7,13 @@ interface LandingButtonProps {
 
 const LandingButton: React.FC<LandingButtonProps> = ({ children}) => {
   return (
-    <button className='bg-secondary-bg text-primary-bg py-2 px-4 rounded-md active:bg-secondary-clicked transition-colors text-xs md:text-base'>
-        {children}
-    </button>
+    <ShinyButton 
+      className='bg-secondary-bg  text-primary-bg px-3 rounded-md active:bg-secondary-clicked transition-colors text-xs md:text-sm'
+    >
+        <div className='flex justify-center items-center gap-2'>
+          {children}
+        </div>
+    </ShinyButton>
   )
 }
 

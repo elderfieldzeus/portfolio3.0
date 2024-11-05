@@ -3,7 +3,7 @@ import Landing from '../components/Landing'
 
 const Home: React.FC = () => {
   return (
-    <main className='w-full h-screen bg-primary-bg text-primary'>
+    <main className='w-full h-screen bg-black text-primary'>
         <Landing />
     </main>
   )
