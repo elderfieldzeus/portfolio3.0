@@ -1,19 +1,26 @@
 import React from 'react'
 import LandingButton from './LandingButton'
 import BlurFade from './ui/blur-fade'
-import RetroGrid from './ui/retro-grid'
 import { IoMdDownload } from "react-icons/io";
 import { MdConnectWithoutContact } from 'react-icons/md';
 import ShimmerButton from './ui/shimmer-button';
+import Particles from './ui/particles';
 
 const Landing: React.FC = () => {
   return (
-    <div className='relative py-20 min-h-screen w-full overflow-hidden font-kanit'>
-        <RetroGrid className='absolute bg-black h-screen' angle={65} />
+    <div className='relative py-20 min-h-screen w-full font-kanit'>
+        {/* <RetroGrid className='absolute bg-black h-screen' angle={65} /> */}
+        <Particles
+            className="absolute inset-0 h-[90vh]"
+            quantity={300}
+            size={0.6}
+            ease={80}
+            refresh
+        />
         <div className='py-28 flex flex-col items-center gap-2'>
             <BlurFade delay={0.25} inView>
                 <ShimmerButton className='rounded-full flex items-center py-2 px-4 text-xs md:text-sm gap-2 active:none'>
-                    <div className='size-2 rounded-full bg-green-700'></div>
+                    <div className='size-2 rounded-full bg-green-600'></div>
                     <p>Available for work</p>
                 </ShimmerButton>
             </BlurFade>
