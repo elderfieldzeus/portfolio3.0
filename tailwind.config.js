@@ -4,9 +4,9 @@ export default {
     content: ["./src/**/*.{tsx,ts}"],
   theme: {
   	extend: {
-		fontFamily: {
-			kanit: "Kanit, sans-serif"
-		},
+  		fontFamily: {
+  			kanit: 'Kanit, sans-serif'
+  		},
   		textColor: {
   			primary: '#F9F9F9',
   			secondary: '#C4C4C4'
@@ -30,7 +30,9 @@ export default {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			grid: 'grid 15s linear infinite',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
+  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
   			rainbow: {
@@ -66,6 +68,22 @@ export default {
   				},
   				'100%': {
   					transform: 'translateZ(0) rotate(360deg)'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
   		}
