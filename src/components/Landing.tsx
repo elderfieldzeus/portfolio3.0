@@ -14,7 +14,7 @@ const Landing: React.FC = () => {
   return (
     <div className='relative py-20 min-h-screen w-full font-kanit'>
         <Particles
-            className="absolute inset-0 h-[90vh]"
+            className="absolute inset-0 h-screen"
             quantity={300}
             size={0.6}
             ease={80}
@@ -38,7 +38,7 @@ const Landing: React.FC = () => {
                 </BlurFade>
             </div>
             <BlurFade delay={0.25 * 4} inView>
-                <p className='text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center font-extralight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore consectetur quas est praesentium odit.</p>
+                <p className='text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center font-extralight'>A Computer Science student with an eye for detail, a thirst for knowledge, and a passion for solving complex problems.</p>
             </BlurFade>
             <BlurFade delay={0.25 * 5} inView>
                 <div className='flex gap-4 py-2'>
