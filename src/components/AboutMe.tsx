@@ -7,7 +7,6 @@ import { CurrentlyLearning, techStacks } from '@/lib/data'
 import TechStackCard from './TechStackCard'
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaBookmark } from "react-icons/fa";
-import Particles from './ui/particles'
 
 const AboutMe: React.FC = () => {
     const tech1 = techStacks.filter((_, i) => i % 2 == 0);
@@ -15,13 +14,7 @@ const AboutMe: React.FC = () => {
     
 
   return (
-    <div className='pb-10 flex flex-col gap-8 items-center font-kanit min-h-screen relative'>
-        <Particles
-            className="absolute inset-0 h-screen"
-            quantity={300}
-            size={0.6}
-            ease={80}
-        />
+    <div className='pb-10 flex flex-col gap-8 items-center font-kanit  relative'>
         <BlurFade delay={0.25} inView>
             <p className='text-4xl'>About</p>
         </BlurFade>

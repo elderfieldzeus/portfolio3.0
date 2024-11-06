@@ -4,7 +4,6 @@ import BlurFade from './ui/blur-fade'
 import { IoMdDownload } from "react-icons/io";
 import { MdConnectWithoutContact } from 'react-icons/md';
 import ShimmerButton from './ui/shimmer-button';
-import Particles from './ui/particles';
 
 const Landing: React.FC = () => {
     const handleAvailable = () => {
@@ -13,12 +12,12 @@ const Landing: React.FC = () => {
 
   return (
     <div className='relative py-20 min-h-screen w-full font-kanit'>
-        <Particles
+        {/* <Particles
             className="absolute inset-0 h-screen"
             quantity={300}
             size={0.6}
             ease={80}
-        />
+        /> */}
         <div className='py-28 flex flex-col items-center gap-2'>
             <BlurFade delay={0.25} inView>
                 <ShimmerButton 
