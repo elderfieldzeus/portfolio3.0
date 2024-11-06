@@ -20,11 +20,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
     }
 
   return (
-    <BlurFade delay={0.25} inView>
+    <BlurFade delay={0.25 * 2} inView>
         <MagicCard className='w-full bg-black border rounded-lg border-opacity-20 overflow-hidden'>
             <div className='aspect-[2/1] w-full h-auto overflow-hidden'>
                 <img
-                    src={project.img}
+                    src={`/images/projects/${project.img}`}
                     alt={project.title}
                     className={`w-full h-auto object-cover object-center ${project.position}`}
                 />

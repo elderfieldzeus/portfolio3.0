@@ -86,47 +86,47 @@ export interface IProject {
 
 export const projects: IProject[] = [
     {
-        img: "/images/me_aha.jpeg",
+        img: "twerkout.png",
         title: "Twerkout",
         description: `
-        This is the best project I have ever done.
+        Twerkout is a mobile-friendly site designed to help you track and visualize your workout progress.
         `,
         github: "https://github.com/elderfieldzeus/twerkout",
         live_demo: "https://twerkout.vercel.app",
         technologies: ["Typescript", "React JS", "Tailwind CSS", "Firebase"],
-        position: "-mt-48"
+        position: "-mt-1"
     },
     {
-        img: "/images/me_aha.jpeg",
+        img: "vintage-royale.png",
         title: "Vintage Royale",
         description: `
-        This is the best project I have ever done.
+        Vintage Royale's mobile-based product management system and tailored to enhance client-side functionality.
         `,
         github: "https://github.com/elderfieldzeus/vintage-royale",
         live_demo: "https://vintage-royale.vercel.app",
         technologies: ["Typescript", "React JS", "Tailwind CSS", "Supabase"],
-        position: "-mt-48"
+        position: "-mt-2"
     },
     {
-        img: "/images/me_aha.jpeg",
+        img: "foamfusion.png",
         title: "Foamfusion",
         description: `
-        This is the best project I have ever done.
+        A full-stack product management system for Foamfusion Soaps, enhancing end-to-end operations.
         `,
         github: "https://github.com/elderfieldzeus/foamfusion",
         live_demo: "http://foamfusion.infinityfreeapp.com/",
         technologies: ["PHP", "Tailwind CSS", "MySQL"],
-        position: "-mt-48"
+        position: "-mt-2"
     },
     {
-        img: "/images/me_aha.jpeg",
+        img: "basher.png",
         title: "Basher",
         description: `
-        This is the best project I have ever done.
+        An anonymous, forum-based web application for open user discussions.
         `,
-        github: "https://github.com/elderfieldzeus/basher",
-        live_demo: "",
+        github: "https://github.com/DestinEcarma/basher-frontend",
+        live_demo: "https://github.com/DestinEcarma/basher-frontend",
         technologies: ["Typescript", "React JS", "Tailwind CSS", "Axios", "GraphQL"],
-        position: "-mt-48"
+        position: "-mt-2"
     }
 ]
