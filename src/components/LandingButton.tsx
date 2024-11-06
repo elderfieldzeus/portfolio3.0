@@ -7,7 +7,7 @@ interface LandingButtonProps {
 
 const LandingButton: React.FC<LandingButtonProps> = ({ children}) => {
   return (
-    <ShinyButton 
+    <ShinyButton
       className='bg-secondary-bg  text-primary-bg px-3 rounded-md active:bg-secondary-clicked transition-colors text-xs md:text-sm'
     >
         <div className='flex justify-center items-center gap-2'>

@@ -7,6 +7,10 @@ import ShimmerButton from './ui/shimmer-button';
 import Particles from './ui/particles';
 
 const Landing: React.FC = () => {
+    const handleAvailable = () => {
+        window.open('https://www.linkedin.com/in/elderfieldzeus/', '_blank');
+    }
+
   return (
     <div className='relative py-20 min-h-screen w-full font-kanit'>
         {/* <RetroGrid className='absolute bg-black h-screen' angle={65} /> */}
@@ -19,7 +23,10 @@ const Landing: React.FC = () => {
         />
         <div className='py-28 flex flex-col items-center gap-2'>
             <BlurFade delay={0.25} inView>
-                <ShimmerButton className='rounded-full flex items-center py-2 px-4 text-xs md:text-sm gap-2 active:none'>
+                <ShimmerButton 
+                    onClick={handleAvailable}
+                    className='rounded-full flex items-center py-2 px-4 text-xs md:text-sm gap-2 active:none'
+                >
                     <div className='size-2 rounded-full bg-green-600'></div>
                     <p>Available for work</p>
                 </ShimmerButton>
