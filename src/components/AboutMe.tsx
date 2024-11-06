@@ -14,23 +14,23 @@ const AboutMe: React.FC = () => {
 
                 <FlexRow className='flex-wrap justify-center gap-2 w-[90vw]'>
                     <BlurFade delay={0.25 * 2} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 w-[22rem] h-[18rem] bg-black'>
+                        <MagicCard className='border rounded-lg border-opacity-20 w-[22rem] aspect-[] bg-black'>
 
                         </MagicCard>
                     </BlurFade>
                     <BlurFade delay={0.25 * 3} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 w-[22rem] h-[18rem] bg-black flex justify-center'>
+                        <MagicCard className='border rounded-lg border-opacity-20 w-[22rem] aspect-[] bg-black flex justify-center'>
 
                         </MagicCard>
                     </BlurFade>
                 </FlexRow>
                 <FlexRow className='flex-wrap justify-center gap-2 w-[90vw]'>
-                    <BlurFade delay={0.25 * 4} inView>
+                    <BlurFade delay={0.25 * 2} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(30rem,90vw)] aspect-[5/2] h-auto bg-black'>
                         </MagicCard>
                     </BlurFade>
 
-                    <BlurFade delay={0.25 * 5} inView>
+                    <BlurFade delay={0.25 * 3} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 aspect-[7/6] w-[90vw] md:w-[14rem] h-auto bg-black'>
                         </MagicCard>
                     </BlurFade>
