@@ -1,5 +1,7 @@
 import { PythonOriginal } from 'devicons-react';
 
+export const CurrentlyLearning: React.ElementType = PythonOriginal;
+
 export interface ITechStack {
     img: string;
     label: string;
@@ -70,4 +72,61 @@ export const techStacks = [
     }
 ]
 
-export const CurrentlyLearning: React.ElementType = PythonOriginal;
+
+
+export interface IProject {
+    img: string;
+    title: string;
+    description: string;
+    github: string;
+    live_demo: string;
+    technologies: string[];
+    position?: string;
+}
+
+export const projects: IProject[] = [
+    {
+        img: "/images/me_aha.jpeg",
+        title: "Twerkout",
+        description: `
+        This is the best project I have ever done.
+        `,
+        github: "https://github.com/elderfieldzeus/twerkout",
+        live_demo: "https://twerkout.vercel.app",
+        technologies: ["Typescript", "React JS", "Tailwind CSS", "Firebase"],
+        position: "-mt-48"
+    },
+    {
+        img: "/images/me_aha.jpeg",
+        title: "Vintage Royale",
+        description: `
+        This is the best project I have ever done.
+        `,
+        github: "https://github.com/elderfieldzeus/vintage-royale",
+        live_demo: "https://vintage-royale.vercel.app",
+        technologies: ["Typescript", "React JS", "Tailwind CSS", "Supabase"],
+        position: "-mt-48"
+    },
+    {
+        img: "/images/me_aha.jpeg",
+        title: "Foamfusion",
+        description: `
+        This is the best project I have ever done.
+        `,
+        github: "https://github.com/elderfieldzeus/foamfusion",
+        live_demo: "http://foamfusion.infinityfreeapp.com/",
+        technologies: ["PHP", "Tailwind CSS", "MySQL"],
+        position: "-mt-48"
+    },
+    {
+        img: "/images/me_aha.jpeg",
+        title: "Basher",
+        description: `
+        This is the best project I have ever done.
+        `,
+        github: "https://github.com/elderfieldzeus/basher",
+        live_demo: "",
+        technologies: ["Typescript", "React JS", "Tailwind CSS", "Axios", "GraphQL"],
+        position: "-mt-48"
+    }
+]

@@ -27,11 +27,13 @@ const animationProps = {
 } as AnimationProps;
 interface ShinyButtonProps {
   children: React.ReactNode;
+  onClick?: () => void;
   className?: string;
 }
-const ShinyButton = ({ children, className, ...props }: ShinyButtonProps) => {
+const ShinyButton = ({ children, onClick, className, ...props }: ShinyButtonProps) => {
   return (
     <motion.button
+      onClick={onClick}
       {...animationProps}
       {...props}
       className={cn(
@@ -40,7 +42,7 @@ const ShinyButton = ({ children, className, ...props }: ShinyButtonProps) => {
       )}
     >
       <span
-        className="relative block size-full tracking-wide text-[rgb(0,0,0,65%)] dark:font-light dark:text-[rgb(255,255,255,90%)]"
+        className="relative block size-full tracking-wide text-opacity-0"
         style={{
           maskImage:
             "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent 30%),hsl(var(--primary)) 100%))",

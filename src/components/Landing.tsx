@@ -13,13 +13,11 @@ const Landing: React.FC = () => {
 
   return (
     <div className='relative py-20 min-h-screen w-full font-kanit'>
-        {/* <RetroGrid className='absolute bg-black h-screen' angle={65} /> */}
         <Particles
             className="absolute inset-0 h-[90vh]"
             quantity={300}
             size={0.6}
             ease={80}
-            refresh
         />
         <div className='py-28 flex flex-col items-center gap-2'>
             <BlurFade delay={0.25} inView>
@@ -40,7 +38,7 @@ const Landing: React.FC = () => {
                 </BlurFade>
             </div>
             <BlurFade delay={0.25 * 4} inView>
-                <p className='text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore consectetur quas est praesentium odit.</p>
+                <p className='text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center font-extralight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore consectetur quas est praesentium odit.</p>
             </BlurFade>
             <BlurFade delay={0.25 * 5} inView>
                 <div className='flex gap-4 py-2'>

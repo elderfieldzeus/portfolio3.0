@@ -23,12 +23,12 @@ const AboutMe: React.FC = () => {
 
                 <FlexRow className='flex-wrap justify-center gap-2'>
                     <BlurFade delay={0.25 * 2} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 w-[80vw] md:w-[14rem] aspect-[7/10] bg-black overflow-hidden'>
+                        <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[14rem] aspect-[7/10] bg-black overflow-hidden'>
                             <img src="/images/me_aha.jpeg" className='-mt-8' />
                         </MagicCard>
                     </BlurFade>
                     <BlurFade delay={0.25 * 2} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 w-[80vw] md:w-[30rem] min-h-[20rem] bg-black'>
+                        <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[30rem] min-h-[20rem] bg-black'>
                             <div className='text-white flex font-light gap-2 m-4 items-center'>
                                 <IoPersonCircleOutline className='size-5' />
                                 <p className='text-gray-300 text-sm'>A little bit about me...</p>
@@ -38,7 +38,7 @@ const AboutMe: React.FC = () => {
                 </FlexRow>
                 <FlexRow className='flex-wrap justify-center gap-2'>
                     <BlurFade delay={0.25 * 2} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 w-[80vw] md:w-[30rem] aspect-[3/1] h-auto bg-black overflow-hidden flex items-center'>
+                        <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[30rem] aspect-[3/1] h-auto bg-black overflow-hidden flex items-center'>
                             <Marquee pauseOnHover repeat={10} className="my-2 [--duration:25s]">
                                 {tech1.map((t, i) => {
                                     return (
@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
                                     )
                                 })}
                             </Marquee>
-                            <Marquee pauseOnHover repeat={10} className="my-2 [--duration:25s]">
+                            <Marquee pauseOnHover reverse repeat={10} className="my-2 [--duration:25s]">
                                 {tech2.map((t, i) => {
                                     return (
                                         <TechStackCard 
@@ -63,7 +63,7 @@ const AboutMe: React.FC = () => {
                     </BlurFade>
 
                     <BlurFade delay={0.25 * 2} inView>
-                        <MagicCard className='border rounded-lg border-opacity-20 md:aspect-[7/5] w-[80vw] md:w-[14rem] h-auto bg-black'>
+                        <MagicCard className='border rounded-lg border-opacity-20 md:aspect-[7/5] w-[min(80vw,20rem)] md:w-[14rem] h-auto bg-black'>
                             <div className='text-white flex font-light gap-2 m-4 items-center w-full'>
                                 <FaBookmark className='text-white size-4'/>
                                 <p className='text-gray-300 text-sm'>Currently Learning</p>
