@@ -5,11 +5,11 @@ import ProjectCard from './ProjectCard'
 
 const MyProjects: React.FC = () => {
   return (
-    <div className='pb-10 flex flex-col items-center font-kanit relative mt-24'>
+    <div className='pb-10 flex flex-col gap-8 items-center font-kanit relative mt-24'>
         <BlurFade delay={0.25} inView>
             <p className='text-4xl'>My Projects</p>
         </BlurFade>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-2 max-w-[50rem] w-[80vw] md:w-full mx-[10vw] my-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-4 max-w-[50rem] w-[80vw] md:w-full mx-[10vw]'>
           {projects.map((project, index) => {
             return(
               <ProjectCard
