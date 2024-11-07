@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard'
 
 const MyProjects: React.FC = () => {
   return (
-    <div className='pb-10 flex flex-col gap-8 items-center font-kanit relative mt-24'>
+    <div className='flex flex-col gap-8 items-center font-kanit relative mt-24'>
         <BlurFade delay={0.25} inView>
             <p className='text-4xl'>My Projects</p>
         </BlurFade>

@@ -22,12 +22,12 @@ const AboutMe: React.FC = () => {
         <div className='flex flex-col w-full gap-2 items-center'>
 
                 <FlexRow className='flex-wrap justify-center gap-2'>
-                    <BlurFade delay={0.25 * 2} inView>
+                    <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[17rem] aspect-[7/10] bg-black overflow-hidden'>
                             <img src="/images/me_aha.jpeg" className='-mt-8' />
                         </MagicCard>
                     </BlurFade>
-                    <BlurFade delay={0.25 * 2} inView>
+                    <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[33rem] min-h-[20rem] bg-black'>
                             <div className='text-white flex font-light gap-2 m-4 items-center'>
                                 <IoPersonCircleOutline className='size-5' />
@@ -37,7 +37,7 @@ const AboutMe: React.FC = () => {
                     </BlurFade>
                 </FlexRow>
                 <FlexRow className='flex-wrap justify-center gap-2'>
-                    <BlurFade delay={0.25 * 2} inView>
+                    <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[33rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center'>
                             <Marquee pauseOnHover repeat={10} className="my-2 [--duration:25s]">
                                 {tech1.map((t, i) => {
@@ -62,7 +62,7 @@ const AboutMe: React.FC = () => {
                         </MagicCard>
                     </BlurFade>
 
-                    <BlurFade delay={0.25 * 2} inView>
+                    <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 md:aspect-[7/5] w-[min(80vw,20rem)] md:w-[17rem] h-auto bg-black'>
                             <div className='text-white flex font-light gap-2 m-4 items-center w-full'>
                                 <FaBookmark className='text-white size-4'/>

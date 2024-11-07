@@ -10,14 +10,12 @@ const Landing: React.FC = () => {
         window.open('https://www.linkedin.com/in/elderfieldzeus/', '_blank');
     }
 
+    const scrollToContact = () => {
+        document.getElementById('contact')?.scrollIntoView();
+    }
+
   return (
     <div className='relative py-20 min-h-screen w-full font-kanit'>
-        {/* <Particles
-            className="absolute inset-0 h-screen"
-            quantity={300}
-            size={0.6}
-            ease={80}
-        /> */}
         <div className='py-28 flex flex-col items-center gap-2'>
             <BlurFade delay={0.25} inView>
                 <ShimmerButton 
@@ -45,7 +43,7 @@ const Landing: React.FC = () => {
                         <IoMdDownload />
                         <p>Download My Resume</p>
                     </LandingButton>
-                    <LandingButton>
+                    <LandingButton onClick={scrollToContact}>
                         <MdConnectWithoutContact />
                         <p>Contact Me</p>
                     </LandingButton>
