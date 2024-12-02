@@ -6,6 +6,10 @@ import { MdConnectWithoutContact } from 'react-icons/md';
 import ShimmerButton from './ui/shimmer-button';
 
 const Landing: React.FC = () => {
+    const handleDownload = () => {
+        window.open('/pdf/Elderfield-Zeus-Resume.pdf', '_blank');
+    }
+
     const handleAvailable = () => {
         window.open('https://www.linkedin.com/in/elderfieldzeus/', '_blank');
     }
@@ -39,7 +43,7 @@ const Landing: React.FC = () => {
             </BlurFade>
             <BlurFade delay={0.25 * 5} inView>
                 <div className='flex gap-4 py-2'>
-                    <LandingButton>
+                    <LandingButton onClick={handleDownload}>
                         <IoMdDownload />
                         <p>Download My Resume</p>
                     </LandingButton>
