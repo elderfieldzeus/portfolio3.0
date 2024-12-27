@@ -69,6 +69,11 @@ export const techStacks = [
         img: "python.svg",
         label: "Python",
         link: "https://www.python.org/"
+    },
+    {
+        img: "nextdotjs.svg",
+        label: "Next JS",
+        link: "https://nextjs.org"
     }
 ]
 
