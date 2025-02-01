@@ -89,7 +89,7 @@ export interface IProject {
     position?: string;
 }
 
-export const projects: IProject[] = [
+export const swe_projects: IProject[] = [
     {
         img: "twerkout.png",
         title: "Twerkout",
@@ -130,8 +130,31 @@ export const projects: IProject[] = [
         An anonymous, forum-based web application for open user discussions.
         `,
         github: "https://github.com/DestinEcarma/basher-frontend",
-        live_demo: "https://github.com/DestinEcarma/basher-frontend",
+        live_demo: "https://basher-ph-dpbf.shuttle.app/",
         technologies: ["Typescript", "React JS", "Tailwind CSS", "Axios", "GraphQL"],
         position: "-mt-2"
+    }
+]
+
+export const ds_projects: IProject[] = [
+    {
+        img: "datacamp.png",
+        title: "Datacamp Projects",
+        description: `
+        Compilation of all my Data-related projects from my DataCamp scholarship. 
+        `,
+        github: "https://github.com/elderfieldzeus/datacamp",
+        live_demo: "https://www.datacamp.com/portfolio/elderfieldzeus24",
+        technologies: ["Python", "SQL"]
+    },
+    {
+        img: "house-predict.jpg",
+        title: "House Price Prediction",
+        description: `
+        Utilizing Linear Regression to predict House Prices in the Philippines.
+        `,
+        github: "https://github.com/elderfieldzeus/ph-house-price-prediction",
+        live_demo: "https://github.com/elderfieldzeus/ph-house-price-prediction",
+        technologies: ["Python", "Scikit-Learn", "Matplotlib"]
     }
 ]

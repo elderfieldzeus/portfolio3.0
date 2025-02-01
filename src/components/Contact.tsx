@@ -34,19 +34,21 @@ const Contact: React.FC = () => {
                 </div>
             </MagicCard>
 
-            <MagicCard className='border w-full rounded-lg border-opacity-20 bg-black h-24 p-5'>
-                <div className='h-full w-full flex gap-3'>
-                    <div className='aspect-square h-full w-auto flex justify-center items-center rounded-full bg-gray-800 bg-opacity-40 text-gray-300'>
-                        <IoIosMail className='size-6'/>
-                    </div>
-                    <div className='text-gray-300 flex flex-col gap-1'>
-                        <p className='text-xl'>Email</p>
-                        <div className='flex'>
-                            <a href='mailto:zdelderfield.work@gmail.com' className='font-light text-sm md:text-xs'>zdelderfield.work@gmail.com</a>
+            <a href='mailto:zdelderfield.work@gmail.com' >
+                <MagicCard className='border w-full rounded-lg border-opacity-20 bg-black h-24 p-5'>
+                    <div className='h-full w-full flex gap-3'>
+                        <div className='aspect-square h-full w-auto flex justify-center items-center rounded-full bg-gray-800 bg-opacity-40 text-gray-300'>
+                            <IoIosMail className='size-6'/>
+                        </div>
+                        <div className='text-gray-300 flex flex-col gap-1'>
+                            <p className='text-xl'>Email</p>
+                            <div className='flex'>
+                                <p className='font-light text-sm md:text-xs'>zdelderfield.work@gmail.com</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </MagicCard>
+                </MagicCard>
+            </a>
 
             <MagicCard className='border w-full rounded-lg border-opacity-20 bg-black h-24 p-5'>
                 <div className='h-full w-full flex gap-3'>
