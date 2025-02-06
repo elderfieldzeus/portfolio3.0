@@ -7,7 +7,7 @@ import ShimmerButton from './ui/shimmer-button';
 
 const Landing: React.FC = () => {
     const handleDownload = () => {
-        window.open('/pdf/Elderfield-Zeus-Resume.pdf', '_blank');
+        window.open('/pdf/Elderfield-Zeus-Curriculum-Vitae.pdf', '_blank');
     }
 
     const handleAvailable = () => {
@@ -45,7 +45,7 @@ const Landing: React.FC = () => {
                 <div className='flex gap-4 py-2'>
                     <LandingButton onClick={handleDownload}>
                         <IoMdDownload />
-                        <p>Download My Resume</p>
+                        <p>Download CV</p>
                     </LandingButton>
                     <LandingButton onClick={scrollToContact}>
                         <MdConnectWithoutContact />
