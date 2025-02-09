@@ -48,13 +48,13 @@ const AboutMe: React.FC = () => {
                                     <p className='text-gray-300'>Cebu, Philippines</p>
                                 </AngleInfo>
                                 <AngleInfo>
-                                    <p>School: </p>
+                                    <p>Edu: </p>
                                     <p className='text-gray-300'>University of San Carlos</p>
                                 </AngleInfo>
                             </div>
                             <div className='px-2 font-extralight flex flex-col max-w-full mb-4'>
                                 <p>Hello, there! You can call me Zeus.</p>
-                                <p className='text-gray-300 mt-1'>I am a BS Computer Science student currently exploring the world of Web & Mobile Development, Competitive Programming, and Data Science.  I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.</p>
+                                <p className='text-gray-300 mt-1'>I'm currently exploring the world of Web & Mobile Development, Competitive Programming, Data Science, and AI/Machine Learning.  I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.</p>
 
                                 <p className='mt-4'>If you need someone who can get the job done on time, I'm your guy.</p>
                                 <p className='text-gray-300 mt-1'>Whether I’m coding an app, competing in programming contests, or diving into data, I’m driven by a desire to build, learn, and grow in everything I do. I’m always excited to take on new challenges and make a meaningful impact through innovative solutions.</p>
@@ -65,7 +65,7 @@ const AboutMe: React.FC = () => {
                 <FlexRow className='flex-wrap justify-center gap-2'>
                     <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[32.5rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center'>
-                            <Marquee pauseOnHover repeat={10} className="my-2 [--duration:25s]">
+                            <Marquee repeat={10} className="my-2 [--duration:25s]">
                                 {tech1.map((t, i) => {
                                     return (
                                         <TechStackCard 
@@ -75,7 +75,7 @@ const AboutMe: React.FC = () => {
                                     )
                                 })}
                             </Marquee>
-                            <Marquee pauseOnHover reverse repeat={10} className="my-2 [--duration:25s]">
+                            <Marquee reverse repeat={10} className="my-2 [--duration:25s]">
                                 {tech2.map((t, i) => {
                                     return (
                                         <TechStackCard 
