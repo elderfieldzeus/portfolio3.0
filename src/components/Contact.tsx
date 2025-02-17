@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                         <div className='flex gap-1'>
                             <FaLinkedin className='size-5 transition-colors hover:text-[#0077B5] active:text-[#0077B5] hover:cursor-pointer' onClick={() => navigate("https://www.linkedin.com/in/elderfieldzeus/")}/>
                             <FaGithub className='size-5 transition-colors hover:text-[#0d74e7] active:text-[#0d74e7] hover:cursor-pointer' onClick={() => navigate("https://github.com/elderfieldzeus")}/>
-                            <FaFacebook className='size-5 transition-colors hover:text-[#4267B2] active:text-[#4267B2] hover:cursor-pointer' onClick={() => navigate("https://www.facebook.com/hai.its.me.zeus.da.kewl.guy.jk/")}/>
+                            <FaFacebook className='size-5 transition-colors hover:text-[#4267B2] active:text-[#4267B2] hover:cursor-pointer' onClick={() => navigate("https://www.facebook.com/elderfieldzeus/")}/>
                         </div>
                     </div>
                 </div>
