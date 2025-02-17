@@ -7,9 +7,6 @@ import { IoIosMail } from 'react-icons/io';
 import { FaFacebook, FaGithub, FaPhone } from 'react-icons/fa6';
 
 const Contact: React.FC = () => {
-    const navigate = (link: string) => {
-        window.open(link, "_blank");
-    }
   return (
     <div id='contact' className='flex flex-col gap-8 items-center font-kanit relative mt-24 pb-20'>
         <BlurFade delay={0.25} inView>
@@ -26,9 +23,15 @@ const Contact: React.FC = () => {
                     <div className='text-gray-300 flex flex-col gap-1'>
                         <p className='text-xl'>Socials</p>
                         <div className='flex gap-1'>
-                            <FaLinkedin className='size-5 transition-colors hover:text-[#0077B5] active:text-[#0077B5] hover:cursor-pointer' onClick={() => navigate("https://www.linkedin.com/in/elderfieldzeus/")}/>
-                            <FaGithub className='size-5 transition-colors hover:text-[#0d74e7] active:text-[#0d74e7] hover:cursor-pointer' onClick={() => navigate("https://github.com/elderfieldzeus")}/>
-                            <FaFacebook className='size-5 transition-colors hover:text-[#4267B2] active:text-[#4267B2] hover:cursor-pointer' onClick={() => navigate("https://www.facebook.com/elderfieldzeus/")}/>
+                            <a href="https://www.linkedin.com/in/elderfieldzeus/">
+                                <FaLinkedin className='size-5 transition-colors hover:text-[#0077B5] active:text-[#0077B5] hover:cursor-pointer' onClick={() => {}}/>
+                            </a>
+                            <a href="https://github.com/elderfieldzeus">
+                                <FaGithub className='size-5 transition-colors hover:text-[#0d74e7] active:text-[#0d74e7] hover:cursor-pointer'/>
+                            </a>
+                            <a href="https://www.facebook.com/elderfieldzeus/">
+                                <FaFacebook className='size-5 transition-colors hover:text-[#4267B2] active:text-[#4267B2] hover:cursor-pointer'/>
+                            </a>
                         </div>
                     </div>
                 </div>
