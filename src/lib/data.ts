@@ -1,6 +1,6 @@
-import { PythonOriginal } from 'devicons-react';
+import { JavaOriginal } from 'devicons-react';
 
-export const CurrentlyLearning: React.ElementType = PythonOriginal;
+export const CurrentlyLearning: React.ElementType = JavaOriginal;
 
 export interface ITechStack {
     img: string;
@@ -74,6 +74,11 @@ export const techStacks = [
         img: "nextdotjs.svg",
         label: "Next JS",
         link: "https://nextjs.org"
+    },
+    {
+        img: "java.svg",
+        label: "Java",
+        link: "https://www.java.com/en/"
     }
 ]
 
