@@ -42,7 +42,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   alt={selectedProject.title}
                   className="h-full w-full object-contain"
                 />
-                <div className=" absolute bottom-0 w-full p-6 flex items-center justify-between text-black gap-2">
+                <div className="hidden absolute bottom-0 w-full p-6 md:flex items-center justify-between text-black gap-2">
                   <LandingButton
                     onClick={goToPrevProject}
                     className='py-2 w-full'
