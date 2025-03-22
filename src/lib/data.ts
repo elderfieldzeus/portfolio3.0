@@ -82,10 +82,21 @@ export const techStacks = [
     }
 ]
 
+export enum ProjectCategoryEnum {
+    ALL_CATEGORIES = "All Categories",
+    WEB_DEVELOPMENT = "Web Development",
+    DATA_SCIENCE = "Data Science"
+}
 
+export const CATEGORIES: ProjectCategoryEnum[] = [
+    ProjectCategoryEnum.ALL_CATEGORIES,
+    ProjectCategoryEnum.WEB_DEVELOPMENT,
+    ProjectCategoryEnum.DATA_SCIENCE,
+]
 
 export interface IProject {
     img: string;
+    category: ProjectCategoryEnum;
     title: string;
     description: string;
     github: string;
@@ -94,9 +105,10 @@ export interface IProject {
     position?: string;
 }
 
-export const swe_projects: IProject[] = [
+export const projects: IProject[] = [
     {
         img: "twerkout.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Twerkout",
         description: `
         Twerkout is a mobile-friendly site designed to help you track and visualize your workout progress.
@@ -108,6 +120,7 @@ export const swe_projects: IProject[] = [
     },
     {
         img: "vintage-royale.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Vintage Royale",
         description: `
         Vintage Royale's mobile-based product management system and tailored to enhance client-side functionality.
@@ -119,6 +132,7 @@ export const swe_projects: IProject[] = [
     },
     {
         img: "foamfusion.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Foamfusion",
         description: `
         A full-stack product management system for Foamfusion Soaps, enhancing end-to-end operations.
@@ -130,6 +144,7 @@ export const swe_projects: IProject[] = [
     },
     {
         img: "basher.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Basher",
         description: `
         An anonymous, forum-based web application for open user discussions.
@@ -138,12 +153,10 @@ export const swe_projects: IProject[] = [
         live_demo: "https://basher-ph-dpbf.shuttle.app/",
         technologies: ["Typescript", "React JS", "Tailwind CSS", "Axios", "GraphQL"],
         position: "-mt-2"
-    }
-]
-
-export const ds_projects: IProject[] = [
+    },
     {
         img: "datacamp.png",
+        category: ProjectCategoryEnum.DATA_SCIENCE,
         title: "Datacamp Projects",
         description: `
         Compilation of all my Data-related projects from my DataCamp scholarship. 
@@ -154,6 +167,7 @@ export const ds_projects: IProject[] = [
     },
     {
         img: "house-predict.jpg",
+        category: ProjectCategoryEnum.DATA_SCIENCE,
         title: "House Price Prediction",
         description: `
         Utilizing Linear Regression to predict House Prices in the Philippines.

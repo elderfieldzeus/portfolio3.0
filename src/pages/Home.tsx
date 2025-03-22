@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Landing from '../components/Landing'
 import AboutMe from '@/components/AboutMe'
-import MyProjects from '@/components/MyProjects'
 import Particles from '@/components/ui/particles'
 import Contact from '@/components/Contact'
+import ProjectContainer from '@/components/ProjectContainer'
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         }
         <Landing />
         <AboutMe />
-        <MyProjects />
+        <ProjectContainer />
         <Contact />
     </main>
   )
