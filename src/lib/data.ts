@@ -37,7 +37,7 @@ export const techStacks = [
     },
     {
         img: "react.svg",
-        label: "React JS",
+        label: "React",
         link: "https://react.dev/"
     },
     {
@@ -57,7 +57,7 @@ export const techStacks = [
     },
     {
         img: "nodedotjs.svg",
-        label: "Node JS",
+        label: "Node.js",
         link: "https://nodejs.org/en"
     },
     {
@@ -72,13 +72,23 @@ export const techStacks = [
     },
     {
         img: "nextdotjs.svg",
-        label: "Next JS",
+        label: "Next.js",
         link: "https://nextjs.org"
     },
     {
         img: "java.svg",
         label: "Java",
         link: "https://www.java.com/en/"
+    },
+    {
+        img: "springboot.svg",
+        label: "Spring Boot",
+        link: "https://spring.io/projects/spring-boot"
+    },
+    {
+        img: "nestjs.svg",
+        label: "NestJS",
+        link: "https://nestjs.com/"
     }
 ]
 
@@ -107,6 +117,30 @@ export interface IProject {
 
 export const projects: IProject[] = [
     {
+        img: "gainz.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+        title: "Gainz",
+        description: `
+        Gainz is a simple, powerful workout tracker to help you crush your fitness goals.
+        `,
+        github: "https://github.com/elderfieldzeus/gainz-api",
+        live_demo: "https://gainz-web.vercel.app",
+        technologies: ["Spring Boot", "Spring Security", "MySQL", "Hibernate", "Next.js"],
+        position: ""
+    },
+    {
+        img: "hermes.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+        title: "Hermes",
+        description: `
+        Project Hermes is a queue system for DCISM students, by DCISM students.
+        `,
+        github: "https://github.com/usc-cisco/hermes-site",
+        live_demo: "https://queue.dcism.org",
+        technologies: ["Typescript", "React", "Tailwind CSS", "Mantine UI", "Axios"],
+        position: "-mt-1"
+    },
+    {
         img: "twerkout.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Twerkout",
@@ -115,7 +149,7 @@ export const projects: IProject[] = [
         `,
         github: "https://github.com/elderfieldzeus/twerkout",
         live_demo: "https://twerkout.vercel.app",
-        technologies: ["Typescript", "React JS", "Tailwind CSS", "Firebase"],
+        technologies: ["Typescript", "React", "Tailwind CSS", "Firebase"],
         position: "-mt-1"
     },
     {
@@ -127,7 +161,7 @@ export const projects: IProject[] = [
         `,
         github: "https://github.com/elderfieldzeus/vintage-royale",
         live_demo: "https://vintage-royale.vercel.app",
-        technologies: ["Typescript", "React JS", "Tailwind CSS", "Supabase"],
+        technologies: ["Typescript", "React", "Tailwind CSS", "Supabase"],
         position: "-mt-2"
     },
     {
@@ -151,8 +185,32 @@ export const projects: IProject[] = [
         `,
         github: "https://github.com/DestinEcarma/basher-frontend",
         live_demo: "https://basher-ph-dpbf.shuttle.app/",
-        technologies: ["Typescript", "React JS", "Tailwind CSS", "Axios", "GraphQL"],
+        technologies: ["Typescript", "React", "Tailwind CSS", "Axios", "GraphQL"],
         position: "-mt-2"
+    },
+    {
+        img: "philnits-mock-exam.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+        title: "Philnits Mock Exam",
+        description: `
+        The PhilNITS Mock Exam helps students prepare for the upcoming PhilNITS FE Morning Exam by simulating the actual time limit and using real past exam questions.
+        `,
+        github: "https://github.com/elderfieldzeus/philnits-mock-exam",
+        live_demo: "https://philnits.dcism.org/",
+        technologies: ["Next.js", "Typescript", "Tailwind CSS"],
+        position: ""
+    },
+    {
+        img: "schedaddle.png",
+        category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+        title: "Schedaddle",
+        description: `
+        Schedaddle is a web app that generates and visualizes class schedules based on offered schedules.
+        `,
+        github: "https://github.com/elderfieldzeus/philnits-mock-exam",
+        live_demo: "https://philnits.dcism.org/",
+        technologies: ["Typescript", "React", "Tailwind CSS"],
+        position: ""
     },
     {
         img: "datacamp.png",

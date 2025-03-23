@@ -36,13 +36,15 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
           <DialogContent className="max-w-[80vw] md:w-[50rem] overflow-hidden p-0 border border-white border-opacity-20 font-kanit rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
               {/* Image - Top on mobile, right on desktop */}
-              <div className="border-b md:border-l border-white border-opacity-20 relative md:order-2 h-[200px] md:h-full md:min-h-[500px] bg-black">
-                <img
-                  src={`/images/projects/${selectedProject.img}`}
-                  alt={selectedProject.title}
-                  className="h-full w-full object-contain"
-                />
-                <div className="hidden absolute bottom-0 w-full p-6 md:flex items-center justify-between text-black gap-2">
+              <div className="border-b md:border-l border-white border-opacity-20 relative md:order-2 pb-12 h-full md:min-h-[500px] bg-black ">
+                <div className='aspect-[2/1] overflow-hidden relative top-1/2 -translate-y-1/2'>
+                  <img
+                    src={`/images/projects/${selectedProject.img}`}
+                    alt={selectedProject.title}
+                    className={"h-auto w-full object-contain " + selectedProject.position}
+                  />
+                </div>
+                <div className="absolute -bottom-4 md:bottom-0 w-full py-6 px-4 md:px-6 flex items-center justify-between text-black gap-2">
                   <LandingButton
                     onClick={goToPrevProject}
                     className='py-2 w-full'
@@ -101,7 +103,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         </LandingButton>
                     </div>
 
-                    <div className="flex md:hidden items-center justify-between text-black gap-2">
+                    {/* <div className="flex md:hidden items-center justify-between text-black gap-2">
                       <LandingButton
                         onClick={goToPrevProject}
                         className='py-2 w-full'
@@ -116,7 +118,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         Next
                         <ChevronRight className="h-4 w-4 ml-1" />
                       </LandingButton>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
