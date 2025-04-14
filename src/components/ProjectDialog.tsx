@@ -33,7 +33,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   return (
     <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         {selectedProject && (
-          <DialogContent className="max-w-[80vw] md:w-[50rem] overflow-hidden p-0 border border-white border-opacity-20 font-kanit rounded-lg">
+          <DialogContent className="max-w-[min(70rem,_80vw)] h-[min(45rem,_80vh)] overflow-scroll md:overflow-hidden p-0 border border-white border-opacity-20 font-kanit rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 h-full">
               {/* Image - Top on mobile, right on desktop */}
               <div className="border-b md:border-l border-white border-opacity-20 relative md:order-2 pb-12 h-full md:min-h-[500px] bg-black ">
@@ -76,7 +76,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 {/* Scrollable content area */}
                 <div className="p-4 md:p-6 pt-4 overflow-y-auto flex-grow">
                   <div className="space-y-4">
-                    <p className='font-extralight text-sm text-gray-400'>{selectedProject.description}</p>
+                    <p className='font-extralight text-sm text-gray-400'>{selectedProject.main_description} {
+                      selectedProject.full_description && selectedProject.full_description  
+                    }</p>
 
                     <div className="flex flex-wrap gap-1 pt-2">
                         {selectedProject.technologies.map((tech, i) => {

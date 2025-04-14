@@ -31,7 +31,7 @@ export default function ProjectContainer() {
       result = result.filter(
         (project) =>
           project.title.toLowerCase().includes(query) ||
-          project.description.toLowerCase().includes(query) ||
+          project.main_description.toLowerCase().includes(query) ||
           project.technologies.some((tag) => tag.toLowerCase().includes(query)),
       )
     }

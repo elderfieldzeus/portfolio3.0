@@ -108,7 +108,8 @@ export interface IProject {
     img: string;
     category: ProjectCategoryEnum;
     title: string;
-    description: string;
+    main_description: string;
+    full_description?: string;
     github: string;
     live_demo: string;
     technologies: string[];
@@ -120,7 +121,7 @@ export const projects: IProject[] = [
         img: "gainz.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Gainz",
-        description: `
+        main_description: `
         Gainz is a simple, powerful workout tracker to help you crush your fitness goals.
         `,
         github: "https://github.com/elderfieldzeus/gainz-api",
@@ -132,7 +133,7 @@ export const projects: IProject[] = [
         img: "hermes.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Hermes",
-        description: `
+        main_description: `
         Project Hermes is a queue system for DCISM students, by DCISM students.
         `,
         github: "https://github.com/usc-cisco/hermes-site",
@@ -144,7 +145,7 @@ export const projects: IProject[] = [
         img: "twerkout.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Twerkout",
-        description: `
+        main_description: `
         Twerkout is a mobile-friendly site designed to help you track and visualize your workout progress.
         `,
         github: "https://github.com/elderfieldzeus/twerkout",
@@ -156,7 +157,7 @@ export const projects: IProject[] = [
         img: "vintage-royale.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Vintage Royale",
-        description: `
+        main_description: `
         Vintage Royale's mobile-based product management system and tailored to enhance client-side functionality.
         `,
         github: "https://github.com/elderfieldzeus/vintage-royale",
@@ -168,7 +169,7 @@ export const projects: IProject[] = [
         img: "foamfusion.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Foamfusion",
-        description: `
+        main_description: `
         A full-stack product management system for Foamfusion Soaps, enhancing end-to-end operations.
         `,
         github: "https://github.com/elderfieldzeus/foamfusion",
@@ -180,7 +181,7 @@ export const projects: IProject[] = [
         img: "basher.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Basher",
-        description: `
+        main_description: `
         An anonymous, forum-based web application for open user discussions.
         `,
         github: "https://github.com/DestinEcarma/basher-frontend",
@@ -192,7 +193,7 @@ export const projects: IProject[] = [
         img: "philnits-mock-exam.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Philnits Mock Exam",
-        description: `
+        main_description: `
         The PhilNITS Mock Exam helps students prepare for the upcoming PhilNITS FE Morning Exam by simulating the actual time limit and using real past exam questions.
         `,
         github: "https://github.com/elderfieldzeus/philnits-mock-exam",
@@ -204,11 +205,11 @@ export const projects: IProject[] = [
         img: "schedaddle.png",
         category: ProjectCategoryEnum.WEB_DEVELOPMENT,
         title: "Schedaddle",
-        description: `
+        main_description: `
         Schedaddle is a web app that generates and visualizes class schedules based on offered schedules.
         `,
-        github: "https://github.com/elderfieldzeus/philnits-mock-exam",
-        live_demo: "https://philnits.dcism.org/",
+        github: "https://github.com/elderfieldzeus/schedaddle",
+        live_demo: "https://schedaddle-react.vercel.app/",
         technologies: ["Typescript", "React", "Tailwind CSS"],
         position: ""
     },
@@ -216,7 +217,7 @@ export const projects: IProject[] = [
         img: "datacamp.png",
         category: ProjectCategoryEnum.DATA_SCIENCE,
         title: "Datacamp Projects",
-        description: `
+        main_description: `
         Compilation of all my Data-related projects from my DataCamp scholarship. 
         `,
         github: "https://github.com/elderfieldzeus/datacamp",
@@ -227,7 +228,7 @@ export const projects: IProject[] = [
         img: "house-predict.jpg",
         category: ProjectCategoryEnum.DATA_SCIENCE,
         title: "House Price Prediction",
-        description: `
+        main_description: `
         Utilizing Linear Regression to predict House Prices in the Philippines.
         `,
         github: "https://github.com/elderfieldzeus/ph-house-price-prediction",
