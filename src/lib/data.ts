@@ -173,7 +173,7 @@ export const projects: IProject[] = [
         A full-stack product management system for Foamfusion Soaps, enhancing end-to-end operations.
         `,
         github: "https://github.com/elderfieldzeus/foamfusion",
-        live_demo: "http://foamfusion.infinityfreeapp.com/",
+        live_demo: "https://foamfusion.dcism.org/",
         technologies: ["PHP", "Tailwind CSS", "MySQL"],
         position: "-mt-2"
     },
