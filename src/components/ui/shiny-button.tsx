@@ -28,7 +28,12 @@ interface ShinyButtonProps {
   onClick?: () => void;
   className?: string;
 }
-const ShinyButton = ({ children, onClick, className, ...props }: ShinyButtonProps) => {
+const ShinyButton = ({
+  children,
+  onClick,
+  className,
+  ...props
+}: ShinyButtonProps) => {
   return (
     <motion.button
       onClick={onClick}

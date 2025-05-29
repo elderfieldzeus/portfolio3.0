@@ -30,7 +30,8 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
     ref,
   ) => {
     return (
-      <button onClick={onClick}
+      <button
+        onClick={onClick}
         style={
           {
             "--spread": "90deg",
