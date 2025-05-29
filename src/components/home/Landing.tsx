@@ -19,7 +19,7 @@ const Landing: React.FC = () => {
   };
 
   return (
-    <div className="relative py-20 min-h-screen w-full font-kanit">
+    <div id="landing" className="relative py-20 min-h-screen w-full font-kanit">
       <div className="py-28 flex flex-col items-center gap-2">
         <BlurFade delay={0.25} inView>
           <ShimmerButton

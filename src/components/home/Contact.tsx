@@ -8,12 +8,11 @@ import { FaFacebook, FaGithub, FaPhone } from "react-icons/fa6";
 
 const Contact: React.FC = () => {
   return (
-    <div
-      id="contact"
-      className="flex flex-col gap-8 items-center font-kanit relative mt-24 pb-20"
-    >
+    <div className="flex flex-col gap-8 items-center font-kanit relative mt-24 pb-20">
       <BlurFade delay={0.25} inView>
-        <p className="text-4xl">Contact Me</p>
+        <p id="contact" className="text-4xl">
+          Contact Me
+        </p>
       </BlurFade>
 
       <BlurFade delay={0.25} inView>

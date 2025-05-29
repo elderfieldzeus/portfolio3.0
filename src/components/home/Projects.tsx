@@ -10,7 +10,9 @@ export default function Projects() {
   return (
     <div className="w-full flex flex-col items-center gap-8 mt-24 max-w-4xl mx-auto font-kanit">
       <BlurFade delay={0.25} inView>
-        <p className="text-4xl">My Projects</p>
+        <p id="projects" className="text-4xl">
+          Projects
+        </p>
       </BlurFade>
       <BlurFade
         delay={0.25}

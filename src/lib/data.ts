@@ -1,4 +1,5 @@
 import { JavaOriginal } from "devicons-react";
+import { User, FolderOpen, Mail, Home } from "lucide-react";
 
 export const CurrentlyLearning: React.ElementType = JavaOriginal;
 
@@ -89,6 +90,40 @@ export const techStacks = [
     img: "nestjs.svg",
     label: "NestJS",
     link: "https://nestjs.com/",
+  },
+];
+
+interface SectionConfig {
+  id: string;
+  text: string;
+  href: string;
+  Icon: React.ElementType;
+}
+
+export const sectionConfigs: SectionConfig[] = [
+  {
+    id: "landing",
+    text: "Welcome!",
+    href: "#about",
+    Icon: Home,
+  },
+  {
+    id: "about",
+    text: "More about me",
+    href: "#projects",
+    Icon: User,
+  },
+  {
+    id: "projects",
+    text: "View all projects",
+    href: "#contact",
+    Icon: FolderOpen,
+  },
+  {
+    id: "contact",
+    text: "Go back to top",
+    href: "#landing",
+    Icon: Mail,
   },
 ];
 

@@ -17,7 +17,9 @@ const AboutMe: React.FC = () => {
   return (
     <div className="pb-10 flex flex-col gap-8 items-center font-kanit relative">
       <BlurFade delay={0.25} inView>
-        <p className="text-4xl">About</p>
+        <p id="about" className="text-4xl">
+          About
+        </p>
       </BlurFade>
 
       <div className="flex flex-col w-full gap-2 items-center">
