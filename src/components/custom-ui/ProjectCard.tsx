@@ -1,10 +1,10 @@
 import { IProject } from '@/lib/data'
 import React from 'react'
 import { MagicCard } from '../ui/magic-card';
-import BlurFade from '../ui/blur-fade';
 import LandingButton from './LandingButton';
 import { FaGithub } from 'react-icons/fa';
 import { CgWebsite } from "react-icons/cg";
+import Image from 'next/image';
 
 interface ProjectCardProps {
     project: IProject;
@@ -22,9 +22,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
   return (
     <MagicCard className='w-full bg-black border rounded-lg border-opacity-20 overflow-hidden'>
         <div className='aspect-[2/1] w-full h-auto overflow-hidden'>
-            <img
+            <Image
                 src={`/images/projects/${project.img}`}
                 alt={project.title}
+                width={1000}
+                height={1000}
                 className={`w-full h-auto object-cover object-center ${project.position}`}
             />
         </div>
