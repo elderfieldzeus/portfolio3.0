@@ -8,6 +8,7 @@ import TechStackCard from '@/components/custom-ui/TechStackCard'
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaBookmark } from "react-icons/fa";
 import AngleInfo from '@/components/custom-ui/AngleInfo'
+import Image from 'next/image'
 
 const AboutMe: React.FC = () => {
     const tech1 = techStacks.filter((_, i) => i % 2 == 0);
@@ -25,7 +26,7 @@ const AboutMe: React.FC = () => {
                 <FlexRow className='flex-wrap justify-center gap-2'>
                     <BlurFade delay={0.25} inView>
                         <MagicCard className='border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[17rem] aspect-[7/10] bg-black overflow-hidden'>
-                            <img src="/images/me_aha.jpeg" className='-mt-8' />
+                            <Image src="/images/me_aha.jpeg" alt='Me' className='-mt-8' width={1000} height={1000}/>
                         </MagicCard>
                     </BlurFade>
                     <BlurFade delay={0.25} inView>
@@ -56,8 +57,8 @@ const AboutMe: React.FC = () => {
                                 <p>Hello, there! You can call me Zeus.</p>
                                 <p className='text-gray-300 mt-1'>I'm currently exploring the world of Web & Mobile Development, Competitive Programming, Data Science, and AI/Machine Learning.  I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.</p>
 
-                                <p className='mt-4'>If you need someone who can get the job done on time, I'm your guy.</p>
-                                <p className='text-gray-300 mt-1'>Whether I’m coding an app, competing in programming contests, or diving into data, I’m driven by a desire to build, learn, and grow in everything I do. I’m always excited to take on new challenges and make a meaningful impact through innovative solutions.</p>
+                                <p className='mt-4'>If you need someone who can get the job done on time, I&apos;m your guy.</p>
+                                <p className='text-gray-300 mt-1'>Whether I&apos;m coding an app, competing in programming contests, or diving into data, I&apos;m driven by a desire to build, learn, and grow in everything I do. I&apos;m always excited to take on new challenges and make a meaningful impact through innovative solutions.</p>
                             </div>
                         </MagicCard>
                     </BlurFade>
