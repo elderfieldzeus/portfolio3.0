@@ -1,13 +1,13 @@
 import React from 'react'
-import BlurFade from './ui/blur-fade'
-import FlexRow from './FlexRow'
-import { MagicCard } from './ui/magic-card'
-import Marquee from './ui/marquee'
+import BlurFade from '../ui/blur-fade'
+import FlexRow from '@/components/custom-ui/FlexRow'
+import { MagicCard } from '@/components/ui/magic-card'
+import Marquee from '@/components/ui/marquee'
 import { CurrentlyLearning, techStacks } from '@/lib/data'
-import TechStackCard from './TechStackCard'
+import TechStackCard from '@/components/custom-ui/TechStackCard'
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaBookmark } from "react-icons/fa";
-import AngleInfo from './AngleInfo'
+import AngleInfo from '@/components/custom-ui/AngleInfo'
 
 const AboutMe: React.FC = () => {
     const tech1 = techStacks.filter((_, i) => i % 2 == 0);

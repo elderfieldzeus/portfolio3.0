@@ -1,9 +1,9 @@
 import React from 'react'
-import LandingButton from './LandingButton'
-import BlurFade from './ui/blur-fade'
+import LandingButton from '@/components/custom-ui/LandingButton'
+import BlurFade from '@/components/ui/blur-fade'
 import { IoMdDownload } from "react-icons/io";
 import { MdConnectWithoutContact } from 'react-icons/md';
-import ShimmerButton from './ui/shimmer-button';
+import ShimmerButton from '@/components/ui/shimmer-button';
 
 const Landing: React.FC = () => {
     const handleDownload = () => {
@@ -27,7 +27,7 @@ const Landing: React.FC = () => {
                     className='rounded-full flex items-center py-2 px-4 text-xs md:text-sm gap-2 active:none'
                 >
                     <div className='size-2 rounded-full bg-green-600'></div>
-                    <p>Available for work</p>
+                    <p className='text-primary'>Available for work</p>
                 </ShimmerButton>
             </BlurFade>
             <div className='flex flex-col items-center text-center text-4xl md:text-6xl'>

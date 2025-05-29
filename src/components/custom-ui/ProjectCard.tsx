@@ -1,23 +1,23 @@
 import { IProject } from '@/lib/data'
 import React from 'react'
-import { MagicCard } from './ui/magic-card';
-// import BlurFade from './ui/blur-fade';
-// import LandingButton from './LandingButton';
-// import { FaGithub } from 'react-icons/fa';
-// import { CgWebsite } from "react-icons/cg";
+import { MagicCard } from '../ui/magic-card';
+import BlurFade from '../ui/blur-fade';
+import LandingButton from './LandingButton';
+import { FaGithub } from 'react-icons/fa';
+import { CgWebsite } from "react-icons/cg";
 
 interface ProjectCardProps {
     project: IProject;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
-//     const handleGithub = () => {
-//         window.open(project.github, "_blank");
-//     }
+    const handleGithub = () => {
+        window.open(project.github, "_blank");
+    }
 
-//     const handleLiveDemo = () => {
-//         window.open(project.live_demo, "_blank");
-//     }
+    const handleLiveDemo = () => {
+        window.open(project.live_demo, "_blank");
+    }
 
   return (
     <MagicCard className='w-full bg-black border rounded-lg border-opacity-20 overflow-hidden'>
@@ -36,13 +36,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                 <div className='flex flex-wrap gap-1 my-2'>
                     {project.technologies.map((tech, i) => {
                         return (
-                            <p key={i} className='text-xs font-extralight rounded-xl border px-2 border-gray-100 border-opacity-20'>{tech}</p>
+                            <p key={i} className='text-xs font-extralight rounded-xl border px-2 border-zinc-800 border-opacity-20'>{tech}</p>
                         );
                     })}
                 </div>
             </div>
 
-            {/* <div className='flex gap-2 mt-6'>
+            <div className='flex gap-2 mt-6 w-full'>
                 <LandingButton onClick={handleGithub} className='py-1'>
                     <FaGithub />
                     <p>Github</p>
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                     <CgWebsite />
                     <p>Live Demo</p>
                 </LandingButton>
-            </div> */}
+            </div>
         </div>
     </MagicCard>
   )

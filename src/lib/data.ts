@@ -98,12 +98,6 @@ export enum ProjectCategoryEnum {
     DATA_SCIENCE = "Data Science"
 }
 
-export const CATEGORIES: ProjectCategoryEnum[] = [
-    ProjectCategoryEnum.ALL_CATEGORIES,
-    ProjectCategoryEnum.WEB_DEVELOPMENT,
-    ProjectCategoryEnum.DATA_SCIENCE,
-]
-
 export interface IProject {
     img: string;
     category: ProjectCategoryEnum;
@@ -114,6 +108,7 @@ export interface IProject {
     live_demo: string;
     technologies: string[];
     position?: string;
+    isFeatured?: boolean;
 }
 
 export const projects: IProject[] = [
@@ -126,8 +121,9 @@ export const projects: IProject[] = [
         `,
         github: "https://github.com/elderfieldzeus/gainz-api",
         live_demo: "https://gainz-web.vercel.app",
-        technologies: ["Spring Boot", "Spring Security", "MySQL", "Hibernate", "Next.js"],
-        position: ""
+        technologies: ["Spring Boot", "Spring Security", "MySQL", "Hibernate"],
+        position: "",
+        isFeatured: true
     },
     {
         img: "hermes.png",
@@ -139,7 +135,8 @@ export const projects: IProject[] = [
         github: "https://github.com/usc-cisco/hermes-site",
         live_demo: "https://queue.dcism.org",
         technologies: ["Typescript", "React", "Tailwind CSS", "Mantine UI", "Axios"],
-        position: "-mt-1"
+        position: "-mt-1",
+        isFeatured: true
     },
     {
         img: "twerkout.png",
@@ -151,7 +148,8 @@ export const projects: IProject[] = [
         github: "https://github.com/elderfieldzeus/twerkout",
         live_demo: "https://twerkout.vercel.app",
         technologies: ["Typescript", "React", "Tailwind CSS", "Firebase"],
-        position: "-mt-1"
+        position: "-mt-1",
+        isFeatured: true
     },
     {
         img: "vintage-royale.png",
@@ -163,7 +161,8 @@ export const projects: IProject[] = [
         github: "https://github.com/elderfieldzeus/vintage-royale",
         live_demo: "https://vintage-royale.vercel.app",
         technologies: ["Typescript", "React", "Tailwind CSS", "Supabase"],
-        position: "-mt-2"
+        position: "-mt-2",
+        isFeatured: true
     },
     {
         img: "foamfusion.png",
@@ -199,7 +198,7 @@ export const projects: IProject[] = [
         github: "https://github.com/elderfieldzeus/philnits-mock-exam",
         live_demo: "https://philnits.dcism.org/",
         technologies: ["Next.js", "Typescript", "Tailwind CSS"],
-        position: ""
+        position: "",
     },
     {
         img: "schedaddle.png",
