@@ -5,4 +5,4 @@ export default {
     "src/**/*.{ts,tsx,json,css}": files => {
         return "prettier --write " + files.join(" ");
     }
-}
+} 
