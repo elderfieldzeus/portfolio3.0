@@ -7,6 +7,7 @@ interface MarqueeProps {
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
+  // eslint-disable-next-line
   [key: string]: any;
 }
 
