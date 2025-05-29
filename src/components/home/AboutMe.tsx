@@ -55,7 +55,7 @@ const AboutMe: React.FC = () => {
                             </div>
                             <div className='px-2 font-extralight flex flex-col max-w-full mb-4'>
                                 <p>Hello, there! You can call me Zeus.</p>
-                                <p className='text-gray-300 mt-1'>I'm currently exploring the world of Web & Mobile Development, Competitive Programming, Data Science, and AI/Machine Learning.  I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.</p>
+                                <p className='text-gray-300 mt-1'>I&apos;m currently exploring the world of Web & Mobile Development, Competitive Programming, Data Science, and AI/Machine Learning.  I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.</p>
 
                                 <p className='mt-4'>If you need someone who can get the job done on time, I&apos;m your guy.</p>
                                 <p className='text-gray-300 mt-1'>Whether I&apos;m coding an app, competing in programming contests, or diving into data, I&apos;m driven by a desire to build, learn, and grow in everything I do. I&apos;m always excited to take on new challenges and make a meaningful impact through innovative solutions.</p>
