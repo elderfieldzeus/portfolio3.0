@@ -41,7 +41,7 @@ const AboutMe: React.FC = () => {
                                 </AngleInfo>
                                 <AngleInfo>
                                     <p>Age: </p>
-                                    <p className='text-gray-300'>21</p>
+                                    <p className='text-gray-300'>22</p>
                                 </AngleInfo>
                                 <AngleInfo>
                                     <p>Loc: </p>
