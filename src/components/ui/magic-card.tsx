@@ -44,14 +44,13 @@ export function MagicCard({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={cn(
-        "group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-zinc-200 text-black dark:text-white dark:border-zinc-800",
-        className,
+      className={cn(className,
+        "group relative flex size-full overflow-hidden rounded-lg bg-black border text-white border-zinc-800"
       )}
     >
       <div className="relative z-10 w-full">{children}</div>
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
             radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)

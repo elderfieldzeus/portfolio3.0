@@ -1,9 +1,11 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
-import Landing from '../components/Landing'
-import AboutMe from '@/components/AboutMe'
+import Landing from '../components/home/Landing'
+import AboutMe from '@/components/home/AboutMe'
 import Particles from '@/components/ui/particles'
-import Contact from '@/components/Contact'
-import ProjectContainer from '@/components/ProjectContainer'
+import ProjectContainer from '@/components/home/Projects'
+import Contact from '@/components/home/Contact'
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);

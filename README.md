@@ -18,14 +18,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is my personal portfolio website built using **TypeScript**, **React**, and **TailwindCSS**. The website serves as a digital business card, highlighting my development skills, projects, and experience. It provides a responsive and visually appealing interface where potential employers or collaborators can learn more about my work and get in touch. The site features sections such as "About Me," "My Projects," and "Contact," providing a comprehensive view of my professional profile.
+This is my personal portfolio website built using **TypeScript**, **Next.js**, and **TailwindCSS**. The website serves as a digital business card, highlighting my development skills, projects, and experience. It provides a responsive and visually appealing interface where potential employers or collaborators can learn more about my work and get in touch. The site features sections such as "About Me," "My Projects," and "Contact," providing a comprehensive view of my professional profile.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 * [![TypeScript](https://img.shields.io/badge/TypeScript-%233178C6?style=for-the-badge&logo=Typescript&logoColor=white)](https://www.typescriptlang.org/)
-* [![React](https://img.shields.io/badge/React-%2361DAFB?style=for-the-badge&logo=React&logoColor=black)](https://react.dev/)
+* [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)](https://nextjs.org/)
 * [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2306B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white)](https://tailwindcss.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -41,13 +41,13 @@ To get a local copy of the project up and running, follow these simple steps.
    ```sh
    git clone https://github.com/elderfieldzeus/twerkout.git
    ```
-2. Install the required NPM packages:
+2. Install the required `bun` packages:
    ```sh
-   npm install
+   bun install
    ```
 3. Start the application:
     ```sh
-    npm run dev
+    bun run dev
     ```
 4. Open your browser and visit the appropriate localhost port (in this case: <a>localhost:5173</a>).
 
