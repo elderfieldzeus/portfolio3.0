@@ -6,7 +6,7 @@ import AboutMe from "@/components/home/AboutMe";
 import Particles from "@/components/ui/particles";
 import Projects from "@/components/home/Projects";
 import Contact from "@/components/home/Contact";
-import Experience from "@/components/home/Experience";
+import Resume from "@/components/home/Resume";
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       )}
       <Landing />
       <AboutMe />
-      <Experience />
+      <Resume />
       <Projects />
       <Contact />
 
