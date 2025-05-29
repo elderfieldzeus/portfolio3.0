@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Landing from "../components/home/Landing";
 import AboutMe from "@/components/home/AboutMe";
 import Particles from "@/components/ui/particles";
-import ProjectContainer from "@/components/home/Projects";
+import Projects from "@/components/home/Projects";
 import Contact from "@/components/home/Contact";
 
 const Home: React.FC = () => {
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       )}
       <Landing />
       <AboutMe />
-      <ProjectContainer />
+      <Projects />
       <Contact />
     </main>
   );

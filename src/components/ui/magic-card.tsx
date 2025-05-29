@@ -45,8 +45,9 @@ export function MagicCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
+        "group relative flex size-full overflow-hidden rounded-lg bg-black border text-white",
         className,
-        "group relative flex size-full overflow-hidden rounded-lg bg-black border text-white border-zinc-800",
+        "border-zinc-800",
       )}
     >
       <div className="relative z-10 w-full">{children}</div>

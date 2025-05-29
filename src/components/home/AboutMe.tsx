@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
   const tech2 = techStacks.filter((_, i) => i % 2 == 1);
 
   return (
-    <div className="pb-10 flex flex-col gap-8 items-center font-kanit  relative">
+    <div className="pb-10 flex flex-col gap-8 items-center font-kanit relative max-w-4xl">
       <BlurFade delay={0.25} inView>
         <p className="text-4xl">About</p>
       </BlurFade>
