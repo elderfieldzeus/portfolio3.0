@@ -18,11 +18,11 @@ export const handlePageTransition = async (
 
   body?.classList.add("page-transition");
 
-  await sleep(100);
+  await sleep(150);
 
   router.push(href);
 
-  await sleep(1500);
+  await sleep(1400);
 
   body?.classList.remove("page-transition");
 };
