@@ -16,19 +16,19 @@ export const sectionConfigs: SectionConfig[] = [
   },
   {
     id: "about",
-    text: "More about me",
+    text: "Know more",
     href: "/about",
     Icon: User,
   },
   {
     id: "resume",
-    text: "View my resume",
+    text: "View resume",
     href: "/resume",
     Icon: Paperclip,
   },
   {
     id: "projects",
-    text: "View all projects",
+    text: "View projects",
     href: "/projects",
     Icon: FolderOpen,
   },

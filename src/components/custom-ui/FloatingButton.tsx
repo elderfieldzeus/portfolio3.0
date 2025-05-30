@@ -11,7 +11,7 @@ import LandingButton from "./LandingButton";
 export function FloatingButton() {
   const router = useRouter();
 
-  const [currentSection, setCurrentSection] = useState("hero");
+  const [currentSection, setCurrentSection] = useState("landing");
   const [isVisible, setIsVisible] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(true);
   const [displayedConfig, setDisplayedConfig] = useState(sectionConfigs[0]);
