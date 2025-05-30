@@ -3,10 +3,14 @@
 import type React from "react";
 
 import { useState, useEffect } from "react";
-import ShinyButton from "../ui/shiny-button";
-import { sectionConfigs } from "@/lib/data";
+import { sectionConfigs } from "@/data/navigation";
+import { useRouter } from "next/navigation";
+import { handleHrefRoute } from "@/lib/utils";
+import LandingButton from "./LandingButton";
 
 export function FloatingButton() {
+  const router = useRouter();
+
   const [currentSection, setCurrentSection] = useState("hero");
   const [isVisible, setIsVisible] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(true);
@@ -48,7 +52,7 @@ export function FloatingButton() {
     });
 
     // Show component after a short delay
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true), 1200);
 
     return () => {
       observer.disconnect();
@@ -56,26 +60,15 @@ export function FloatingButton() {
     };
   }, [currentSection]);
 
-  const handleClick = () => {
-    if (displayedConfig.text[0] === "#") {
-      const targetElement = document.querySelector(displayedConfig.href);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      window.location.href = displayedConfig.href;
-    }
-  };
-
   return (
     <div
       className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-in-out ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       }`}
     >
-      <ShinyButton
-        onClick={handleClick}
-        className="group relative overflow-hidden bg-primary text-black hover:text-zinc-800 shadow-lg rounded-full px-6 py-3 h-auto hover:cursor-pointer"
+      <LandingButton
+        onClick={() => handleHrefRoute(displayedConfig.href, router)}
+        className="group relative overflow-hidden bg-primary text-black hover:text-zinc-800 shadow-lg rounded-full px-4 hover:cursor-pointer"
       >
         <div className="flex items-center gap-3">
           {/* Icon with smooth transition */}
@@ -100,15 +93,6 @@ export function FloatingButton() {
           >
             {displayedConfig.text}
           </span>
-
-          {/* Arrow with smooth transition */}
-          {/* <div
-            className={`transition-all duration-400 ease-in-out group-hover:translate-x-1 ${
-              isTextVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
-            }`}
-          >
-            <ArrowRight className="w-4 h-4" />
-          </div> */}
         </div>
 
         {/* Animated background */}
@@ -120,7 +104,7 @@ export function FloatingButton() {
             !isTextVisible ? "opacity-100" : "opacity-0"
           }`}
         />
-      </ShinyButton>
+      </LandingButton>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import BlurFade from "../ui/blur-fade";
 import FlexRow from "@/components/custom-ui/FlexRow";
 import { MagicCard } from "@/components/ui/magic-card";
 import Marquee from "@/components/ui/marquee";
-import { CurrentlyLearning, techStacks } from "@/lib/data";
+import { CurrentlyLearning, techStacks } from "@/data/about";
 import TechStackCard from "@/components/custom-ui/TechStackCard";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaBookmark } from "react-icons/fa";

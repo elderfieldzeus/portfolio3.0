@@ -1,4 +1,4 @@
-import { ITechStack } from "@/lib/data";
+import { ITechStack } from "@/data/projects";
 import Image from "next/image";
 import React from "react";
 

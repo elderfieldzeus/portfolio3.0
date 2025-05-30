@@ -22,7 +22,7 @@ const ResumeEvent: React.FC<ResumeEventProps> = ({
           className={`absolute rounded-full size-4 aspect-square ${isCurrent ? "bg-secondary hover:bg-primary" : "bg-black hover:bg-zinc-900"} border border-zinc-800 z-10 top-[0.3rem] transition-all`}
         ></div>
         <div
-          className={`absolute w-0.5 ${isLast ? "h-full" : "h-[200%]"} bg-zinc-600 top-2`}
+          className={`absolute w-0.5 ${isLast ? "h-3/4" : "h-[200%]"} bg-zinc-600 top-2`}
         ></div>
       </div>
       <div className="w-full">

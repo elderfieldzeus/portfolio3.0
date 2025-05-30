@@ -1,4 +1,4 @@
-import { IProject } from "@/lib/data";
+import { IProject } from "@/data/projects";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import LandingButton from "./LandingButton";

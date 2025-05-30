@@ -41,6 +41,10 @@
     filter: invert(100%) sepia(0%) saturate(7439%) hue-rotate(41deg)
       brightness(123%) contrast(99%);
   }
+  .page-transition {
+    opacity: 0;
+    filter: blur(20px);
+  }
 }
 
 html {
@@ -49,6 +53,9 @@ html {
 
 body {
   background-color: black;
+  transition-property: opacity, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
 }
 
 /* scrollbar */

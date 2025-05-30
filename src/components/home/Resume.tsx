@@ -78,7 +78,7 @@ const Resume = () => {
                 isCurrent
               />
               <ResumeEvent
-                title="Software Engineer"
+                title="Software Engineer Certification"
                 subtitle="HackerRank"
                 year="2025"
                 isLast

@@ -7,6 +7,7 @@ import Particles from "@/components/ui/particles";
 import Projects from "@/components/home/Projects";
 import Contact from "@/components/home/Contact";
 import Resume from "@/components/home/Resume";
+import { FloatingButton } from "@/components/custom-ui/FloatingButton";
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -38,7 +39,7 @@ const Home: React.FC = () => {
       <Projects />
       <Contact />
 
-      {/* <FloatingButton /> */}
+      <FloatingButton />
     </main>
   );
 };

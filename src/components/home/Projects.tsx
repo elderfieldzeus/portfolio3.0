@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectCard from "@/components/custom-ui/ProjectCard";
-import { projects } from "@/lib/data";
+import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
 
 export default function Projects() {
