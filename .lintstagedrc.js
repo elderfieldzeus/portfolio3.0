@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "src/**/*.{ts,tsx,css}": files => {
         return "eslint --fix " + files.join(" ");
     },
