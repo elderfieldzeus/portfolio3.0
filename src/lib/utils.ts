@@ -18,7 +18,7 @@ export const handlePageTransition = async (
 
   body?.classList.add("page-transition");
 
-  // await sleep(300);
+  await sleep(100);
 
   router.push(href);
 
