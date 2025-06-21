@@ -61,7 +61,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [zdelderfield.work@gmail.com](mailto:zdelderfield.work@gmail.com)
+Zeus Elderfield - [zdelderfield.work@gmail.com](mailto:zdelderfield.work@gmail.com)
 
 Project Link: [https://github.com/elderfieldzeus/portfolio3.0](https://github.com/yourusername/portfolio)
 
