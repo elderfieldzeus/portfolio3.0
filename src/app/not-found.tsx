@@ -1,7 +1,7 @@
 "use client";
 
 import ShinyButton from "@/components/ui/shiny-button";
-import { handlePageTransition } from "@/lib/utils";
+// import { handlePageTransition } from "@/lib/utils";
 import { ConstructionIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -15,7 +15,7 @@ export default function NotFound() {
         <h2>Page in progress...</h2>
       </div>
       <ShinyButton
-        onClick={() => handlePageTransition("/", router)}
+        onClick={() => router.push("/")}
         className="bg-primary text-black px-4 py-2 rounded-lg"
       >
         Return Home

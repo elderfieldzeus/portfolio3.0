@@ -29,7 +29,8 @@ export const handlePageTransition = async (
 
 export const handleHrefRoute = (href: string, router: AppRouterInstance) => {
   if (href.startsWith("/")) {
-    handlePageTransition(href, router);
+    // handlePageTransition(href, router);
+    router.push(href);
   } else if (href.startsWith("#")) {
     const targetElement = document.querySelector(href);
     if (targetElement) {
