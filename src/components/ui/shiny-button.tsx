@@ -1,9 +1,9 @@
 import React from "react";
-import { motion, type AnimationProps } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-const animationProps = {
+const animationProps: HTMLMotionProps<"button"> = {
   initial: { "--x": "100%", scale: 0.8 },
   animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
@@ -22,7 +22,7 @@ const animationProps = {
       mass: 0.5,
     },
   },
-} as AnimationProps;
+};
 interface ShinyButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
