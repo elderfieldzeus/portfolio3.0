@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             </div>
           </MagicCard>
 
-          <a href="mailto:zdelderfield.work@gmail.com">
+          <a href="mailto:elderfieldzeus@gmail.com">
             <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
               <div className="h-full w-full flex gap-3">
                 <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                   <p className="text-xl">Email</p>
                   <div className="flex">
                     <p className="font-light text-sm md:text-xs">
-                      zdelderfield.work@gmail.com
+                      elderfieldzeus@gmail.com
                     </p>
                   </div>
                 </div>
