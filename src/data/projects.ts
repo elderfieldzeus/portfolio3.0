@@ -51,6 +51,31 @@ export const projects: IProject[] = [
     isFeatured: true,
   },
   {
+    img: "swipeats.png",
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "SwipEats",
+    main_description: `
+        SwipEats is a mobile-based match making application to help groups decide what restaurant to eat at.
+        `,
+    github: "https://github.com/SwipEats/SwipEats",
+    live_demo: "https://swipeats.dcism.org",
+    technologies: ["Angular", "Golang", "WebSocket"],
+    position: "-mt-1",
+    isFeatured: true,
+  },
+  {
+    img: "placeholder.png",
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "Skill Stacker",
+    main_description: `
+        Skill Stacker is a training management system for authors to publish, and for learners to learn.
+        `,
+    github: "https://github.com/SwipEats/SwipEats",
+    live_demo: "https://swipeats.dcism.org",
+    technologies: ["ASP.NET MVC", "Tailwind CSS", "SQL Server", "Supabase"],
+    position: "-mt-1",
+  },
+  {
     img: "twerkout.png",
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Twerkout",
@@ -61,7 +86,6 @@ export const projects: IProject[] = [
     live_demo: "https://twerkout.vercel.app",
     technologies: ["Typescript", "React", "Tailwind CSS", "Firebase"],
     position: "-mt-1",
-    isFeatured: true,
   },
   {
     img: "vintage-royale.png",
@@ -74,7 +98,6 @@ export const projects: IProject[] = [
     live_demo: "https://vintage-royale.vercel.app",
     technologies: ["Typescript", "React", "Tailwind CSS", "Supabase"],
     position: "-mt-2",
-    isFeatured: true,
   },
   {
     img: "foamfusion.png",
@@ -87,6 +110,7 @@ export const projects: IProject[] = [
     live_demo: "https://foamfusion.dcism.org/",
     technologies: ["PHP", "Tailwind CSS", "MySQL"],
     position: "-mt-2",
+    isFeatured: true,
   },
   {
     img: "basher.png",

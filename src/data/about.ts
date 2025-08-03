@@ -90,6 +90,11 @@ export const techStacks = [
     label: "NestJS",
     link: "https://nestjs.com/",
   },
+  {
+    img: "aspnet.svg",
+    label: "ASP.NET",
+    link: "https://link.net",
+  },
 ];
 
 export const frontend: string[] = [
@@ -100,6 +105,7 @@ export const frontend: string[] = [
   "React",
   "React Native",
   "Next.js",
+  "Angular",
   "Astro",
   "Tailwind CSS",
   "Bootstrap",
@@ -113,16 +119,16 @@ export const frontend: string[] = [
 ];
 
 export const backend: string[] = [
-  "Node.js",
-  "Express.js",
-  "NestJS",
   "Spring Boot",
-  "Java",
+  "Golang",
+  "ASP.NET",
+  "Node.js",
+  "Express",
+  "NestJS",
   "PHP",
-  "Python",
-  "FastAPI",
-  "REST APIs",
+  "REST API",
   "GraphQL",
+  "WebSocket",
   "Firebase",
   "Supabase",
   "MySQL",
@@ -133,8 +139,6 @@ export const backend: string[] = [
   "Sequelize",
   "Hibernate",
   "JWT",
-  "OAuth",
-  "Redis",
   "Swagger",
 ];
 
@@ -152,6 +156,7 @@ export const dsml: string[] = [
 ];
 
 export const devopsAndTools: string[] = [
+  "Apache",
   "Docker",
   "Github Actions",
   "Git",

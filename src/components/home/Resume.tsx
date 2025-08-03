@@ -5,6 +5,7 @@ import { FaCertificate } from "react-icons/fa";
 import { MedalIcon } from "lucide-react";
 import { MdOutlineWork } from "react-icons/md";
 import ResumeEvent from "../custom-ui/ResumeEvent";
+import { achievements, certifications, experiences } from "@/data/resume";
 
 const Resume = () => {
   return (
@@ -22,23 +23,16 @@ const Resume = () => {
               <p className="text-gray-300 text-sm">Experience</p>
             </div>
             <div>
-              <ResumeEvent
-                title="Web Developer"
-                subtitle="Today's Carolinian"
-                year="2025"
-                isCurrent
-              />
-              <ResumeEvent
-                title="Frontend Developer"
-                subtitle="Hermes"
-                year="2024"
-              />
-              <ResumeEvent
-                title="Software Developer"
-                subtitle="Freelance"
-                year="2024"
-                isLast
-              />
+              {experiences.map((experience, index) => {
+                return (
+                  <ResumeEvent
+                    key={index}
+                    event={experience}
+                    isFirst={index == 0}
+                    isLast={index == experiences.length - 1}
+                  />
+                );
+              })}
             </div>
           </MagicCard>
         </BlurFade>
@@ -49,18 +43,16 @@ const Resume = () => {
               <p className="text-gray-300 text-sm">Achievements</p>
             </div>
             <div>
-              <ResumeEvent
-                title="1st Place"
-                subtitle="National CS/IT Skills Competition"
-                year="2025"
-                isCurrent
-              />
-              <ResumeEvent
-                title="6th Place"
-                subtitle="Codechum National Programming Competition - Finals"
-                year="2024"
-                isLast
-              />
+              {achievements.map((achievement, index) => {
+                return (
+                  <ResumeEvent
+                    key={index}
+                    event={achievement}
+                    isFirst={index == 0}
+                    isLast={index == achievements.length - 1}
+                  />
+                );
+              })}
             </div>
           </MagicCard>
         </BlurFade>
@@ -71,18 +63,16 @@ const Resume = () => {
               <p className="text-gray-300 text-sm">Certifications</p>
             </div>
             <div>
-              <ResumeEvent
-                title="Fundamental IT Engineers Certification"
-                subtitle="PhilNITS"
-                year="2025"
-                isCurrent
-              />
-              <ResumeEvent
-                title="Software Engineer Certification"
-                subtitle="HackerRank"
-                year="2025"
-                isLast
-              />
+              {certifications.map((certification, index) => {
+                return (
+                  <ResumeEvent
+                    key={index}
+                    event={certification}
+                    isFirst={index == 0}
+                    isLast={index == certifications.length - 1}
+                  />
+                );
+              })}
             </div>
           </MagicCard>
         </BlurFade>
