@@ -9,7 +9,7 @@ import { achievements, certifications, experiences } from "@/data/resume";
 
 const Resume = () => {
   return (
-    <div className="flex flex-col items-center gap-8 mt-24 max-w-[min(80vw,50rem)] mx-auto font-kanit">
+    <div className="flex flex-col items-center gap-8 mt-24 max-w-[80vw] md:max-w-[50rem] mx-auto font-kanit">
       <BlurFade delay={0.25} inView>
         <p id="resume" className="text-4xl">
           Resume

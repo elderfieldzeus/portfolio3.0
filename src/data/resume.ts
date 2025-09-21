@@ -6,6 +6,11 @@ export interface IResumeEvent {
 
 export const experiences: IResumeEvent[] = [
   {
+    title: "Software/AI Engineer Intern",
+    subtitle: "oboda",
+    year: "2025",
+  },
+  {
     title: "Software Developer Intern",
     subtitle: "Alliance Software Inc.",
     year: "2025",
@@ -14,11 +19,6 @@ export const experiences: IResumeEvent[] = [
     title: "Web Developer",
     subtitle: "Today's Carolinian",
     year: "2025",
-  },
-  {
-    title: "Software Developer",
-    subtitle: "Freelance",
-    year: "2024",
   },
 ];
 
