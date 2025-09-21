@@ -5,7 +5,9 @@ import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
 
 export default function Projects() {
-  const featuredProjects = projects.filter((project) => project.isFeatured);
+  const featuredProjects = projects
+    .filter((project) => project.featureIndex !== undefined)
+    .sort((a, b) => a.featureIndex! - b.featureIndex!);
 
   return (
     <div className="w-full flex flex-col items-center gap-8 mt-24 max-w-4xl mx-auto font-kanit">

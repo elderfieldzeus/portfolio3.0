@@ -1,6 +1,5 @@
 import React from "react";
 import BlurFade from "../ui/blur-fade";
-import FlexRow from "@/components/custom-ui/FlexRow";
 import { MagicCard } from "@/components/ui/magic-card";
 import Marquee from "@/components/ui/marquee";
 import { CurrentlyLearning, techStacks } from "@/data/about";
@@ -23,21 +22,21 @@ const AboutMe: React.FC = () => {
       </BlurFade>
 
       <div className="flex flex-col w-full gap-2 items-center">
-        <FlexRow className="flex-wrap justify-center gap-2">
+        <div className="flex flex-col md:flex-row justify-center gap-2">
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[17rem] aspect-[7/10] bg-black overflow-hidden">
+            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[17rem] aspect-[7/10] bg-black overflow-hidden">
               <Image
                 src="/images/me_aha.jpeg"
                 alt="Me"
-                className="-mt-8"
+                className="-mt-8 h-[calc(100%+2rem)] w-full object-cover"
                 width={1000}
                 height={1000}
               />
             </MagicCard>
           </BlurFade>
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[32.5rem] min-h-[20rem] bg-black p-4 text-white text-sm">
-              <div className=" flex font-light gap-2 items-center mb-4">
+            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[32.5rem] min-h-[20rem] bg-black p-4 text-white text-sm">
+              <div className="flex font-light gap-2 items-center mb-4">
                 <IoPersonCircleOutline className="size-5" />
                 <p className="text-gray-300 text-sm">
                   A little bit about myself...
@@ -86,10 +85,10 @@ const AboutMe: React.FC = () => {
               </div>
             </MagicCard>
           </BlurFade>
-        </FlexRow>
-        <FlexRow className="flex-wrap justify-center gap-2">
+        </div>
+        <div className="flex flex-col md:flex-row justify-center gap-2">
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[min(80vw,20rem)] md:w-[32.5rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center">
+            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[32.5rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center">
               <Marquee repeat={10} className="my-2 [--duration:25s]">
                 {tech1.map((t, i) => {
                   return <TechStackCard key={i} TechStack={t} />;
@@ -104,7 +103,7 @@ const AboutMe: React.FC = () => {
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 md:aspect-[7/5] w-[min(80vw,20rem)] md:w-[17rem] h-auto bg-black">
+            <MagicCard className="border rounded-lg border-opacity-20 md:aspect-[7/5] w-[80vw] md:w-[17rem] h-auto bg-black">
               <div className="text-white flex font-light gap-2 m-4 items-center w-full">
                 <FaBookmark className="text-white size-4" />
                 <p className="text-gray-300 text-sm">Currently Learning</p>
@@ -114,7 +113,7 @@ const AboutMe: React.FC = () => {
               </div>
             </MagicCard>
           </BlurFade>
-        </FlexRow>
+        </div>
       </div>
     </div>
   );

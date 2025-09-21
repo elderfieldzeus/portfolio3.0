@@ -14,10 +14,23 @@ export interface IProject {
   live_demo: string;
   technologies: string[];
   position?: string;
-  isFeatured?: boolean;
+  featureIndex?: number;
 }
 
 export const projects: IProject[] = [
+  {
+    img: "ciscode.jpg",
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "Ciscode",
+    main_description: `
+        Project Ciscode is CISCO's very own coding platform built exclusively for DCISM students.
+        `,
+    github: "https://github.com/usc-cisco/ciscode",
+    live_demo: "https://ciscode.dcism.org",
+    technologies: ["Next.js", "Shadcn UI", "Sequelize", "MySQL"],
+    position: "-mt-29",
+    featureIndex: 1,
+  },
   {
     img: "gainz.png",
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
@@ -27,9 +40,9 @@ export const projects: IProject[] = [
         `,
     github: "https://github.com/elderfieldzeus/gainz-api",
     live_demo: "https://gainz-web.vercel.app",
-    technologies: ["Spring Boot", "Spring Security", "MySQL", "Hibernate"],
+    technologies: ["Spring Boot", "Spring Security", "Hibernate", "MySQL"],
     position: "",
-    isFeatured: true,
+    featureIndex: 4,
   },
   {
     img: "hermes.png",
@@ -40,15 +53,9 @@ export const projects: IProject[] = [
         `,
     github: "https://github.com/usc-cisco/hermes-site",
     live_demo: "https://queue.dcism.org",
-    technologies: [
-      "Typescript",
-      "React",
-      "Tailwind CSS",
-      "Mantine UI",
-      "Axios",
-    ],
+    technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
     position: "-mt-1",
-    isFeatured: true,
+    featureIndex: 2,
   },
   {
     img: "swipeats.png",
@@ -59,9 +66,9 @@ export const projects: IProject[] = [
         `,
     github: "https://github.com/SwipEats/SwipEats",
     live_demo: "https://swipeats.dcism.org",
-    technologies: ["Angular", "Golang", "WebSocket"],
+    technologies: ["Angular", "Golang", "WebSocket", "MySQL"],
     position: "-mt-1",
-    isFeatured: true,
+    featureIndex: 3,
   },
   {
     img: "placeholder.png",
@@ -110,7 +117,6 @@ export const projects: IProject[] = [
     live_demo: "https://foamfusion.dcism.org/",
     technologies: ["PHP", "Tailwind CSS", "MySQL"],
     position: "-mt-2",
-    isFeatured: true,
   },
   {
     img: "basher.png",
