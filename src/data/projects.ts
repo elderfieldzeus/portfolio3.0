@@ -28,7 +28,7 @@ export const projects: IProject[] = [
     github: "https://github.com/usc-cisco/ciscode",
     live_demo: "https://ciscode.dcism.org",
     technologies: ["Next.js", "Shadcn UI", "Sequelize", "MySQL"],
-    position: "-mt-29",
+    position: "-mt-5",
     featureIndex: 1,
   },
   {
