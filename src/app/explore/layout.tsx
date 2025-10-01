@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Zeus Elderfield",
+  title: "Explore | Zeus Elderfield",
   icons: {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutLayout({
+export default function ExploreLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

@@ -3,6 +3,7 @@
 import ProjectCard from "@/components/custom-ui/ProjectCard";
 import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
+import ViewMore from "../custom-ui/ViewMore";
 
 export default function Projects() {
   const featuredProjects = projects
@@ -24,6 +25,9 @@ export default function Projects() {
         {featuredProjects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}
+      </BlurFade>
+      <BlurFade delay={0.25} inView>
+        <ViewMore text="View Projects" href="/projects" />
       </BlurFade>
     </div>
   );

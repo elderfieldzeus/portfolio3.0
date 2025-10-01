@@ -2,14 +2,25 @@
 
 import TechStackCard from "@/components/about/TechStackCard";
 import { backend, devopsAndTools, dsml, frontend } from "@/data/about";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const AboutPage = () => {
   return (
     <main className="w-full overflow-hidden min-h-screen bg-black text-primary relative">
       <section className="w-[min(80vw,_50rem)] mx-auto flex flex-col items-start gap-8 my-10">
-        <div className="flex items-center gap-6">
-          <p className="text-4xl">About</p>
+        <div className="flex flex-col gap-1">
+          <Link
+            href="/"
+            className="flex items-center gap-2 hover:scale-105 transition-transform hover:text-neutral-200"
+          >
+            <ArrowLeft className="size-4" />
+            <p className="text-sm font-light">Return to Home</p>
+          </Link>
+          <div className="flex items-center gap-6">
+            <p className="text-4xl">About</p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">

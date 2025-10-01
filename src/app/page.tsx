@@ -38,7 +38,6 @@ const Home: React.FC = () => {
       <Resume />
       <Projects />
       <Contact />
-
       <FloatingButton />
     </main>
   );

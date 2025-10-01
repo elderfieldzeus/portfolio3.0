@@ -6,6 +6,7 @@ import { MedalIcon } from "lucide-react";
 import { MdOutlineWork } from "react-icons/md";
 import ResumeEvent from "../custom-ui/ResumeEvent";
 import { achievements, certifications, experiences } from "@/data/resume";
+import ViewMore from "../custom-ui/ViewMore";
 
 const Resume = () => {
   return (
@@ -77,6 +78,9 @@ const Resume = () => {
           </MagicCard>
         </BlurFade>
       </div>
+      <BlurFade delay={0.25} inView>
+        <ViewMore text="View Resume" href="/resume" />
+      </BlurFade>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaBookmark } from "react-icons/fa";
 import AngleInfo from "@/components/custom-ui/AngleInfo";
 import Image from "next/image";
+import ViewMore from "../custom-ui/ViewMore";
 
 const AboutMe: React.FC = () => {
   const tech1 = techStacks.filter((_, i) => i % 2 == 0);
@@ -114,6 +115,10 @@ const AboutMe: React.FC = () => {
             </MagicCard>
           </BlurFade>
         </div>
+
+        <BlurFade delay={0.25} className="mt-6" inView>
+          <ViewMore text="View more" href="/about" />
+        </BlurFade>
       </div>
     </div>
   );
