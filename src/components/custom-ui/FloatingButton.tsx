@@ -7,6 +7,7 @@ import { sectionConfigs } from "@/data/navigation";
 import { useRouter } from "next/navigation";
 import { handleHrefRoute } from "@/lib/utils";
 import LandingButton from "./LandingButton";
+import { Spinner } from "../ui/spinner";
 
 export function FloatingButton() {
   const router = useRouter();
@@ -15,6 +16,7 @@ export function FloatingButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(true);
   const [displayedConfig, setDisplayedConfig] = useState(sectionConfigs[0]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,7 +69,10 @@ export function FloatingButton() {
       }`}
     >
       <LandingButton
-        onClick={() => handleHrefRoute(displayedConfig.href, router)}
+        onClick={() => {
+          handleHrefRoute(displayedConfig.href, router);
+          setIsLoading(true);
+        }}
         className="group relative overflow-hidden bg-primary text-black hover:text-zinc-800 shadow-lg rounded-full px-4 hover:cursor-pointer"
       >
         <div className="flex items-center gap-3">
@@ -79,7 +84,11 @@ export function FloatingButton() {
                 : "opacity-0 -translate-x-2"
             }`}
           >
-            <displayedConfig.Icon className="size-4" />
+            {isLoading ? (
+              <Spinner className="size-4 text-black" />
+            ) : (
+              <displayedConfig.Icon className="size-4" />
+            )}
           </div>
 
           {/* Text with fade animation */}

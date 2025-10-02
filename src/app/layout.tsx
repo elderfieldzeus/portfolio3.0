@@ -9,7 +9,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Zeus Elderfield | Portfolio",
+  title: "Portfolio | Zeus Elderfield",
   description: "Portfolio of Zeus Elderfield, Software Engineer",
   icons: {
     icon: "/images/logo.png",
