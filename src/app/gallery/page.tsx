@@ -3,7 +3,7 @@
 import type React from "react";
 import ReturnToHome from "@/components/custom-ui/ReturnToHome";
 import Masonry from "@/components/ui/masonry";
-import { galleryItems } from "@/data/gallery";
+import { GALLERY_IMAGE_PATH, galleryItems } from "@/data/gallery";
 
 export default function GalleryPage() {
   return (
@@ -18,8 +18,10 @@ export default function GalleryPage() {
 
         <Masonry
           items={galleryItems.map((item, idx) => ({
-            ...item,
             id: String(idx),
+            img: GALLERY_IMAGE_PATH + item.img,
+            url: GALLERY_IMAGE_PATH + item.img,
+            height: item.height,
           }))}
           ease="power3.out"
           duration={0.6}
