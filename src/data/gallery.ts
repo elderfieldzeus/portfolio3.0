@@ -54,4 +54,24 @@ export const galleryItems: GalleryItem[] = [
     img: "thai.jpg",
     height: 500,
   },
+  {
+    img: "cbd.jpg",
+    height: 500,
+  },
+  {
+    img: "csn.jpg",
+    height: 500,
+  },
+  {
+    img: "execomm.jpg",
+    height: 300,
+  },
+  {
+    img: "sgp.jpg",
+    height: 400,
+  },
+  {
+    img: "viet-me.jpg",
+    height: 400,
+  },
 ];
