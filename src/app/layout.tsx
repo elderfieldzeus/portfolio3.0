@@ -9,7 +9,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Zeus Elderfield",
+  title: "Zeus Elderfield",
   description:
     "Explore the portfolio of Zeus Elderfield — a Software Engineer based in Cebu.",
   icons: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     apple: "/images/logo.png",
   },
   openGraph: {
-    title: "Portfolio | Zeus Elderfield",
+    title: "Zeus Elderfield",
     description:
       "Explore the portfolio of Zeus Elderfield — a Software Engineer based in Cebu.",
     url: "https://elderfieldzeus.com",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | Zeus Elderfield",
+    title: "Zeus Elderfield",
     description:
       "Explore the portfolio of Zeus Elderfield — a Software Engineer based in Cebu.",
     images: ["https://elderfieldzeus.com/images/opengraph.png"],
