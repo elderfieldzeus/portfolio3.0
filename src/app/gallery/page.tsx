@@ -63,8 +63,8 @@ const items = [
 
 export default function GalleryPage() {
   return (
-    <main className="w-full overflow-hidden min-h-screen bg-black text-primary relative">
-      <section className="w-[min(80vw,_50rem)] mx-auto flex flex-col items-start gap-8 my-10">
+    <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
+      <section className="w-[min(80vw,_50rem)] h-full mx-auto flex flex-col items-start gap-8 my-10">
         <div className="flex flex-col gap-1">
           <ReturnToHome />
           <div className="flex items-center gap-6">

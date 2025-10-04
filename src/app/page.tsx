@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className="w-full overflow-hidden min-h-screen bg-black text-primary relative">
+    <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
       {isLoaded && (
         <Particles
           className="absolute inset-0 h-full"
