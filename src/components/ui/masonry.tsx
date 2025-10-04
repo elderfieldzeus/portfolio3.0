@@ -243,7 +243,7 @@ const Masonry: React.FC<MasonryProps> = ({
         ease: "power2.out",
       });
       gsap.to(`[data-key="${id}"] > div`, {
-        filter: "grayscale(100%)",
+        // filter: "grayscale(100%)",
         duration: 0.3,
         ease: "power2.out",
       });
