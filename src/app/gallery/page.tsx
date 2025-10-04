@@ -3,63 +3,7 @@
 import type React from "react";
 import ReturnToHome from "@/components/custom-ui/ReturnToHome";
 import Masonry from "@/components/ui/masonry";
-
-const items = [
-  {
-    id: "1",
-    img: "/images/me_aha.jpeg",
-    url: "https://example.com/one",
-    height: 400,
-  },
-  {
-    id: "2",
-    img: "https://picsum.photos/id/1011/600/750?grayscale",
-    url: "https://example.com/two",
-    height: 250,
-  },
-  {
-    id: "3",
-    img: "https://picsum.photos/id/1020/600/800?grayscale",
-    url: "https://example.com/three",
-    height: 600,
-  },
-  {
-    id: "4",
-    img: "https://picsum.photos/id/1015/600/900?grayscale",
-    url: "https://example.com/one",
-    height: 400,
-  },
-  {
-    id: "5",
-    img: "https://picsum.photos/id/1011/600/750?grayscale",
-    url: "https://example.com/two",
-    height: 250,
-  },
-  {
-    id: "6",
-    img: "https://picsum.photos/id/1020/600/800?grayscale",
-    url: "https://example.com/three",
-    height: 600,
-  },
-  {
-    id: "7",
-    img: "https://picsum.photos/id/1015/600/900?grayscale",
-    url: "https://example.com/one",
-    height: 400,
-  },
-  {
-    id: "8",
-    img: "https://picsum.photos/id/1011/600/750?grayscale",
-    url: "https://example.com/two",
-    height: 250,
-  },
-  {
-    id: "9",
-    img: "https://picsum.photos/id/1020/600/800?grayscale",
-    url: "https://example.com/three",
-    height: 600,
-  },
-];
+import { galleryItems } from "@/data/gallery";
 
 export default function GalleryPage() {
   return (
@@ -73,7 +17,10 @@ export default function GalleryPage() {
         </div>
 
         <Masonry
-          items={items}
+          items={galleryItems.map((item, idx) => ({
+            ...item,
+            id: String(idx),
+          }))}
           ease="power3.out"
           duration={0.6}
           stagger={0.05}
