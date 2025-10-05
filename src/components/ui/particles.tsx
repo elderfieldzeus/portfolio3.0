@@ -91,9 +91,9 @@ const Particles: React.FC<ParticlesProps> = ({
     };
   }, [color]);
 
-  // useEffect(() => {
-  //   onMouseMove();
-  // }, [mousePosition.x, mousePosition.y]);
+  useEffect(() => {
+    onMouseMove();
+  }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
@@ -104,19 +104,19 @@ const Particles: React.FC<ParticlesProps> = ({
     drawParticles();
   };
 
-  // const onMouseMove = () => {
-  //   if (canvasRef.current) {
-  //     const rect = canvasRef.current.getBoundingClientRect();
-  //     const { w, h } = canvasSize.current;
-  //     const x = mousePosition.x - rect.left - w / 2;
-  //     const y = mousePosition.y - rect.top - h / 2;
-  //     const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-  //     if (inside) {
-  //       mouse.current.x = x;
-  //       mouse.current.y = y;
-  //     }
-  //   }
-  // };
+  const onMouseMove = () => {
+    if (canvasRef.current) {
+      const rect = canvasRef.current.getBoundingClientRect();
+      const { w, h } = canvasSize.current;
+      const x = mousePosition.x - rect.left - w / 2;
+      const y = mousePosition.y - rect.top - h / 2;
+      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
+      if (inside) {
+        mouse.current.x = x;
+        mouse.current.y = y;
+      }
+    }
+  };
 
   type Circle = {
     x: number;
