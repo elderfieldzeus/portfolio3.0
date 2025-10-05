@@ -1,7 +1,7 @@
 "use client";
 
 import TechStackCard from "@/components/about/TechStackCard";
-import ReturnToHome from "@/components/custom-ui/ReturnToHome";
+import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
 import { backend, devopsAndTools, dsml, frontend } from "@/data/about";
 import React from "react";
 
@@ -9,12 +9,10 @@ const AboutPage = () => {
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
       <section className="w-[min(80vw,_50rem)] mx-auto flex flex-col items-start gap-8 my-10">
-        <div className="flex flex-col gap-1">
-          <ReturnToHome />
-          <div className="flex items-center gap-6">
-            <p className="text-4xl">About</p>
-          </div>
-        </div>
+        <NonHomeHeader
+          title="About"
+          description="Learn more about me, my background, skills, and what drives my passion for technology and creativity."
+        />
 
         <div className="flex flex-col gap-4">
           <p className="text-lg">Frontend</p>

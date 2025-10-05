@@ -1,4 +1,5 @@
 import React from "react";
+import { MagicCard } from "../ui/magic-card";
 
 interface TechStackProps {
   text: string;
@@ -6,9 +7,9 @@ interface TechStackProps {
 
 const TechStackCard: React.FC<TechStackProps> = ({ text }) => {
   return (
-    <p className="text-sm rounded-md border border-primary px-2 py-0.5 font-light">
+    <MagicCard className="text-sm rounded-md px-2 py-0.5 font-light w-auto">
       {text}
-    </p>
+    </MagicCard>
   );
 };
 

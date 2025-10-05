@@ -3,12 +3,20 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Spinner } from "../ui/spinner";
 
-const ReturnToHome = () => {
+interface ReturnToHomeProps {
+  returnTo?: string;
+  returnToLabel?: string;
+}
+
+const ReturnToHome: React.FC<ReturnToHomeProps> = ({
+  returnTo,
+  returnToLabel,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
     <Link
-      href="/"
+      href={returnTo || "/"}
       className="flex items-center gap-2"
       onClick={() => setIsLoading(true)}
     >
@@ -17,7 +25,7 @@ const ReturnToHome = () => {
       ) : (
         <ArrowLeft className="size-4" />
       )}
-      <p className="text-sm font-light">Return to Home</p>
+      <p className="text-sm font-light">Return to {returnToLabel || "Home"}</p>
     </Link>
   );
 };
