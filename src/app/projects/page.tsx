@@ -2,6 +2,7 @@
 
 import type React from "react";
 import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
+import UnderConstruction from "@/components/custom-ui/UnderConstruction";
 
 export default function ProjectsPage() {
   return (
@@ -11,6 +12,7 @@ export default function ProjectsPage() {
           title="Projects"
           description="Explore my personal projects, collaborations, and open-source contributions."
         />
+        <UnderConstruction />
       </section>
     </main>
   );

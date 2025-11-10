@@ -2,6 +2,7 @@
 
 import type React from "react";
 import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
+import UnderConstruction from "@/components/custom-ui/UnderConstruction";
 
 export default function ResumePage() {
   return (
@@ -11,6 +12,8 @@ export default function ResumePage() {
           title="Resume"
           description="Explore my professional experience, education, certifications, and technical expertise in one place."
         />
+
+        <UnderConstruction />
       </section>
     </main>
   );
