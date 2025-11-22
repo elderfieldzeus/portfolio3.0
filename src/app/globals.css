@@ -29,6 +29,8 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+    --w-max: 90vw;
+    --w-mfull: min(var(--w-max), 1200rem);
   }
   .dark {
     --color-1: 0 100% 63%;

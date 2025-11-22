@@ -8,7 +8,7 @@ import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
 export default function ExplorePage() {
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
-      <section className="w-[min(80vw,50rem)] mx-auto flex flex-col items-start gap-8 my-10">
+      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-8 my-10">
         <NonHomeHeader
           title="Explore"
           description="A curated hub that connects you to different sections and hidden gems across my website."

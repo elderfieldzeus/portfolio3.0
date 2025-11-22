@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
       <div className="flex flex-col w-full gap-2 items-center">
         <div className="flex flex-col md:flex-row justify-center gap-2">
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[17rem] aspect-[7/10] bg-black overflow-hidden">
+            <MagicCard className="border rounded-lg border-opacity-20 w-(--w-max) md:w-68 aspect-7/10 bg-black overflow-hidden">
               <Image
                 src="/images/me_aha.jpeg"
                 alt="Me"
@@ -36,7 +36,7 @@ const AboutMe: React.FC = () => {
             </MagicCard>
           </BlurFade>
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[32.5rem] min-h-[20rem] bg-black p-4 text-white text-sm">
+            <MagicCard className="border rounded-lg border-opacity-20 w-(--w-max) md:w-[32.5rem] min-h-[20rem] bg-black p-4 text-white text-sm">
               <div className="flex font-light gap-2 items-center mb-4">
                 <IoPersonCircleOutline className="size-5" />
                 <p className="text-gray-300 text-sm">
@@ -89,7 +89,7 @@ const AboutMe: React.FC = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-2">
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 w-[80vw] md:w-[32.5rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center">
+            <MagicCard className="border rounded-lg border-opacity-20 w-(--w-max) md:w-[32.5rem] aspect-[3/1] h-full bg-black overflow-hidden flex items-center">
               <Marquee repeat={10} className="my-2 [--duration:25s]">
                 {tech1.map((t, i) => {
                   return <TechStackCard key={i} TechStack={t} />;
@@ -104,7 +104,7 @@ const AboutMe: React.FC = () => {
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
-            <MagicCard className="border rounded-lg border-opacity-20 md:aspect-[7/5] w-[80vw] md:w-[17rem] h-auto bg-black">
+            <MagicCard className="border rounded-lg border-opacity-20 md:aspect-[7/5] w-(--w-max) md:w-[17rem] h-auto bg-black">
               <div className="text-white flex font-light gap-2 m-4 items-center w-full">
                 <FaBookmark className="text-white size-4" />
                 <p className="text-gray-300 text-sm">Currently Learning</p>

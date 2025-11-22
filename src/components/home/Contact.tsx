@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
       </BlurFade>
 
       <BlurFade delay={0.25} inView>
-        <div className="w-[80vw] md:w-[50rem] grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div className="w-(--w-max) md:w-[50rem] grid grid-cols-1 md:grid-cols-3 gap-2">
           <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
             <div className="h-full w-full flex gap-3">
               <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">

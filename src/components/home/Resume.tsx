@@ -10,13 +10,13 @@ import ViewMore from "../custom-ui/ViewMore";
 
 const Resume = () => {
   return (
-    <div className="flex flex-col items-center gap-8 mt-24 max-w-[80vw] md:max-w-[50rem] mx-auto font-kanit">
+    <div className="flex flex-col items-center gap-8 mt-24 max-w-(--w-max) md:max-w-[50rem] mx-auto font-kanit">
       <BlurFade delay={0.25} inView>
         <p id="resume" className="text-4xl">
           Resume
         </p>
       </BlurFade>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-4 max-w-[50rem] w-[80vw] md:w-full mx-[10vw]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-4 max-w-[50rem] w-(--w-max) md:w-full mx-[10vw]">
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-6">
             <div className=" flex font-light gap-2 items-center p-4 mb-2">

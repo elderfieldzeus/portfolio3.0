@@ -30,12 +30,12 @@ const Landing: React.FC = () => {
             <p className="text-primary">Available for work</p>
           </ShimmerButton>
         </BlurFade>
-        <div className="flex flex-col items-center text-center text-4xl md:text-6xl">
+        <div className="flex flex-col items-center text-center text-[2.45rem] md:text-6xl leading-4 gap-6 md:gap-10 py-2 md:py-6">
           <BlurFade delay={0.25 * 2} inView>
-            <p>Zeus Elderfield</p>
+            <p>Zeus&nbsp;Elderfield</p>
           </BlurFade>
           <BlurFade delay={0.25 * 3} inView>
-            <p>Software Engineer</p>
+            <p>Software&nbsp;Engineer</p>
           </BlurFade>
         </div>
         <BlurFade delay={0.25 * 4} inView>

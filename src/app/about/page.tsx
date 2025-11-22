@@ -8,7 +8,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
-      <section className="w-[min(80vw,50rem)] mx-auto flex flex-col items-start gap-8 my-10">
+      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-8 my-10">
         <NonHomeHeader
           title="About"
           description="Learn more about me, my background, skills, and what drives my passion for technology and creativity."
