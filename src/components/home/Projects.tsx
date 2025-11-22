@@ -20,7 +20,7 @@ export default function Projects() {
       <BlurFade
         delay={0.25}
         inView
-        className={`grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-4 max-w-[50rem] w-(--w-max) md:w-full mx-[10vw]`}
+        className={`grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-4 max-w-200 w-(--w-max) md:w-full mx-[10vw]`}
       >
         {featuredProjects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;

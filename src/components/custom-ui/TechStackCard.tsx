@@ -18,7 +18,7 @@ const TechStackCard: React.FC<TechStackCardProps> = ({ TechStack }) => {
         alt={TechStack.label}
         width={1000}
         height={1000}
-        className="white-svg size-5 md:size-10"
+        className="white-svg size-10 md:size-12"
       />
       <p className="text-xs md:text-sm">{TechStack.label}</p>
     </a>
