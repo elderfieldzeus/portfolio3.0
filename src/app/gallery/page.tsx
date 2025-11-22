@@ -8,7 +8,7 @@ import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
 export default function GalleryPage() {
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
-      <section className="w-[min(80vw,_50rem)] h-full mx-auto flex flex-col items-start gap-8 my-10">
+      <section className="w-[min(80vw,50rem)] h-full mx-auto flex flex-col items-start gap-8 my-10">
         <NonHomeHeader
           title="Gallery"
           description="A personal collection of candid moments and memories with me and my loved ones through the years."
