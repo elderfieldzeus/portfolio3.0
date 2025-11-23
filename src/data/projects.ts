@@ -39,7 +39,7 @@ export const projects: IProject[] = [
         Gainz is a simple, powerful workout tracker to help you crush your fitness goals.
         `,
     github: "https://github.com/elderfieldzeus/gainz-api",
-    live_demo: "https://gainz-web.vercel.app",
+    live_demo: "https://gainz.zoos.dev",
     technologies: ["Spring Boot", "Spring Security", "Hibernate", "MySQL"],
     position: "",
     featureIndex: 4,
@@ -90,7 +90,7 @@ export const projects: IProject[] = [
         Twerkout is a mobile-friendly site designed to help you track and visualize your workout progress.
         `,
     github: "https://github.com/elderfieldzeus/twerkout",
-    live_demo: "https://twerkout.vercel.app",
+    live_demo: "https://twerkout.zoos.dev",
     technologies: ["Typescript", "React", "Tailwind CSS", "Firebase"],
     position: "-mt-1",
   },
@@ -102,7 +102,7 @@ export const projects: IProject[] = [
         Vintage Royale's mobile-based product management system and tailored to enhance client-side functionality.
         `,
     github: "https://github.com/elderfieldzeus/vintage-royale",
-    live_demo: "https://vintage-royale.vercel.app",
+    live_demo: "https://vintage-royale.zoos.dev",
     technologies: ["Typescript", "React", "Tailwind CSS", "Supabase"],
     position: "-mt-2",
   },
@@ -138,7 +138,7 @@ export const projects: IProject[] = [
         The PhilNITS Mock Exam helps students prepare for the upcoming PhilNITS FE Morning Exam by simulating the actual time limit and using real past exam questions.
         `,
     github: "https://github.com/elderfieldzeus/philnits-mock-exam",
-    live_demo: "https://philnits.dcism.org/",
+    live_demo: "https://philnits.zoos.dev/",
     technologies: ["Next.js", "Typescript", "Tailwind CSS"],
     position: "",
   },
@@ -150,7 +150,7 @@ export const projects: IProject[] = [
         Schedaddle is a web app that generates and visualizes class schedules based on offered schedules.
         `,
     github: "https://github.com/elderfieldzeus/schedaddle",
-    live_demo: "https://schedaddle-react.vercel.app/",
+    live_demo: "https://schedaddle.zoos.dev/",
     technologies: ["Typescript", "React", "Tailwind CSS"],
     position: "",
   },

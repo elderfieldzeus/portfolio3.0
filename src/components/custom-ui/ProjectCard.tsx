@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <MagicCard className="w-full bg-black border rounded-lg border-opacity-20 overflow-hidden">
-      <div className="aspect-[2/1] w-full h-auto overflow-hidden">
+      <div className="aspect-2/1 w-full h-auto overflow-hidden">
         <Image
           src={`/images/projects/${project.img}`}
           alt={project.title}

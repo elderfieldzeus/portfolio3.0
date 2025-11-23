@@ -40,3 +40,12 @@ export const handleHrefRoute = (href: string, router: AppRouterInstance) => {
     window.open(href, "_blank");
   }
 };
+
+export const handleClickButtonLink =
+  (url: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e.ctrlKey || e.metaKey) {
+      window.open(url, "_blank");
+    } else {
+      window.location.href = url;
+    }
+  };
