@@ -39,7 +39,7 @@ const ChatbotButton = () => {
         </LandingButton>
       </div>
       <MagicCard
-        className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] h-96 md:w-96 md:h-128 transition-all duration-500 ease-in-out flex flex-col ${isChatOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}
+        className={`fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] h-[min(32rem,90vh)] md:w-96 transition-all duration-500 ease-in-out flex flex-col ${isChatOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}
       >
         <Chatbox handleClose={() => setIsOpen(false)} />
       </MagicCard>
