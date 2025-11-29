@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Kanit } from "next/font/google";
+import FloatingButton from "@/components/chatbot/chatbot-button";
+import ChatbotButton from "@/components/chatbot/chatbot-button";
 
 const kanit = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -53,7 +55,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={kanit.className + " bg-background text-foreground"}>
+      <body className={kanit.className + " bg-background text-foreground dark"}>
         {children}
       </body>
     </html>

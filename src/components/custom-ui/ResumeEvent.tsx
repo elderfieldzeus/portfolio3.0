@@ -18,7 +18,7 @@ const ResumeEvent: React.FC<ResumeEventProps> = ({
     <section className="flex px-4 gap-3 w-full pb-5">
       <div className="flex flex-col items-center relative">
         <div
-          className={`absolute rounded-full size-4 aspect-square ${isFirst ? "bg-secondary hover:bg-primary" : "bg-black hover:bg-zinc-900"} border border-zinc-800 z-10 top-[0.3rem] transition-all`}
+          className={`absolute rounded-full size-4 aspect-square ${isFirst ? "bg-white hover:bg-primary" : "bg-black hover:bg-zinc-900"} border border-zinc-800 z-10 top-[0.3rem] transition-all`}
         ></div>
         <div
           className={`absolute w-0.5 ${isLast ? "h-3/4" : "h-[200%]"} bg-zinc-600 top-2`}

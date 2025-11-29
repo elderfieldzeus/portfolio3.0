@@ -39,7 +39,7 @@ const Landing: React.FC = () => {
           </BlurFade>
         </div>
         <BlurFade delay={0.25 * 4} inView>
-          <p className="text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center font-extralight">
+          <p className="text-xs md:text-sm text-secondary max-w-xs md:max-w-sm text-center font-extralight text-white">
             A Tech Enthusiast with an eye for detail, a thirst for knowledge,
             and a passion for solving complex problems.
           </p>

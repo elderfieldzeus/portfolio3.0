@@ -8,6 +8,28 @@ export interface ITechStack {
   link: string;
 }
 
+export interface AboutData {
+  name: string;
+  age: number;
+  location: string;
+  education: string;
+  description1: string;
+  description2: string;
+}
+
+export const aboutData: AboutData = {
+  name: "Zeus Elderfield",
+  age: 22,
+  location: "Cebu, Philippines",
+  education: "University of San Carlos",
+  description1: `
+     I'm currently exploring the world of Web & Mobile Development, Competitive Programming, Data Science, and AI/Machine Learning. I thrive on solving challenging problems and constantly expanding my skill set through side projects. Known for my adaptability, quick learning, and persistence, I enjoy tackling new challenges and finding creative solutions.
+  `,
+  description2: `
+    Whether I'm coding an app, competing in programming contests, or diving into data, I'm driven by a desire to build, learn, and grow in everything I do. I'm always excited to take on new challenges and make a meaningful impact through innovative solutions. 
+  `,
+};
+
 // svg from https://simpleicons.org/
 export const techStacks = [
   {

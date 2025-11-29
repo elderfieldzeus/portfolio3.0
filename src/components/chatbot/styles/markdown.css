@@ -1,0 +1,26 @@
+.markdown {
+  background: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  font-family: "Kanit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: inherit;
+}
+
+.markdown ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  list-style-type: disc;
+}
+
+.markdown ol {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  list-style-type: decimal;
+}
+
+.markdown li {
+  margin-bottom: 0.25rem;
+}
