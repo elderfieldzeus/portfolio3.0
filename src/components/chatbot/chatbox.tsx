@@ -158,7 +158,7 @@ const Chatbox = ({ handleClose }: ChatboxProps) => {
           <Button
             variant={"default"}
             disabled={input.length === 0}
-            className="flex items-center justify-center size-10 cursor-pointer bg-white"
+            className="flex items-center justify-center size-10 cursor-pointer bg-primary"
           >
             <Send />
           </Button>

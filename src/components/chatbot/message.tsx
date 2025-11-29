@@ -30,7 +30,7 @@ const Message = ({ role, content, isLoading }: MessageProps) => {
       )}
 
       <div
-        className={`${role === "user" ? "bg-white text-black" : "bg-primary/10 text-white"} rounded-lg p-3 max-w-[80%] mt-2 mb-4 text-sm`}
+        className={`${role === "user" ? "bg-primary text-black" : "bg-primary/10 text-white"} rounded-lg p-3 max-w-[80%] mt-2 mb-4 text-sm`}
       >
         {isLoading ? (
           <div className="markdown animate-pulse text-gray-500">Typing...</div>

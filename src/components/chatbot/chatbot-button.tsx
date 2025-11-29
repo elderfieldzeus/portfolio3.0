@@ -16,7 +16,7 @@ const ChatbotButton = () => {
           onClick={() => {
             setIsOpen((prev) => !prev);
           }}
-          className="group relative overflow-hidden text-black hover:text-zinc-800 shadow-lg rounded-full px-4 hover:cursor-pointer bg-white"
+          className="group relative overflow-hidden text-black hover:text-zinc-800 shadow-lg rounded-full px-4 hover:cursor-pointer bg-primary"
         >
           <div className="flex items-center gap-3 text-black">
             <div
