@@ -5,6 +5,7 @@ import LandingButton from "./LandingButton";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
   project: IProject;
@@ -52,17 +53,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
 
         <div className="flex gap-2 mt-6 w-full">
-          <LandingButton onClick={handleGithub} className="py-1">
-            <FaGithub />
-            <p>Github</p>
-          </LandingButton>
-          <LandingButton
-            onClick={handleLiveDemo}
-            className="py-1 text-white bg-black active:bg-secondary-clicked"
-          >
-            <CgWebsite />
-            <p>Live Demo</p>
-          </LandingButton>
+          <Link href={project.github} target="_blank" rel="noreferrer">
+            <LandingButton className="py-1">
+              <FaGithub />
+              <p>Github</p>
+            </LandingButton>
+          </Link>
+          <Link href={project.live_demo} target="_blank" rel="noreferrer">
+            <LandingButton className="py-1 text-white bg-black active:bg-secondary-clicked">
+              <CgWebsite />
+              <p>Live Demo</p>
+            </LandingButton>
+          </Link>
         </div>
       </div>
     </MagicCard>
