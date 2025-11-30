@@ -152,7 +152,7 @@ const Chatbox = ({ handleClose }: ChatboxProps) => {
           <Input
             value={input}
             onChange={handleInputChange}
-            className="h-10"
+            className="h-10 font-light "
             placeholder="Ask me something..."
           />
           <Button
@@ -163,8 +163,8 @@ const Chatbox = ({ handleClose }: ChatboxProps) => {
             <Send />
           </Button>
         </form>
-        <div className="flex justify-between w-full text-[0.6rem] text-secondary-foreground ">
-          <p className="ml-1">Powered by Gemini 2.0 Flash Lite</p>
+        <div className="flex justify-between w-full text-[0.6rem] text-secondary-foreground font-light">
+          <p className="ml-1">Powered by Gemini 2.5 Flash Lite</p>
           <p>
             {input.length}/{MAX_INPUT_LENGTH}
           </p>

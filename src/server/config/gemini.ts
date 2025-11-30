@@ -6,4 +6,4 @@ export const gemini = new GoogleGenAI({
   apiKey: API_KEY,
 });
 
-export const GEMINI_MODEL = "gemini-2.0-flash-lite";
+export const GEMINI_MODEL = "gemini-2.5-flash-lite";
