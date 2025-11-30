@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Kanit } from "next/font/google";
-import FloatingButton from "@/components/chatbot/chatbot-button";
-import ChatbotButton from "@/components/chatbot/chatbot-button";
+import FloatingButton from "@/components/chatbot/ChatbotButton";
+import ChatbotButton from "@/components/chatbot/ChatbotButton";
 
 const kanit = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

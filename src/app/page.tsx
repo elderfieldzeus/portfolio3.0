@@ -7,7 +7,7 @@ import Particles from "@/components/ui/particles";
 import Projects from "@/components/home/Projects";
 import Contact from "@/components/home/Contact";
 import Resume from "@/components/home/Resume";
-import ChatbotButton from "@/components/chatbot/chatbot-button";
+import ChatbotButton from "@/components/chatbot/ChatbotButton";
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);

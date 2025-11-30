@@ -2,7 +2,7 @@ import { useState } from "react";
 import LandingButton from "../custom-ui/LandingButton";
 import { MessageCircleCodeIcon } from "lucide-react";
 import { MagicCard } from "../ui/magic-card";
-import Chatbox from "./chatbox";
+import Chatbox from "./Chatbox";
 
 const ChatbotButton = () => {
   const [isChatOpen, setIsOpen] = useState(false);

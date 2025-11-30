@@ -5,6 +5,7 @@ import { IoShareSocialSharp } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { FaFacebook, FaGithub, FaPhone } from "react-icons/fa6";
+import Explore from "./Explore";
 
 const Contact: React.FC = () => {
   return (
@@ -66,22 +67,26 @@ const Contact: React.FC = () => {
             </MagicCard>
           </a>
 
-          <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
-            <div className="h-full w-full flex gap-3">
-              <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">
-                <FaPhone className="size-6" />
-              </div>
-              <div className="text-gray-300 flex flex-col gap-1">
-                <p className="text-xl">Contact No.</p>
-                <div className="flex">
-                  <p className="font-light text-sm md:text-xs">
-                    +63 917 775 5790
-                  </p>
+          <a href="https://wa.me/639177755790">
+            <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
+              <div className="h-full w-full flex gap-3">
+                <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">
+                  <FaPhone className="size-6" />
+                </div>
+                <div className="text-gray-300 flex flex-col gap-1">
+                  <p className="text-xl">Contact No.</p>
+                  <div className="flex">
+                    <p className="font-light text-sm md:text-xs">
+                      +63 917 775 5790
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </MagicCard>
+            </MagicCard>
+          </a>
         </div>
+
+        <Explore />
       </BlurFade>
     </div>
   );

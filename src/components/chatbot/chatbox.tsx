@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Send, X } from "lucide-react";
-import Message from "./message";
+import Message from "./Message";
 import { Input } from "../ui/input";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { sleep } from "@/lib/utils";
