@@ -3,9 +3,9 @@ import BlurFade from "../ui/blur-fade";
 import { MagicCard } from "../ui/magic-card";
 import ResumeEvent from "../custom-ui/ResumeEvent";
 import {
-  achievements,
-  certifications,
   getHomePageExperiences,
+  getHomePageAchievements,
+  getHomePageCertifications,
 } from "@/data/resume";
 import ViewMore from "../custom-ui/ViewMore";
 
@@ -44,13 +44,14 @@ const Resume = () => {
               <p className="text-gray-300 text-sm">Achievements</p>
             </div>
             <div>
-              {achievements.map((achievement, index) => {
+              {getHomePageAchievements().map((achievement, index) => {
+                const allAchievements = getHomePageAchievements();
                 return (
                   <ResumeEvent
                     key={index}
                     event={achievement}
                     isFirst={index == 0}
-                    isLast={index == achievements.length - 1}
+                    isLast={index == allAchievements.length - 1}
                   />
                 );
               })}
@@ -63,13 +64,14 @@ const Resume = () => {
               <p className="text-gray-300 text-sm">Certifications</p>
             </div>
             <div>
-              {certifications.map((certification, index) => {
+              {getHomePageCertifications().map((certification, index) => {
+                const allCertifications = getHomePageCertifications();
                 return (
                   <ResumeEvent
                     key={index}
                     event={certification}
                     isFirst={index == 0}
-                    isLast={index == certifications.length - 1}
+                    isLast={index == allCertifications.length - 1}
                   />
                 );
               })}

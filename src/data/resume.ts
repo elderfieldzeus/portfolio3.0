@@ -4,6 +4,23 @@ export interface IResumeEvent {
   year: string;
 }
 
+export interface IAchievement {
+  title: string;
+  subtitle: string;
+  year: string;
+  imgs: string[];
+  description?: string;
+}
+
+export interface ICertification {
+  title: string;
+  subtitle: string;
+  year: string;
+  imgs: string[];
+  description?: string;
+  url?: string;
+}
+
 export interface IExperiencePosition {
   title: string;
   startDate: string;
@@ -97,39 +114,57 @@ export const experiences: IExperience[] = [
   },
 ];
 
-export const achievements: IResumeEvent[] = [
+export const achievements: IAchievement[] = [
   {
     title: "Top 3 Score (Philippines)",
     subtitle: "PhilNITS",
     year: "2025",
+    imgs: ["mrbean-phone.gif"],
+    description:
+      "Achieved top 3 score in the Philippines for the PhilNITS examination.",
   },
   {
     title: "1st Place",
     subtitle: "National CS/IT Skills Competition",
     year: "2025",
+    imgs: ["mrbean-phone.gif"],
+    description: "Won first place in the National CS/IT Skills Competition.",
   },
   {
     title: "3rd Place",
     subtitle: "Codechum National Programming Competition - Group 2",
     year: "2024",
+    imgs: ["mrbean-phone.gif"],
+    description:
+      "Secured third place in the Codechum National Programming Competition - Group 2.",
   },
 ];
 
-export const certifications: IResumeEvent[] = [
+export const certifications: ICertification[] = [
   {
     title: "TOPCIT Level III",
     subtitle: "Ministry of Science and ICT, South Korea",
     year: "2025",
+    imgs: ["mrbean-phone.gif"],
+    description:
+      "Achieved TOPCIT Level III certification from the Ministry of Science and ICT, South Korea.",
+    url: "/pdf/Elderfield-Zeus-TOPCIT-Certificate.pdf",
   },
   {
     title: "Fundamental IT Engineer",
     subtitle: "PhilNITS",
     year: "2025",
+    imgs: ["mrbean-phone.gif"],
+    description:
+      "Earned the Fundamental IT Engineer certification from PhilNITS.",
   },
   {
     title: "Software Engineer",
     subtitle: "HackerRank",
     year: "2025",
+    imgs: ["mrbean-phone.gif"],
+    description: "Completed the Software Engineer certification on HackerRank.",
+    url: "https://www.hackerrank.com/certificates",
   },
 ];
 
@@ -142,4 +177,21 @@ export const getHomePageExperiences = (): IResumeEvent[] => {
       year: pos.startDate,
     })),
   );
+};
+
+// Helper functions to convert achievements and certifications for home page preview
+export const getHomePageAchievements = (): IResumeEvent[] => {
+  return achievements.map((achievement) => ({
+    title: achievement.title,
+    subtitle: achievement.subtitle,
+    year: achievement.year,
+  }));
+};
+
+export const getHomePageCertifications = (): IResumeEvent[] => {
+  return certifications.map((certification) => ({
+    title: certification.title,
+    subtitle: certification.subtitle,
+    year: certification.year,
+  }));
 };
