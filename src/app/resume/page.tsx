@@ -100,7 +100,7 @@ export default function ResumePage() {
             <h2 className="text-2xl font-medium font-kanit text-white">
               Achievements
             </h2>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {achievements.map((achievement, index) => (
                 <AchievementGridCard
                   key={index}
@@ -118,7 +118,7 @@ export default function ResumePage() {
             <h2 className="text-2xl font-medium font-kanit text-white">
               Certifications
             </h2>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {certifications.map((certification, index) => (
                 <CertificationGridCard
                   key={index}

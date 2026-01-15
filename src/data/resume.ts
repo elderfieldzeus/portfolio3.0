@@ -59,17 +59,6 @@ export const experiences: IExperience[] = [
           "Optimized existing codebase for better performance",
         ],
       },
-      // Example: Multiple positions at the same company
-      // Uncomment below to see the feature in action:
-      {
-        title: "Junior Software Engineer",
-        startDate: "2025-04",
-        endDate: "Present",
-        contributions: [
-          "Led development of new product features",
-          "Mentored junior developers",
-        ],
-      },
     ],
   },
   {
