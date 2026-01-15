@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { IExperience } from "@/data/resume";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 
 interface ExperienceItemProps {
@@ -39,14 +38,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   experience,
   isLast,
 }) => {
-  const [expandedPositionIndex, setExpandedPositionIndex] = useState<
-    number | null
-  >(null);
-
-  const togglePosition = (index: number) => {
-    setExpandedPositionIndex(expandedPositionIndex === index ? null : index);
-  };
-
   return (
     <div className="w-full">
       {experience.positions.map((position, positionIndex) => {
@@ -60,11 +51,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
             className={`flex px-4 gap-6 w-full relative ${isLastPosition ? "pb-8" : "pb-6"}`}
           >
             {/* Timeline */}
-            <div className="flex flex-col items-center relative flex-shrink-0">
+            <div className="flex flex-col items-center relative shrink-0">
               {/* Company Circle - Only show for first position */}
               {isFirstPosition && (
                 <div className="relative z-10 mb-2">
-                  <div className="size-12 rounded-full border-2 border-white bg-black flex items-center justify-center"></div>
+                  <div className="size-14 rounded-full border-2 border-white bg-black flex items-center justify-center"></div>
                 </div>
               )}
 
@@ -121,40 +112,19 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
                   </div>
                 </div>
 
-                {/* Contributions Dropdown */}
+                {/* Contributions */}
                 {position.contributions &&
                   position.contributions.length > 0 && (
-                    <div className="mt-2">
-                      <button
-                        onClick={() => togglePosition(positionIndex)}
-                        className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors font-light cursor-pointer"
-                      >
-                        <span>
-                          {expandedPositionIndex === positionIndex
-                            ? "Hide"
-                            : "Show"}{" "}
-                          contributions ({position.contributions.length})
-                        </span>
-                        {expandedPositionIndex === positionIndex ? (
-                          <ChevronUp className="size-4" />
-                        ) : (
-                          <ChevronDown className="size-4" />
-                        )}
-                      </button>
-
-                      {expandedPositionIndex === positionIndex && (
-                        <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                          {position.contributions.map((contribution, idx) => (
-                            <div
-                              key={idx}
-                              className="flex items-start gap-2 text-sm text-gray-300 font-light"
-                            >
-                              <span className="text-gray-500 mt-1">•</span>
-                              <span>{contribution}</span>
-                            </div>
-                          ))}
+                    <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-2">
+                      {position.contributions.map((contribution, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-start gap-2 text-sm text-gray-300 font-light"
+                        >
+                          <span className="text-gray-500 mt-1">•</span>
+                          <span>{contribution}</span>
                         </div>
-                      )}
+                      ))}
                     </div>
                   )}
 

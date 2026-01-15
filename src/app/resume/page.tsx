@@ -28,7 +28,6 @@ export default function ResumePage() {
                   <ExperienceItem
                     key={experience.company.id}
                     experience={experience}
-                    isFirst={index === 0}
                     isLast={index === experiences.length - 1}
                   />
                 ))}
