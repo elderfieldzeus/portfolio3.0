@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, {
@@ -56,17 +57,13 @@ const useMeasure = <T extends HTMLElement>() => {
   return [ref, size] as const;
 };
 
-const preloadImages = async (urls: string[]): Promise<void> => {
-  await Promise.all(
-    urls.map(
-      (src) =>
-        new Promise<void>((resolve) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = img.onerror = () => resolve();
-        }),
-    ),
-  );
+// Lazy load a single image
+const loadImage = (src: string): Promise<void> => {
+  return new Promise<void>((resolve) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = img.onerror = () => resolve();
+  });
 };
 
 interface Item {
@@ -118,7 +115,8 @@ const Masonry: React.FC<MasonryProps> = ({
   );
 
   const [containerRef, { width }] = useMeasure<HTMLDivElement>();
-  const [imagesReady, setImagesReady] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const getInitialPosition = (item: GridItem) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -151,10 +149,6 @@ const Masonry: React.FC<MasonryProps> = ({
     }
   };
 
-  useEffect(() => {
-    preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
-  }, [items]);
-
   const grid = useMemo<GridItem[]>(() => {
     if (!width) return [];
     const colHeights = new Array(columns).fill(0);
@@ -173,10 +167,94 @@ const Masonry: React.FC<MasonryProps> = ({
     });
   }, [columns, items, width]);
 
+  // Set up Intersection Observer for lazy loading
+  useEffect(() => {
+    if (!containerRef.current || grid.length === 0) return;
+
+    // Create observer if it doesn't exist
+    if (!observerRef.current) {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const imgSrc = entry.target.getAttribute("data-img-src");
+              if (imgSrc) {
+                setLoadedImages((prev) => {
+                  if (!prev.has(imgSrc)) {
+                    loadImage(imgSrc).then(() => {
+                      setLoadedImages(
+                        (current) => new Set([...current, imgSrc]),
+                      );
+                    });
+                  }
+                  return prev;
+                });
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "200px", // Start loading 200px before entering viewport
+          threshold: 0.01,
+        },
+      );
+    }
+
+    // Observe all image containers once grid is ready
+    const timeoutId = setTimeout(() => {
+      if (containerRef.current && observerRef.current) {
+        // Disconnect to avoid duplicates
+        observerRef.current.disconnect();
+
+        // Recreate observer to ensure it's fresh
+        observerRef.current = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const imgSrc = entry.target.getAttribute("data-img-src");
+                if (imgSrc) {
+                  setLoadedImages((prev) => {
+                    if (!prev.has(imgSrc)) {
+                      loadImage(imgSrc).then(() => {
+                        setLoadedImages(
+                          (current) => new Set([...current, imgSrc]),
+                        );
+                      });
+                    }
+                    return prev;
+                  });
+                }
+              }
+            });
+          },
+          {
+            root: null,
+            rootMargin: "200px",
+            threshold: 0.01,
+          },
+        );
+
+        const imageElements =
+          containerRef.current.querySelectorAll("[data-img-src]");
+        imageElements.forEach((el) => {
+          observerRef.current?.observe(el);
+        });
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [grid]);
+
   const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
-    if (!imagesReady) return;
+    if (!width) return;
 
     grid.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
@@ -214,7 +292,7 @@ const Masonry: React.FC<MasonryProps> = ({
     });
 
     hasMounted.current = true;
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [grid, width, stagger, animateFrom, blurToFocus, duration, ease]);
 
   const handleMouseEnter = (id: string, element: HTMLElement) => {
     if (scaleOnHover) {
@@ -254,11 +332,11 @@ const Masonry: React.FC<MasonryProps> = ({
     }
   };
 
-  if (!imagesReady) {
+  if (!width) {
     return (
       <div
         ref={containerRef}
-        className="mt-20 w-full flex justify-center items-center"
+        className="mt-20 w-full flex justify-center items-center min-h-[400px]"
       >
         <Spinner />
       </div>
@@ -267,29 +345,40 @@ const Masonry: React.FC<MasonryProps> = ({
 
   return (
     <div ref={containerRef} className="relative w-full h-full">
-      {grid.map((item) => (
-        <div
-          key={item.id}
-          data-key={item.id}
-          className="absolute box-content"
-          style={{ willChange: "transform, width, height, opacity" }}
-          // onClick={() => window.open(item.url, "_blank", "noopener")}
-          onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
-          onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
-        >
+      {grid.map((item) => {
+        const isLoaded = loadedImages.has(item.img);
+        return (
           <div
-            className="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px]"
-            style={{
-              backgroundImage: `url(${item.img})`,
-              filter: "grayscale(100%)",
-            }}
+            key={item.id}
+            data-key={item.id}
+            data-img-src={item.img}
+            className="absolute box-content"
+            style={{ willChange: "transform, width, height, opacity" }}
+            onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
+            onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
           >
-            {colorShiftOnHover && (
-              <div className="color-overlay absolute inset-0 rounded-[10px] bg-gradient-to-tr from-pink-500/50 to-sky-500/50 opacity-0 pointer-events-none" />
+            {/* Placeholder skeleton while loading */}
+            {!isLoaded && (
+              <div className="absolute inset-0 bg-gray-900/50 rounded-[10px] animate-pulse" />
             )}
+
+            {/* Actual image */}
+            <div
+              className={`relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px] transition-opacity duration-300 ${
+                isLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                backgroundImage: isLoaded ? `url(${item.img})` : "none",
+                filter: "grayscale(100%)",
+              }}
+            >
+              {colorShiftOnHover && (
+                <div className="color-overlay absolute inset-0 rounded-[10px] bg-gradient-to-tr from-pink-500/50 to-sky-500/50 opacity-0 pointer-events-none" />
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
