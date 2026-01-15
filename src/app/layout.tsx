@@ -5,9 +5,11 @@ import FloatingButton from "@/components/chatbot/ChatbotButton";
 import ChatbotButton from "@/components/chatbot/ChatbotButton";
 
 const kanit = Kanit({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600"],
   subsets: ["latin"],
   variable: "--font-kanit",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
