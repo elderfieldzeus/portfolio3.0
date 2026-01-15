@@ -52,21 +52,18 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
           >
             {/* Timeline */}
             <div className="flex flex-col items-center relative shrink-0">
-              {/* Company Circle - Only show for first position */}
-              {isFirstPosition && (
-                <div className="relative z-10 mb-2">
-                  <div className="size-14 rounded-full border-2 border-white bg-black flex items-center justify-center"></div>
-                </div>
-              )}
-
-              {/* Spacer for non-first positions */}
-              {!isFirstPosition && <div className="h-12"></div>}
+              {/* Company Circle - Visible for first position, invisible for others to maintain alignment */}
+              <div
+                className={`relative z-10 mb-2 ${!isFirstPosition ? "opacity-0" : ""}`}
+              >
+                <div className="size-14 rounded-full border-2 border-white bg-black flex items-center justify-center"></div>
+              </div>
 
               {/* Timeline Line */}
               {isLast && isLastPosition ? (
-                <div className="absolute w-0.5 bg-zinc-600 top-12 bottom-2"></div>
+                <div className="absolute w-0.5 bg-zinc-600 top-16 bottom-2"></div>
               ) : (
-                <div className="absolute w-0.5 h-full bg-zinc-600 top-12"></div>
+                <div className="absolute w-0.5 h-[120%] bg-zinc-600 top-16"></div>
               )}
             </div>
 
