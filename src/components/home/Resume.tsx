@@ -1,12 +1,16 @@
 import React from "react";
 import BlurFade from "../ui/blur-fade";
 import { MagicCard } from "../ui/magic-card";
-import { FaCertificate } from "react-icons/fa";
-import { MedalIcon } from "lucide-react";
-import { MdOutlineWork } from "react-icons/md";
 import ResumeEvent from "../custom-ui/ResumeEvent";
-import { achievements, certifications, experiences } from "@/data/resume";
+import {
+  getHomePageExperiences,
+  getHomePageAchievements,
+  getHomePageCertifications,
+} from "@/data/resume";
 import ViewMore from "../custom-ui/ViewMore";
+import { MdOutlineWork } from "react-icons/md";
+import { FaCertificate } from "react-icons/fa";
+import { Medal } from "lucide-react";
 
 const Resume = () => {
   return (
@@ -19,18 +23,19 @@ const Resume = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-4 max-w-200 w-(--w-max) md:w-full mx-[10vw]">
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-6">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <MdOutlineWork className="size-4" />
+            <div className="flex font-light gap-2 items-center p-4 mb-2">
+              <MdOutlineWork className="text-gray-300 size-4" />
               <p className="text-gray-300 text-sm">Experience</p>
             </div>
             <div>
-              {experiences.map((experience, index) => {
+              {getHomePageExperiences().map((experience, index) => {
+                const allExperiences = getHomePageExperiences();
                 return (
                   <ResumeEvent
                     key={index}
                     event={experience}
                     isFirst={index == 0}
-                    isLast={index == experiences.length - 1}
+                    isLast={index == allExperiences.length - 1}
                   />
                 );
               })}
@@ -39,18 +44,19 @@ const Resume = () => {
         </BlurFade>
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-2">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <MedalIcon className="size-4" />
+            <div className="flex font-light gap-2 items-center p-4 mb-2">
+              <Medal className="text-gray-300 size-4" />
               <p className="text-gray-300 text-sm">Achievements</p>
             </div>
             <div>
-              {achievements.map((achievement, index) => {
+              {getHomePageAchievements().map((achievement, index) => {
+                const allAchievements = getHomePageAchievements();
                 return (
                   <ResumeEvent
                     key={index}
                     event={achievement}
                     isFirst={index == 0}
-                    isLast={index == achievements.length - 1}
+                    isLast={index == allAchievements.length - 1}
                   />
                 );
               })}
@@ -59,18 +65,19 @@ const Resume = () => {
         </BlurFade>
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-2">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <FaCertificate className="size-4" />
+            <div className="flex font-light gap-2 items-center p-4 mb-2">
+              <FaCertificate className="text-gray-300 size-4" />
               <p className="text-gray-300 text-sm">Certifications</p>
             </div>
             <div>
-              {certifications.map((certification, index) => {
+              {getHomePageCertifications().map((certification, index) => {
+                const allCertifications = getHomePageCertifications();
                 return (
                   <ResumeEvent
                     key={index}
                     event={certification}
                     isFirst={index == 0}
-                    isLast={index == certifications.length - 1}
+                    isLast={index == allCertifications.length - 1}
                   />
                 );
               })}
@@ -79,7 +86,7 @@ const Resume = () => {
         </BlurFade>
       </div>
       <BlurFade delay={0.25} inView>
-        <ViewMore text="View Resume" href="/resume" />
+        <ViewMore text="View Full Resume" href="/resume" />
       </BlurFade>
     </div>
   );

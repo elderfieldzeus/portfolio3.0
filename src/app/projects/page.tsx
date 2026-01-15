@@ -112,7 +112,7 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         {filteredProjects.length > 0 ? (
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
             {filteredProjects.map((project, index) => (
               <ProjectGridCard
                 key={index}

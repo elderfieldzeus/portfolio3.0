@@ -32,7 +32,7 @@ const ResumeEvent: React.FC<ResumeEventProps> = ({
           </div>
           <div>
             <p className="text-xs font-extralight rounded-xl border px-2 border-zinc-800 border-opacity-20">
-              {year}
+              {new Date(year).getFullYear()}
             </p>
           </div>
         </div>

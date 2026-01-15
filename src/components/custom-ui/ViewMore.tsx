@@ -14,7 +14,7 @@ const ViewMore: React.FC<ViewMoreProps> = ({ text, href }) => {
   return (
     <Link
       href={href}
-      className={`flex w-full justify-center items-center gap-2`}
+      className={`flex w-full justify-center items-center gap-2 cursor-pointer`}
       onClick={() => setIsLoading(true)}
     >
       <p className="font-medium text-base">{text}</p>

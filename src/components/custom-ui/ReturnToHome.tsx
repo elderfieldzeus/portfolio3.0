@@ -17,7 +17,7 @@ const ReturnToHome: React.FC<ReturnToHomeProps> = ({
   return (
     <Link
       href={returnTo || "/"}
-      className="flex items-center gap-2"
+      className="flex items-center gap-2 cursor-pointer"
       onClick={() => setIsLoading(true)}
     >
       {isLoading ? (
