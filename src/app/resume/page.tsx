@@ -6,15 +6,31 @@ import BlurFade from "@/components/ui/blur-fade";
 import { MagicCard } from "@/components/ui/magic-card";
 import { experiences } from "@/data/resume";
 import ExperienceItem from "@/components/resume/ExperienceItem";
+import LandingButton from "@/components/custom-ui/LandingButton";
+import { IoMdDownload } from "react-icons/io";
+import Link from "next/link";
 
 export default function ResumePage() {
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
       <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-12 my-10 px-4 md:px-8">
-        <NonHomeHeader
-          title="Resume"
-          description="Explore my professional experience, education, certifications, and technical expertise in one place."
-        />
+        <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+          <NonHomeHeader
+            title="Resume"
+            description="Explore my professional experience, education, certifications, and technical expertise in one place."
+          />
+          <Link
+            href="/pdf/Elderfield-Zeus-Curriculum-Vitae.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+          >
+            <LandingButton className="mt-6 md:mt-0">
+              <IoMdDownload />
+              <p>Download CV</p>
+            </LandingButton>
+          </Link>
+        </div>
 
         {/* Experience Section */}
         <BlurFade delay={0.1} inView className="w-full">

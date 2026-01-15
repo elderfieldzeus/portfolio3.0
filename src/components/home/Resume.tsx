@@ -78,7 +78,7 @@ const Resume = () => {
         </BlurFade>
       </div>
       <BlurFade delay={0.25} inView>
-        <ViewMore text="View Resume" href="/resume" />
+        <ViewMore text="View Full Resume" href="/resume" />
       </BlurFade>
     </div>
   );
