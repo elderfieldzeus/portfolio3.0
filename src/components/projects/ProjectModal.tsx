@@ -10,8 +10,8 @@ import {
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
-import LandingButton from "./LandingButton";
-import ImageCarousel from "../projects/ImageCarousel";
+import LandingButton from "../custom-ui/LandingButton";
+import ImageCarousel from "./ImageCarousel";
 
 interface ProjectModalProps {
   project: IProject | null;

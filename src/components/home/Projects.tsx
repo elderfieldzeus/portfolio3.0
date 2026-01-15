@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectCard from "@/components/custom-ui/ProjectCard";
+import ProjectCard from "@/components/projects/ProjectCard";
 import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
 import ViewMore from "../custom-ui/ViewMore";

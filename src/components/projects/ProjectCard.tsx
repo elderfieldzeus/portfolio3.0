@@ -1,7 +1,7 @@
 import { IProject } from "@/data/projects";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
-import LandingButton from "./LandingButton";
+import LandingButton from "../custom-ui/LandingButton";
 import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Image from "next/image";

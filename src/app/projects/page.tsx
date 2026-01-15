@@ -3,8 +3,8 @@
 import type React from "react";
 import { useState, useMemo } from "react";
 import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
-import ProjectGridCard from "@/components/custom-ui/ProjectGridCard";
-import ProjectModal from "@/components/custom-ui/ProjectModal";
+import ProjectGridCard from "@/components/projects/ProjectGridCard";
+import ProjectModal from "@/components/projects/ProjectModal";
 import { projects, IProject, ProjectCategoryEnum } from "@/data/projects";
 import { Input } from "@/components/ui/input";
 import {

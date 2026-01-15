@@ -5,7 +5,7 @@ export enum ProjectCategoryEnum {
 }
 
 export interface IProject {
-  img: string;
+  imgs: string[];
   category: ProjectCategoryEnum;
   title: string;
   main_description: string;
@@ -20,7 +20,7 @@ export interface IProject {
 
 export const projects: IProject[] = [
   {
-    img: "ciscode.jpg",
+    imgs: ["ciscode.jpg"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Ciscode",
     main_description: `
@@ -38,7 +38,7 @@ Built with modern web technologies, Ciscode offers a seamless user experience wi
     featureIndex: 1,
   },
   {
-    img: "gainz.png",
+    imgs: ["gainz.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Gainz",
     main_description: `
@@ -56,7 +56,7 @@ Built with Spring Boot and Spring Security, Gainz ensures secure user authentica
     featureIndex: 4,
   },
   {
-    img: "hermes.png",
+    imgs: ["hermes.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Hermes",
     main_description: `
@@ -74,7 +74,7 @@ Built with React and Mantine UI, Hermes provides a modern, responsive user inter
     featureIndex: 2,
   },
   {
-    img: "swipeats.png",
+    imgs: ["swipeats.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "SwipEats",
     main_description: `
@@ -92,7 +92,7 @@ Built with Angular for the frontend and Golang for the backend, SwipEats deliver
     featureIndex: 3,
   },
   {
-    img: "swipeats.png",
+    imgs: ["swipeats.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Skill Stacker",
     main_description: `
@@ -109,7 +109,7 @@ Built with ASP.NET MVC, the platform provides a robust server-side architecture 
     position: "-mt-1",
   },
   {
-    img: "twerkout.png",
+    imgs: ["twerkout.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Twerkout",
     main_description: `
@@ -126,7 +126,7 @@ Built with TypeScript and React, Twerkout provides a type-safe, component-based 
     position: "-mt-1",
   },
   {
-    img: "vintage-royale.png",
+    imgs: ["vintage-royale.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Vintage Royale",
     main_description: `
@@ -143,7 +143,7 @@ Built with TypeScript and React, the application delivers a fast, responsive use
     position: "-mt-2",
   },
   {
-    img: "foamfusion.png",
+    imgs: ["foamfusion.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Foamfusion",
     main_description: `
@@ -160,7 +160,7 @@ Built with PHP for server-side logic, the application provides robust backend fu
     position: "-mt-2",
   },
   {
-    img: "basher.png",
+    imgs: ["basher.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Basher",
     main_description: `
@@ -177,7 +177,7 @@ Built with TypeScript and React, Basher provides a modern, interactive user inte
     position: "-mt-2",
   },
   {
-    img: "philnits-mock-exam.png",
+    imgs: ["philnits-mock-exam.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Philnits Mock Exam",
     main_description: `
@@ -194,7 +194,7 @@ Built with Next.js and TypeScript, the application provides server-side renderin
     position: "",
   },
   {
-    img: "schedaddle.png",
+    imgs: ["schedaddle.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Schedaddle",
     main_description: `
@@ -211,7 +211,7 @@ Built with TypeScript and React, Schedaddle provides a robust, type-safe applica
     position: "",
   },
   {
-    img: "datacamp.png",
+    imgs: ["datacamp.png"],
     category: ProjectCategoryEnum.DATA_SCIENCE,
     title: "Datacamp Projects",
     main_description: `
@@ -227,7 +227,7 @@ All projects are implemented using Python with libraries such as pandas, numpy, 
     technologies: ["Python", "SQL"],
   },
   {
-    img: "house-predict.jpg",
+    imgs: ["house-predict.jpg"],
     category: ProjectCategoryEnum.DATA_SCIENCE,
     title: "House Price Prediction",
     main_description: `
