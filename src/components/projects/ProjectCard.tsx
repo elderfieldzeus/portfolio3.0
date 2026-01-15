@@ -45,13 +45,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
 
         <div className="flex gap-2 mt-6 w-full">
-          <Link href={project.github} target="_blank" rel="noreferrer">
+          <Link
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+          >
             <LandingButton className="py-1">
               <FaGithub />
               <p>Github</p>
             </LandingButton>
           </Link>
-          <Link href={project.live_demo} target="_blank" rel="noreferrer">
+          <Link
+            href={project.live_demo}
+            target="_blank"
+            rel="noreferrer"
+            className="cursor-pointer"
+          >
             <LandingButton className="py-1 text-white bg-black active:bg-secondary-clicked">
               <CgWebsite />
               <p>Live Demo</p>

@@ -87,13 +87,23 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
             {/* Fixed Footer */}
             <div className="px-6 py-4 border-t border-zinc-800 flex gap-3">
-              <Link href={project.github} target="_blank" rel="noreferrer">
+              <Link
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer"
+              >
                 <LandingButton className="py-2 px-4">
                   <FaGithub />
                   <p>View on GitHub</p>
                 </LandingButton>
               </Link>
-              <Link href={project.live_demo} target="_blank" rel="noreferrer">
+              <Link
+                href={project.live_demo}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer"
+              >
                 <LandingButton className="py-2 px-4 text-white bg-black active:bg-secondary-clicked">
                   <CgWebsite />
                   <p>Live Demo</p>

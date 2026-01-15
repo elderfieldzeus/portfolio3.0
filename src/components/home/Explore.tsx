@@ -9,7 +9,7 @@ const Explore = () => {
         <p>Still bored? </p>
         <Link
           href="/explore"
-          className="underline underline-offset-4 font-light"
+          className="underline underline-offset-4 font-light cursor-pointer"
         >
           Explore more.
         </Link>

@@ -29,18 +29,24 @@ const Contact: React.FC = () => {
                   <a
                     href="https://www.linkedin.com/in/elderfieldzeus/"
                     target="_blank"
+                    className="cursor-pointer"
                   >
                     <FaLinkedin
                       className="size-5 transition-colors hover:text-[#0077B5] active:text-[#0077B5] hover:cursor-pointer"
                       onClick={() => {}}
                     />
                   </a>
-                  <a href="https://github.com/elderfieldzeus" target="_blank">
+                  <a
+                    href="https://github.com/elderfieldzeus"
+                    target="_blank"
+                    className="cursor-pointer"
+                  >
                     <FaGithub className="size-5 transition-colors hover:text-[#0d74e7] active:text-[#0d74e7] hover:cursor-pointer" />
                   </a>
                   <a
                     href="https://www.facebook.com/elderfieldzeus/"
                     target="_blank"
+                    className="cursor-pointer"
                   >
                     <FaFacebook className="size-5 transition-colors hover:text-[#4267B2] active:text-[#4267B2] hover:cursor-pointer" />
                   </a>
@@ -49,7 +55,7 @@ const Contact: React.FC = () => {
             </div>
           </MagicCard>
 
-          <a href="mailto:elderfieldzeus@gmail.com">
+          <a href="mailto:elderfieldzeus@gmail.com" className="cursor-pointer">
             <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
               <div className="h-full w-full flex gap-3">
                 <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">
@@ -67,7 +73,7 @@ const Contact: React.FC = () => {
             </MagicCard>
           </a>
 
-          <a href="https://wa.me/639177755790">
+          <a href="https://wa.me/639177755790" className="cursor-pointer">
             <MagicCard className="border w-full rounded-lg border-opacity-20 bg-black h-24 p-5">
               <div className="h-full w-full flex gap-3">
                 <div className="aspect-square h-full w-auto flex justify-center items-center rounded-full bg-zinc-900 bg-opacity-20 text-gray-300">

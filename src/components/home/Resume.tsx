@@ -1,11 +1,12 @@
 import React from "react";
 import BlurFade from "../ui/blur-fade";
 import { MagicCard } from "../ui/magic-card";
-import { FaCertificate } from "react-icons/fa";
-import { MedalIcon } from "lucide-react";
-import { MdOutlineWork } from "react-icons/md";
 import ResumeEvent from "../custom-ui/ResumeEvent";
-import { achievements, certifications, experiences } from "@/data/resume";
+import {
+  achievements,
+  certifications,
+  getHomePageExperiences,
+} from "@/data/resume";
 import ViewMore from "../custom-ui/ViewMore";
 
 const Resume = () => {
@@ -19,18 +20,18 @@ const Resume = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-4 max-w-200 w-(--w-max) md:w-full mx-[10vw]">
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-6">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <MdOutlineWork className="size-4" />
+            <div className="flex font-light items-center p-4 mb-2">
               <p className="text-gray-300 text-sm">Experience</p>
             </div>
             <div>
-              {experiences.map((experience, index) => {
+              {getHomePageExperiences().map((experience, index) => {
+                const allExperiences = getHomePageExperiences();
                 return (
                   <ResumeEvent
                     key={index}
                     event={experience}
                     isFirst={index == 0}
-                    isLast={index == experiences.length - 1}
+                    isLast={index == allExperiences.length - 1}
                   />
                 );
               })}
@@ -39,8 +40,7 @@ const Resume = () => {
         </BlurFade>
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-2">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <MedalIcon className="size-4" />
+            <div className="flex font-light items-center p-4 mb-2">
               <p className="text-gray-300 text-sm">Achievements</p>
             </div>
             <div>
@@ -59,8 +59,7 @@ const Resume = () => {
         </BlurFade>
         <BlurFade delay={0.25} inView>
           <MagicCard className="border rounded-lg border-opacity-20 w-full h-full bg-black overflow-hidden flex pb-2">
-            <div className=" flex font-light gap-2 items-center p-4 mb-2">
-              <FaCertificate className="size-4" />
+            <div className="flex font-light items-center p-4 mb-2">
               <p className="text-gray-300 text-sm">Certifications</p>
             </div>
             <div>

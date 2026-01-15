@@ -19,6 +19,7 @@ const Landing: React.FC = () => {
             href="https://www.linkedin.com/in/elderfieldzeus/"
             target="_blank"
             rel="noreferrer"
+            className="cursor-pointer"
           >
             <ShimmerButton className="rounded-full flex items-center py-2 px-4 text-xs md:text-sm gap-2 active:none">
               <div className="size-2 rounded-full bg-green-600"></div>
@@ -46,6 +47,7 @@ const Landing: React.FC = () => {
               href="/pdf/Elderfield-Zeus-Curriculum-Vitae.pdf"
               target="_blank"
               rel="noreferrer"
+              className="cursor-pointer"
             >
               <LandingButton>
                 <IoMdDownload />

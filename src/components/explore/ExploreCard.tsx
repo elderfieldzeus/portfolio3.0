@@ -27,7 +27,7 @@ export function ExploreCard({
         className,
       )}
     >
-      <Link href={href} className="flex flex-col h-full p-6">
+      <Link href={href} className="flex flex-col h-full p-6 cursor-pointer">
         <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-900 text-neutral-500 transition-colors group-hover:text-neutral-500-foreground">
           <Icon className="h-6 w-6" />
         </div>
