@@ -265,3 +265,26 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@utility scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Optional: a utility to show the scrollbar again if needed for specific breakpoints */
+@utility scrollbar-default {
+  /* Firefox */
+  scrollbar-width: auto;
+  /* IE and Edge */
+  -ms-overflow-style: auto;
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: block;
+  }
+}
