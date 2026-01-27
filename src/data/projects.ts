@@ -92,7 +92,7 @@ Built with Angular for the frontend and Golang for the backend, SwipEats deliver
     featureIndex: 3,
   },
   {
-    imgs: ["swipeats.png"],
+    imgs: ["skillstacker.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Skill Stacker",
     main_description: `
@@ -106,7 +106,7 @@ Built with ASP.NET MVC, the platform provides a robust server-side architecture 
     github: "https://github.com/SwipEats/SwipEats",
     live_demo: "https://swipeats.dcism.org",
     technologies: ["ASP.NET MVC", "Tailwind CSS", "SQL Server", "Supabase"],
-    position: "-mt-1",
+    position: "-mt-11",
   },
   {
     imgs: ["twerkout.png"],
