@@ -4,8 +4,14 @@ import type React from "react";
 import { useState } from "react";
 import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
 import BlurFade from "@/components/ui/blur-fade";
-import { experiences, achievements, certifications } from "@/data/resume";
+import {
+  experiences,
+  educations,
+  achievements,
+  certifications,
+} from "@/data/resume";
 import ExperienceItem from "@/components/resume/ExperienceItem";
+import EducationItem from "@/components/resume/EducationItem";
 import LandingButton from "@/components/custom-ui/LandingButton";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";
@@ -94,8 +100,29 @@ export default function ResumePage() {
           </div>
         </BlurFade>
 
-        {/* Achievements Section */}
+        {/* Education Section */}
         <BlurFade delay={0.2} inView className="w-full">
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-medium font-kanit text-white shrink-0">
+                Education
+              </h2>
+              <div className="flex-1 h-px bg-zinc-800" />
+            </div>
+            <div>
+              {educations.map((education, index) => (
+                <EducationItem
+                  key={education.id}
+                  education={education}
+                  isLast={index === educations.length - 1}
+                />
+              ))}
+            </div>
+          </div>
+        </BlurFade>
+
+        {/* Achievements Section */}
+        <BlurFade delay={0.3} inView className="w-full">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <h2 className="text-2xl font-medium font-kanit text-white shrink-0">
@@ -116,7 +143,7 @@ export default function ResumePage() {
         </BlurFade>
 
         {/* Certifications Section */}
-        <BlurFade delay={0.3} inView className="w-full">
+        <BlurFade delay={0.4} inView className="w-full">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <h2 className="text-2xl font-medium font-kanit text-white shrink-0">

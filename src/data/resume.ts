@@ -21,6 +21,17 @@ export interface ICertification {
   url?: string;
 }
 
+export interface IEducation {
+  id: string;
+  institution: string;
+  url?: string;
+  icon?: string;
+  degree: string;
+  startDate: string;
+  endDate?: string;
+  highlights?: string[];
+}
+
 export interface IExperiencePosition {
   title: string;
   startDate: string;
@@ -39,6 +50,33 @@ export interface IExperience {
   company: ICompany;
   positions: IExperiencePosition[];
 }
+
+export const educations: IEducation[] = [
+  {
+    id: "usc",
+    institution: "University of San Carlos",
+    url: "https://www.usc.edu.ph",
+    degree: "BS Computer Science",
+    startDate: "2022-08",
+    endDate: "Present",
+    highlights: [
+      "Consistent Dean's Lister throughout the program",
+      "Specialized in software engineering and artificial intelligence",
+      "Active member of the Computer and Information Sciences Council",
+    ],
+  },
+  {
+    id: "shs-adc",
+    institution: "SHS-ADC",
+    degree: "High School Diploma",
+    startDate: "2020-06",
+    endDate: "2022-05",
+    highlights: [
+      "Graduated with honors under the STEM strand",
+      "Participated in school-wide programming and math competitions",
+    ],
+  },
+];
 
 export const experiences: IExperience[] = [
   {
