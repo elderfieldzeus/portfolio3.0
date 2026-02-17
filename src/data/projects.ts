@@ -81,13 +81,39 @@ Although the project is no longer actively maintained, it serves as a strong fou
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Hermes",
     main_description: `
-        Project Hermes is a queue system for DCISM students, by DCISM students.
-        `,
-    long_description: `Project Hermes is a queue system for DCISM students, built by DCISM students. This innovative platform streamlines the process of managing queues for various services and resources within the department.
+    Hermes is an enrollment queue management system built for DCISM students to streamline the enrollment process.
+  `,
+    long_description: `
+Hermes is a web-based enrollment queue management system designed specifically for DCISM students. The platform streamlines the enrollment process by allowing students to join a virtual queue for advising, subject approval, and enrollment-related concerns.
 
-The system allows students to join virtual queues for consultations, lab access, equipment checkout, and other department services. Real-time queue updates ensure students know their position and estimated wait times. The platform includes features for queue management, notifications, and analytics to help optimize service delivery.
+Students can enter the queue remotely, monitor their real-time position, and receive updates on estimated wait times. This reduces physical crowding, improves scheduling efficiency, and provides better visibility into the enrollment flow.
 
-Built with React and Mantine UI, Hermes provides a modern, responsive user interface that works seamlessly on all devices. The backend, powered by ElysiaJS, handles real-time queue updates efficiently. With SQLite database, the system ensures fast data access and reliable queue management. The platform has significantly reduced wait times and improved the overall student experience.`,
+Administrators and faculty can manage the queue through a dedicated interface, monitor active students, process requests in order, and maintain an organized enrollment workflow.
+
+Built with React and Mantine UI, Hermes delivers a responsive and user-friendly interface. The backend, powered by ElysiaJS, handles real-time updates efficiently, while SQLite ensures lightweight and reliable data storage.
+  `,
+    github: "https://github.com/usc-cisco/hermes-site",
+    live_demo: "https://queue.dcism.org",
+    technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
+    position: "-mt-1",
+    featureIndex: 2,
+  },
+  {
+    imgs: ["hermes.png"],
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "Hermes",
+    main_description: `
+    Hermes is an enrollment queue management system built for DCISM students to streamline the enrollment process.
+  `,
+    long_description: `
+Hermes is a web-based enrollment queue management system designed specifically for DCISM students. The platform streamlines the enrollment process by allowing students to join a virtual queue for advising, subject approval, and enrollment-related concerns.
+
+Students can enter the queue remotely, monitor their real-time position, and receive updates on estimated wait times. This reduces physical crowding, improves scheduling efficiency, and provides better visibility into the enrollment flow.
+
+Administrators and faculty can manage the queue through a dedicated interface, monitor active students, process requests in order, and maintain an organized enrollment workflow.
+
+Built with React and Mantine UI, Hermes delivers a responsive and user-friendly interface. The backend, powered by ElysiaJS, handles real-time updates efficiently, while SQLite ensures lightweight and reliable data storage.
+  `,
     github: "https://github.com/usc-cisco/hermes-site",
     live_demo: "https://queue.dcism.org",
     technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
