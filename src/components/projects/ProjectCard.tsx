@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="w-full text-white font-kanit p-6">
         <p className="text-lg md:text-xl">{project.title}</p>
         <p className="w-full text-gray-400 font-extralight text-xs md:text-sm">
-          {project.main_description}
+          {project.mainDescription}
         </p>
         <div className="mt-6">
           <p className="font-light text-sm">Technologies Used:</p>
@@ -70,9 +70,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <p>Github</p>
             </LandingButton>
           )}
-          {project.live_demo ? (
+          {project.liveDemo ? (
             <Link
-              href={project.live_demo}
+              href={project.liveDemo}
               target="_blank"
               rel="noreferrer"
               className="cursor-pointer"

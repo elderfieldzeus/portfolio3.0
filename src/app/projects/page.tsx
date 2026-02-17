@@ -28,7 +28,7 @@ export default function ProjectsPage() {
       const matchesSearch =
         searchQuery === "" ||
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.main_description
+        project.mainDescription
           .toLowerCase()
           .includes(searchQuery.toLowerCase());
 

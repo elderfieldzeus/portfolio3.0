@@ -70,9 +70,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   </h3>
                   <div className="prose prose-invert max-w-none">
                     <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
-                      {project.long_description ||
-                        project.full_description ||
-                        project.main_description}
+                      {project.longDescription ||
+                        project.fullDescription ||
+                        project.mainDescription}
                     </p>
                   </div>
                 </div>
@@ -128,9 +128,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     <TooltipContent>Private project</TooltipContent>
                   </Tooltip>
                 )}
-                {project.live_demo ? (
+                {project.liveDemo ? (
                   <Link
-                    href={project.live_demo}
+                    href={project.liveDemo}
                     target="_blank"
                     rel="noreferrer"
                     className="cursor-pointer"

@@ -27,7 +27,7 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
         <div className="w-full text-white font-kanit p-6">
           <p className="text-lg md:text-xl font-semibold">{project.title}</p>
           <p className="w-full text-gray-400 font-extralight text-xs md:text-sm line-clamp-2">
-            {project.main_description.trim()}
+            {project.mainDescription.trim()}
           </p>
           <div className="mt-6">
             <p className="font-light text-sm">Technologies Used:</p>
