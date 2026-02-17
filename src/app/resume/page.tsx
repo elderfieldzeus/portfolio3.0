@@ -4,7 +4,6 @@ import type React from "react";
 import { useState } from "react";
 import NonHomeHeader from "@/components/custom-ui/NonHomeHeader";
 import BlurFade from "@/components/ui/blur-fade";
-import { MagicCard } from "@/components/ui/magic-card";
 import { experiences, achievements, certifications } from "@/data/resume";
 import ExperienceItem from "@/components/resume/ExperienceItem";
 import LandingButton from "@/components/custom-ui/LandingButton";
@@ -83,17 +82,15 @@ export default function ResumePage() {
               </h2>
               <div className="flex-1 h-px bg-zinc-800" />
             </div>
-            <MagicCard className="border rounded-lg border-opacity-20 w-full bg-black overflow-hidden">
-              <div className="p-6">
-                {experiences.map((experience, index) => (
-                  <ExperienceItem
-                    key={experience.company.id}
-                    experience={experience}
-                    isLast={index === experiences.length - 1}
-                  />
-                ))}
-              </div>
-            </MagicCard>
+            <div>
+              {experiences.map((experience, index) => (
+                <ExperienceItem
+                  key={experience.company.id}
+                  experience={experience}
+                  isLast={index === experiences.length - 1}
+                />
+              ))}
+            </div>
           </div>
         </BlurFade>
 
