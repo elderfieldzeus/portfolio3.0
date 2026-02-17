@@ -10,6 +10,7 @@ export interface IAchievement {
   year: string;
   imgs: string[];
   description?: string;
+  isFeatured?: true;
 }
 
 export interface ICertification {
@@ -19,6 +20,7 @@ export interface ICertification {
   imgs: string[];
   description?: string;
   url?: string;
+  isFeatured?: true;
 }
 
 export interface IEducation {
@@ -49,6 +51,7 @@ export interface ICompany {
 export interface IExperience {
   company: ICompany;
   positions: IExperiencePosition[];
+  isFeatured?: true;
 }
 
 export const educations: IEducation[] = [
@@ -82,6 +85,7 @@ export const educations: IEducation[] = [
 
 export const experiences: IExperience[] = [
   {
+    isFeatured: true,
     company: {
       id: "oboda",
       name: "oboda",
@@ -120,6 +124,7 @@ export const experiences: IExperience[] = [
     ],
   },
   {
+    isFeatured: true,
     company: {
       id: "todays-carolinian",
       name: "Today's Carolinian",
@@ -140,6 +145,7 @@ export const experiences: IExperience[] = [
     ],
   },
   {
+    isFeatured: true,
     company: {
       id: "alliance-software",
       name: "Alliance Software Inc.",
@@ -163,6 +169,7 @@ export const experiences: IExperience[] = [
 
 export const achievements: IAchievement[] = [
   {
+    isFeatured: true,
     title: "Top 3 Score (Philippines)",
     subtitle: "PhilNITS",
     year: "2025",
@@ -171,6 +178,7 @@ export const achievements: IAchievement[] = [
       "Achieved top 3 score in the Philippines for the PhilNITS examination.",
   },
   {
+    isFeatured: true,
     title: "1st Place",
     subtitle: "National CS/IT Skills Competition",
     year: "2025",
@@ -178,6 +186,7 @@ export const achievements: IAchievement[] = [
     description: "Won first place in the National CS/IT Skills Competition.",
   },
   {
+    isFeatured: true,
     title: "3rd Place",
     subtitle: "Codechum National Programming Competition - Group 2",
     year: "2024",
@@ -189,6 +198,7 @@ export const achievements: IAchievement[] = [
 
 export const certifications: ICertification[] = [
   {
+    isFeatured: true,
     title: "TOPCIT Level III",
     subtitle: "Ministry of Science and ICT, South Korea",
     year: "2025",
@@ -198,6 +208,7 @@ export const certifications: ICertification[] = [
     url: "/pdf/Elderfield-Zeus-TOPCIT-Certificate.pdf",
   },
   {
+    isFeatured: true,
     title: "Fundamental IT Engineer",
     subtitle: "PhilNITS",
     year: "2025",
@@ -206,6 +217,7 @@ export const certifications: ICertification[] = [
       "Earned the Fundamental IT Engineer certification from PhilNITS.",
   },
   {
+    isFeatured: true,
     title: "Software Engineer",
     subtitle: "HackerRank",
     year: "2025",
@@ -217,28 +229,34 @@ export const certifications: ICertification[] = [
 
 // Helper function to convert experiences for home page preview
 export const getHomePageExperiences = (): IResumeEvent[] => {
-  return experiences.flatMap((exp) =>
-    exp.positions.map((pos) => ({
-      title: pos.title,
-      subtitle: exp.company.name,
-      year: pos.startDate,
-    })),
-  );
+  return experiences
+    .filter((exp) => exp.isFeatured)
+    .flatMap((exp) =>
+      exp.positions.map((pos) => ({
+        title: pos.title,
+        subtitle: exp.company.name,
+        year: pos.startDate,
+      })),
+    );
 };
 
 // Helper functions to convert achievements and certifications for home page preview
 export const getHomePageAchievements = (): IResumeEvent[] => {
-  return achievements.map((achievement) => ({
-    title: achievement.title,
-    subtitle: achievement.subtitle,
-    year: achievement.year,
-  }));
+  return achievements
+    .filter((achievement) => achievement.isFeatured)
+    .map((achievement) => ({
+      title: achievement.title,
+      subtitle: achievement.subtitle,
+      year: achievement.year,
+    }));
 };
 
 export const getHomePageCertifications = (): IResumeEvent[] => {
-  return certifications.map((certification) => ({
-    title: certification.title,
-    subtitle: certification.subtitle,
-    year: certification.year,
-  }));
+  return certifications
+    .filter((certification) => certification.isFeatured)
+    .map((certification) => ({
+      title: certification.title,
+      subtitle: certification.subtitle,
+      year: certification.year,
+    }));
 };
