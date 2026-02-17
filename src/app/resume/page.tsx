@@ -55,7 +55,7 @@ export default function ResumePage() {
 
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
-      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-12 my-10 px-4 md:px-8">
+      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-16 my-12 px-4 md:px-8">
         <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-4">
           <NonHomeHeader
             title="Resume"
@@ -77,9 +77,12 @@ export default function ResumePage() {
         {/* Experience Section */}
         <BlurFade delay={0.1} inView className="w-full">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl font-medium font-kanit text-white">
-              Experience
-            </h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-medium font-kanit text-white shrink-0">
+                Experience
+              </h2>
+              <div className="flex-1 h-px bg-zinc-800" />
+            </div>
             <MagicCard className="border rounded-lg border-opacity-20 w-full bg-black overflow-hidden">
               <div className="p-6">
                 {experiences.map((experience, index) => (
@@ -97,9 +100,12 @@ export default function ResumePage() {
         {/* Achievements Section */}
         <BlurFade delay={0.2} inView className="w-full">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl font-medium font-kanit text-white">
-              Achievements
-            </h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-medium font-kanit text-white shrink-0">
+                Achievements
+              </h2>
+              <div className="flex-1 h-px bg-zinc-800" />
+            </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {achievements.map((achievement, index) => (
                 <AchievementGridCard
@@ -115,9 +121,12 @@ export default function ResumePage() {
         {/* Certifications Section */}
         <BlurFade delay={0.3} inView className="w-full">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl font-medium font-kanit text-white">
-              Certifications
-            </h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-medium font-kanit text-white shrink-0">
+                Certifications
+              </h2>
+              <div className="flex-1 h-px bg-zinc-800" />
+            </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {certifications.map((certification, index) => (
                 <CertificationGridCard
