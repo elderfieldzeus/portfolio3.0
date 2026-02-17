@@ -160,16 +160,20 @@ This project focuses strictly on the admin-side implementation based on provided
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Twerkout",
     main_description: `
-        Twerkout is a mobile-friendly site designed to help you track and visualize your workout progress.
-        `,
-    long_description: `Twerkout is a mobile-friendly web application designed to help you track and visualize your workout progress. This personal fitness companion makes it easy to log workouts, monitor progress, and stay motivated on your fitness journey.
+    Twerkout is a mobile-first workout tracker built to log sessions, monitor progress, and visualize gym performance.
+  `,
+    long_description: `
+Twerkout is a mobile-first web application designed for logging and tracking workout progress. Built around my personal gym workflow, the platform focuses on simplicity, speed, and visual feedback to make tracking performance effortless.
 
-The application allows users to create custom workout routines, log exercises with sets, reps, and weights, and track their progress over time. Interactive charts and graphs visualize strength gains, workout frequency, and personal records. Users can set fitness goals, track body measurements, and view detailed workout history.
+Users can create workout routines, log exercises with sets, reps, and weights, and monitor strength progression over time. The app provides clear workout history tracking and structured logging to help users stay consistent and goal-oriented.
 
-Built with TypeScript and React, Twerkout provides a type-safe, component-based architecture that ensures reliability and maintainability. Tailwind CSS creates a beautiful, responsive design that works perfectly on mobile devices. Firebase integration provides real-time data synchronization, secure authentication, and cloud storage, ensuring your workout data is always accessible and backed up.`,
+The frontend is built using TypeScript, React (TSX), and Vite, providing a fast and type-safe development experience. Tailwind CSS powers a responsive, mobile-optimized UI with a playful, cartoony aesthetic inspired by a twerking chicken mascot. Firebase handles authentication, real-time data synchronization, and cloud storage, ensuring secure and accessible workout data.
+
+Twerkout is open source and available under the MIT License.
+  `,
     github: "https://github.com/elderfieldzeus/twerkout",
     live_demo: "https://twerkout.zoos.dev",
-    technologies: ["Typescript", "React", "Tailwind CSS", "Firebase"],
+    technologies: ["TypeScript", "React", "Vite", "Tailwind CSS", "Firebase"],
     position: "-mt-1",
   },
   {
