@@ -12,6 +12,12 @@ import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
 import LandingButton from "./LandingButton";
 import ImageCarousel from "../projects/ImageCarousel";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 interface ProjectModalProps {
   project: IProject | null;
@@ -86,20 +92,60 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
 
             {/* Fixed Footer */}
-            <div className="px-6 py-4 border-t border-zinc-800 flex gap-3">
-              <Link href={project.github} target="_blank" rel="noreferrer">
-                <LandingButton className="py-2 px-4">
-                  <FaGithub />
-                  <p>View on GitHub</p>
-                </LandingButton>
-              </Link>
-              <Link href={project.live_demo} target="_blank" rel="noreferrer">
-                <LandingButton className="py-2 px-4 text-white bg-black active:bg-secondary-clicked">
-                  <CgWebsite />
-                  <p>Live Demo</p>
-                </LandingButton>
-              </Link>
-            </div>
+            <TooltipProvider>
+              <div className="px-6 py-4 border-t border-zinc-800 flex gap-3">
+                {project.github ? (
+                  <Link href={project.github} target="_blank" rel="noreferrer">
+                    <LandingButton className="py-2 px-4">
+                      <FaGithub />
+                      <p>View on GitHub</p>
+                    </LandingButton>
+                  </Link>
+                ) : (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span>
+                        <LandingButton
+                          className="py-2 px-4 opacity-50 cursor-not-allowed"
+                          disabled
+                        >
+                          <FaGithub />
+                          <p>View on GitHub</p>
+                        </LandingButton>
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent>Private project</TooltipContent>
+                  </Tooltip>
+                )}
+                {project.live_demo ? (
+                  <Link
+                    href={project.live_demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LandingButton className="py-2 px-4 text-white bg-black active:bg-secondary-clicked">
+                      <CgWebsite />
+                      <p>Live Demo</p>
+                    </LandingButton>
+                  </Link>
+                ) : (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span>
+                        <LandingButton
+                          className="py-2 px-4 text-white bg-black opacity-50 cursor-not-allowed"
+                          disabled
+                        >
+                          <CgWebsite />
+                          <p>Live Demo</p>
+                        </LandingButton>
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent>Not deployed</TooltipContent>
+                  </Tooltip>
+                )}
+              </div>
+            </TooltipProvider>
           </>
         )}
       </DialogContent>

@@ -6,16 +6,19 @@ interface LandingButtonProps {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const LandingButton: React.FC<LandingButtonProps> = ({
   children,
   className,
   onClick,
+  disabled,
 }) => {
   return (
     <ShinyButton
-      onClick={onClick}
+      onClick={disabled ? undefined : onClick}
+      disabled={disabled}
       className={cn(
         "bg-primary text-black px-3 rounded-md active:bg-clicked transition-colors text-xs md:text-sm",
         className,

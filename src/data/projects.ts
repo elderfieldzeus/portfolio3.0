@@ -11,8 +11,8 @@ export interface IProject {
   main_description: string;
   full_description?: string;
   long_description?: string;
-  github: string;
-  live_demo: string;
+  github?: string;
+  live_demo?: string;
   technologies: string[];
   position?: string;
   featureIndex?: number;
@@ -143,8 +143,6 @@ Built using .NET 6.0 and Razor Pages, the application follows a clean server-ren
 
 This project focuses strictly on the admin-side implementation based on provided functional specifications and does not include the public-facing learner interface.
   `,
-    github: "",
-    live_demo: "",
     technologies: [
       ".NET 6.0",
       "C#",

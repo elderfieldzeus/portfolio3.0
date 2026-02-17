@@ -27,16 +27,19 @@ interface ShinyButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 }
 const ShinyButton = ({
   children,
   onClick,
   className,
+  disabled,
   ...props
 }: ShinyButtonProps) => {
   return (
     <motion.button
       onClick={onClick}
+      disabled={disabled}
       {...animationProps}
       {...props}
       className={cn(
