@@ -237,7 +237,7 @@ Built with TypeScript and React, Basher provides a modern, interactive user inte
 Students can take timed practice exams with questions from previous PhilNITS examinations, providing authentic preparation experience. The platform tracks performance, provides detailed explanations for each question, and generates comprehensive score reports. Users can review their answers, understand mistakes, and focus on areas that need improvement.
 
 Built with Next.js and TypeScript, the application provides server-side rendering for fast page loads and optimal performance. Tailwind CSS creates a clean, distraction-free interface that mimics the actual exam environment. The platform has helped numerous students prepare effectively for the PhilNITS examination, improving their confidence and performance.`,
-    github: "https://github.com/elderfieldzeus/philnits-mock-exam",
+    github: "https://github.com/usc-cisco/philnits-mock",
     live_demo: "https://philnits.zoos.dev/",
     technologies: ["Next.js", "Typescript", "Tailwind CSS"],
     position: "",
@@ -246,17 +246,15 @@ Built with Next.js and TypeScript, the application provides server-side renderin
     imgs: ["schedaddle.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Schedaddle",
-    main_description: `
-        Schedaddle is a web app that generates and visualizes class schedules based on offered schedules.
-        `,
-    long_description: `Schedaddle is a web application that generates and visualizes class schedules based on offered course schedules. This tool helps students plan their academic semesters by automatically generating optimal schedule combinations.
+    main_description: `A web application that generates and visualizes optimal class schedules based on offered courses.`,
+    long_description: `Schedaddle is a user-friendly web application designed to simplify schedule planning for students. Users can input their desired courses, and the app automatically generates optimized schedule combinations while avoiding time conflicts.
 
-The application allows users to input their desired courses and automatically generates all possible schedule combinations, considering time conflicts and preferences. Interactive visualizations display schedules in an easy-to-read format, making it simple to compare options. Users can filter schedules based on preferences, view detailed course information, and export their chosen schedule.
+The platform provides interactive visualizations of schedules, making it easy to compare options and choose the best fit. Users can filter schedules based on preferences, view detailed course information, and export their chosen timetable. By automating schedule generation, Schedaddle saves students time and ensures efficient academic planning.
 
-Built with TypeScript and React, Schedaddle provides a robust, type-safe application with efficient algorithm implementation for schedule generation. Tailwind CSS ensures a clean, intuitive interface that makes complex schedule data easy to understand. The platform has saved students countless hours of manual schedule planning and helped them find optimal course combinations.`,
+Built with TypeScript and React, Schedaddle leverages type-safe, maintainable code and efficient algorithms for schedule generation. Tailwind CSS delivers a clean, responsive interface, ensuring that complex schedule data is intuitive and easy to navigate across devices.`,
     github: "https://github.com/elderfieldzeus/schedaddle",
     live_demo: "https://schedaddle.zoos.dev/",
-    technologies: ["Typescript", "React", "Tailwind CSS"],
+    technologies: ["TypeScript", "React", "Tailwind CSS", "Vite"],
     position: "",
   },
   {
