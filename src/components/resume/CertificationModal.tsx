@@ -34,7 +34,7 @@ const CertificationModal: React.FC<CertificationModalProps> = ({
                   {certification.title}
                 </DialogTitle>
                 <DialogDescription className="text-gray-400 font-kanit">
-                  {certification.subtitle} • {certification.year}
+                  {certification.subtitle} • {certification.date}
                 </DialogDescription>
               </DialogHeader>
             </div>
