@@ -99,42 +99,31 @@ Built with React and Mantine UI, Hermes delivers a responsive and user-friendly 
     featureIndex: 2,
   },
   {
-    imgs: ["hermes.png"],
-    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "Hermes",
-    main_description: `
-    Hermes is an enrollment queue management system built for DCISM students to streamline the enrollment process.
-  `,
-    long_description: `
-Hermes is a web-based enrollment queue management system designed specifically for DCISM students. The platform streamlines the enrollment process by allowing students to join a virtual queue for advising, subject approval, and enrollment-related concerns.
-
-Students can enter the queue remotely, monitor their real-time position, and receive updates on estimated wait times. This reduces physical crowding, improves scheduling efficiency, and provides better visibility into the enrollment flow.
-
-Administrators and faculty can manage the queue through a dedicated interface, monitor active students, process requests in order, and maintain an organized enrollment workflow.
-
-Built with React and Mantine UI, Hermes delivers a responsive and user-friendly interface. The backend, powered by ElysiaJS, handles real-time updates efficiently, while SQLite ensures lightweight and reliable data storage.
-  `,
-    github: "https://github.com/usc-cisco/hermes-site",
-    live_demo: "https://queue.dcism.org",
-    technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
-    position: "-mt-1",
-    featureIndex: 2,
-  },
-  {
     imgs: ["swipeats.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "SwipEats",
     main_description: `
-        SwipEats is a mobile-based match making application to help groups decide what restaurant to eat at.
-        `,
-    long_description: `SwipEats is a mobile-based matchmaking application designed to help groups decide what restaurant to eat at. Inspired by dating apps, this innovative platform solves the age-old problem of group decision-making when choosing dining locations.
+    SwipEats is a mobile-first web app that helps groups decide where to eat by swiping and voting on nearby restaurants.
+  `,
+    long_description: `
+SwipEats is a mobile-first web application that allows groups to swipe and vote on nearby restaurants — inspired by the Tinder swipe experience. It solves the common problem of group indecision by turning restaurant selection into a fast, collaborative, and interactive process.
 
-Users create groups and swipe through restaurant options, with the app using a sophisticated matching algorithm to find restaurants that everyone in the group likes. The platform integrates with restaurant APIs to provide real-time information, menus, ratings, and availability. Real-time synchronization using WebSocket ensures all group members see updates instantly.
+Users can create or join group sessions, discover location-based restaurant options, and swipe right or left to vote. Votes are synchronized in real time using WebSockets, allowing all members to instantly see updates and final results once a match is found.
 
-Built with Angular for the frontend and Golang for the backend, SwipEats delivers a fast, responsive experience. The application features beautiful UI/UX design optimized for mobile devices, making it easy to use on the go. With MySQL database, the platform efficiently manages user data, restaurant information, and group preferences. The app has helped countless groups make dining decisions quickly and democratically.`,
+The frontend is built with Angular and TailwindCSS, optimized for a smooth mobile experience. The backend is written in Go, using Gorilla WebSocket for real-time communication alongside REST endpoints for session and restaurant management. The project follows a clean separation between client and server, with dedicated documentation covering architecture, API references, and system diagrams.
+
+The application is deployed using Apache for the backend and static hosting for the Angular frontend. While the project is no longer maintained, it remains a strong example of real-time system design, WebSocket implementation, and full-stack architecture using Go and Angular.
+  `,
     github: "https://github.com/SwipEats/SwipEats",
     live_demo: "https://swipeats.dcism.org",
-    technologies: ["Angular", "Golang", "WebSocket", "MySQL"],
+    technologies: [
+      "Angular",
+      "TailwindCSS",
+      "Go",
+      "REST API",
+      "WebSockets",
+      "Apache",
+    ],
     position: "-mt-1",
     featureIndex: 3,
   },
