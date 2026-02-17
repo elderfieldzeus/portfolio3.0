@@ -60,7 +60,7 @@ export default function ResumePage() {
 
   return (
     <main className="w-full overflow-x-hidden overflow-y-auto min-h-screen bg-black text-primary relative">
-      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-16 my-12 px-4 md:px-8">
+      <section className="w-(--w-mfull) mx-auto flex flex-col items-start gap-12 my-12 px-4 md:px-8">
         <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-4">
           <NonHomeHeader
             title="Resume"

@@ -56,6 +56,7 @@ export const educations: IEducation[] = [
     id: "usc",
     institution: "University of San Carlos",
     url: "https://www.usc.edu.ph",
+    icon: "usc.jpg",
     degree: "BS Computer Science",
     startDate: "2022-08",
     endDate: "Present",
@@ -67,7 +68,8 @@ export const educations: IEducation[] = [
   },
   {
     id: "shs-adc",
-    institution: "SHS-ADC",
+    institution: "Sacred Heart School - Ateneo de Cebu",
+    icon: "ateneo.jpg",
     degree: "High School Diploma",
     startDate: "2020-06",
     endDate: "2022-05",
@@ -102,7 +104,7 @@ export const experiences: IExperience[] = [
     company: {
       id: "usc-cisco",
       name: "Computer and Information Sciences Council",
-      url: "https://face",
+      url: "https://facebook.com/cisco.usc",
       icon: "cisco.jpg",
     },
     positions: [
