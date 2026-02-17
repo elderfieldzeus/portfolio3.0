@@ -52,28 +52,42 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         <div className="flex gap-2 mt-6 w-full">
-          <Link
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="cursor-pointer"
-          >
-            <LandingButton className="py-1">
+          {project.github ? (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="cursor-pointer"
+            >
+              <LandingButton className="py-1">
+                <FaGithub />
+                <p>Github</p>
+              </LandingButton>
+            </Link>
+          ) : (
+            <LandingButton className="py-1 opacity-50 cursor-not-allowed">
               <FaGithub />
               <p>Github</p>
             </LandingButton>
-          </Link>
-          <Link
-            href={project.live_demo}
-            target="_blank"
-            rel="noreferrer"
-            className="cursor-pointer"
-          >
-            <LandingButton className="py-1 text-white bg-black active:bg-secondary-clicked">
+          )}
+          {project.live_demo ? (
+            <Link
+              href={project.live_demo}
+              target="_blank"
+              rel="noreferrer"
+              className="cursor-pointer"
+            >
+              <LandingButton className="py-1 text-white bg-black active:bg-secondary-clicked">
+                <CgWebsite />
+                <p>Live Demo</p>
+              </LandingButton>
+            </Link>
+          ) : (
+            <LandingButton className="py-1 text-white bg-black opacity-50 cursor-not-allowed">
               <CgWebsite />
               <p>Live Demo</p>
             </LandingButton>
-          </Link>
+          )}
         </div>
       </div>
     </MagicCard>
