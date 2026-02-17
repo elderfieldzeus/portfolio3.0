@@ -185,7 +185,7 @@ Twerkout is open source and available under the MIT License.
         `,
     long_description: `Vintage Royale is a mobile-based product management system tailored to enhance client-side functionality for a vintage retail business. This comprehensive platform streamlines inventory management, order processing, and customer interactions.
 
-The system features an intuitive product catalog with high-quality images, detailed descriptions, and real-time inventory tracking. Customers can browse products, add items to cart, and complete purchases seamlessly. The admin dashboard provides tools for inventory management, order fulfillment, sales analytics, and customer relationship management.
+The system features an intuitive product catalog with high-quality images, detailed descriptions, and real-time inventory tracking. Customers can browse products, add items to cart, and complete purchases seamlessly. The admin dashboard provides tools for inventory management, order fulfillment, and customer relationship management.
 
 Built with TypeScript and React, the application delivers a fast, responsive user experience optimized for mobile devices. Tailwind CSS ensures a beautiful, consistent design throughout the platform. Supabase integration provides real-time database updates, secure authentication, file storage for product images, and efficient data management. The platform has significantly improved operational efficiency and customer satisfaction.`,
     github: "https://github.com/elderfieldzeus/vintage-royale",
@@ -196,18 +196,16 @@ Built with TypeScript and React, the application delivers a fast, responsive use
   {
     imgs: ["foamfusion.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "Foamfusion",
-    main_description: `
-        A full-stack product management system for Foamfusion Soaps, enhancing end-to-end operations.
-        `,
-    long_description: `Foamfusion is a full-stack product management system designed specifically for Foamfusion Soaps, enhancing end-to-end business operations. This comprehensive platform manages the entire product lifecycle from inventory to sales.
+    title: "FoamFusion",
+    main_description: `A full-stack product management system for FoamFusion Soaps, enhancing end-to-end operations.`,
+    long_description: `FoamFusion is a full-stack product management system designed specifically for FoamFusion Soaps, enhancing end-to-end business operations. This comprehensive platform manages the entire product lifecycle from inventory to sales.
 
 The system includes features for product catalog management, inventory tracking, order processing, customer management, and sales reporting. Administrators can add products with detailed specifications, manage stock levels, process orders, and generate comprehensive sales reports. The platform provides a seamless experience for both customers browsing products and administrators managing the business.
 
-Built with PHP for server-side logic, the application provides robust backend functionality with secure data handling. Tailwind CSS creates a modern, responsive interface that works beautifully on all devices. MySQL database efficiently manages product information, inventory data, orders, and customer records. The platform has streamlined operations and improved overall business efficiency.`,
+Built with PHP for server-side logic, the application provides robust backend functionality with secure data handling. Tailwind CSS creates a modern, responsive interface that works beautifully on all devices. MySQL efficiently manages product information, inventory data, orders, and customer records. The platform has streamlined operations and improved overall business efficiency.`,
     github: "https://github.com/elderfieldzeus/foamfusion",
     live_demo: "https://foamfusion.dcism.org/",
-    technologies: ["PHP", "Tailwind CSS", "MySQL"],
+    technologies: ["PHP", "Tailwind CSS", "MySQL", "JavaScript", "HTML"],
     position: "-mt-2",
   },
   {
