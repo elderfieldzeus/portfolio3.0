@@ -12,6 +12,7 @@ import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
 import LandingButton from "../custom-ui/LandingButton";
 import ImageCarousel from "./ImageCarousel";
+import { Badge } from "../ui/badge";
 
 interface ProjectModalProps {
   project: IProject | null;
@@ -35,9 +36,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 <DialogTitle className="text-2xl font-kanit text-white">
                   {project.title}
                 </DialogTitle>
-                <DialogDescription className="text-gray-400 font-kanit">
-                  {project.category}
-                </DialogDescription>
+                <div className="text-gray-400 font-kanit">
+                  <Badge
+                    variant={"outline"}
+                    className="text-xs border-zinc-800 border-opacity-20"
+                  >
+                    {project.category}
+                  </Badge>
+                </div>
               </DialogHeader>
             </div>
 

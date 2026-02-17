@@ -2,6 +2,7 @@ import { IProject } from "@/data/projects";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
 
 interface ProjectGridCardProps {
   project: IProject;
@@ -32,9 +33,12 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
             {project.main_description.trim()}
           </p>
           <div className="mt-3">
-            <span className="text-xs text-gray-500 font-light">
+            <Badge
+              variant={"outline"}
+              className="text-xs border-zinc-800 border-opacity-20"
+            >
               {project.category}
-            </span>
+            </Badge>
           </div>
         </div>
       </div>

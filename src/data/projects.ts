@@ -24,16 +24,23 @@ export const projects: IProject[] = [
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Ciscode",
     main_description: `
-        Project Ciscode is CISCO's very own coding platform built exclusively for DCISM students.
-        `,
-    long_description: `Project Ciscode is CISCO's very own coding platform built exclusively for DCISM students. This comprehensive platform provides a complete coding environment where students can practice, learn, and compete in programming challenges.
+        Project Ciscode is a student-built coding platform by USC-CISCO that offers algorithm challenges to help students practice, improve, and master their problem-solving skills.
+    `,
+    long_description: `Project Ciscode is a fullstack coding platform developed by USC-CISCO to provide students with structured algorithm challenges across multiple difficulty levels. The platform is designed to sharpen problem-solving skills in a competitive yet supportive learning environment.
 
-The platform features a robust code editor with syntax highlighting, real-time compilation, and instant feedback. Students can access a curated library of coding problems ranging from basic algorithms to advanced data structures. The system includes automated testing, code submission tracking, and detailed performance analytics.
+    Students can browse, search, and filter coding problems ranging from beginner-friendly to advanced levels. The system allows users to track their progress, monitor submitted solutions, and manage their accounts through built-in authentication features.
 
-Built with modern web technologies, Ciscode offers a seamless user experience with a clean, intuitive interface. The platform supports multiple programming languages and provides comprehensive documentation and learning resources. It serves as both an educational tool and a competitive programming environment, helping students prepare for technical interviews and coding competitions.`,
+    Built entirely with Next.js as a fullstack framework (handling both frontend and API backend), Ciscode integrates MySQL as its database and Sequelize as its ORM for efficient data management. The application delivers a fast and modern UI experience while maintaining scalable backend functionality.
+
+    This project is intended for educational purposes under USC-CISCO and welcomes contributions from students and developers.
+    
+    To test out the site, you can use a test account with the following credentials:
+    Username: testuser
+    Password: testpassword
+    `,
     github: "https://github.com/usc-cisco/ciscode",
     live_demo: "https://ciscode.dcism.org",
-    technologies: ["Next.js", "Shadcn UI", "Sequelize", "MySQL"],
+    technologies: ["Next.js", "MySQL", "Sequelize", "Node.js"],
     position: "-mt-5",
     featureIndex: 1,
   },
