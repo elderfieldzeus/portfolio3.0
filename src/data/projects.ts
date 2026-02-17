@@ -24,7 +24,7 @@ export const projects: IProject[] = [
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Ciscode",
     main_description: `
-        Project Ciscode is a student-built coding platform by USC-CISCO that offers algorithm challenges to help students practice, improve, and master their problem-solving skills.
+        Project Ciscode is CISCO's official coding platform for DCISM students.
     `,
     long_description: `Project Ciscode is a fullstack coding platform developed by USC-CISCO to provide students with structured algorithm challenges across multiple difficulty levels. The platform is designed to sharpen problem-solving skills in a competitive yet supportive learning environment.
 
@@ -45,11 +45,62 @@ export const projects: IProject[] = [
     featureIndex: 1,
   },
   {
+    imgs: ["hermes.png"],
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "Hermes",
+    main_description: `
+    Hermes is an enrollment queue management system built for DCISM students by DCISM students.
+  `,
+    long_description: `
+Hermes is a web-based enrollment queue management system designed specifically for DCISM students. The platform streamlines the enrollment process by allowing students to join a virtual queue for advising, subject approval, and enrollment-related concerns.
+
+Students can enter the queue remotely, monitor their real-time position, and receive updates on estimated wait times. This reduces physical crowding, improves scheduling efficiency, and provides better visibility into the enrollment flow.
+
+Administrators and faculty can manage the queue through a dedicated interface, monitor active students, process requests in order, and maintain an organized enrollment workflow.
+
+Built with React and Mantine UI, Hermes delivers a responsive and user-friendly interface. The backend, powered by ElysiaJS, handles real-time updates efficiently, while SQLite ensures lightweight and reliable data storage.
+  `,
+    github: "https://github.com/usc-cisco/hermes-site",
+    live_demo: "https://queue.dcism.org",
+    technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
+    position: "-mt-1",
+    featureIndex: 2,
+  },
+  {
+    imgs: ["swipeats.png"],
+    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
+    title: "SwipEats",
+    main_description: `
+    SwipEats is a web app that helps groups decide where to eat by swiping and voting on nearby restaurants.
+  `,
+    long_description: `
+SwipEats is a mobile-first web application that allows groups to swipe and vote on nearby restaurants — inspired by the Tinder swipe experience. It solves the common problem of group indecision by turning restaurant selection into a fast, collaborative, and interactive process.
+
+Users can create or join group sessions, discover location-based restaurant options, and swipe right or left to vote. Votes are synchronized in real time using WebSockets, allowing all members to instantly see updates and final results once a match is found.
+
+The frontend is built with Angular and TailwindCSS, optimized for a smooth mobile experience. The backend is written in Go, using Gorilla WebSocket for real-time communication alongside REST endpoints for session and restaurant management. The project follows a clean separation between client and server, with dedicated documentation covering architecture, API references, and system diagrams.
+
+The application is deployed using Apache for the backend and static hosting for the Angular frontend. While the project is no longer maintained, it remains a strong example of real-time system design, WebSocket implementation, and full-stack architecture using Go and Angular.
+  `,
+    github: "https://github.com/SwipEats/SwipEats",
+    live_demo: "https://swipeats.dcism.org",
+    technologies: [
+      "Angular",
+      "TailwindCSS",
+      "Go",
+      "REST API",
+      "WebSockets",
+      "Apache",
+    ],
+    position: "-mt-1",
+    featureIndex: 3,
+  },
+  {
     imgs: ["gainz.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Gainz API",
     main_description: `
-    Gainz API is a secure, extensible Workout Tracker REST API built with Java 21 and Spring Boot 3, featuring JWT authentication.
+    Gainz API is a secure, extensible Workout Tracker demonstrating modern backend development practices.
   `,
     long_description: `
 Gainz API is a secure and extensible Workout Tracker REST API built using Java 21 and Spring Boot 3. It enables users to register, authenticate via JWT, and manage their workout sessions through a clean RESTful architecture.
@@ -77,57 +128,6 @@ Although the project is no longer actively maintained, it serves as a strong fou
     featureIndex: 4,
   },
   {
-    imgs: ["hermes.png"],
-    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "Hermes",
-    main_description: `
-    Hermes is an enrollment queue management system built for DCISM students to streamline the enrollment process.
-  `,
-    long_description: `
-Hermes is a web-based enrollment queue management system designed specifically for DCISM students. The platform streamlines the enrollment process by allowing students to join a virtual queue for advising, subject approval, and enrollment-related concerns.
-
-Students can enter the queue remotely, monitor their real-time position, and receive updates on estimated wait times. This reduces physical crowding, improves scheduling efficiency, and provides better visibility into the enrollment flow.
-
-Administrators and faculty can manage the queue through a dedicated interface, monitor active students, process requests in order, and maintain an organized enrollment workflow.
-
-Built with React and Mantine UI, Hermes delivers a responsive and user-friendly interface. The backend, powered by ElysiaJS, handles real-time updates efficiently, while SQLite ensures lightweight and reliable data storage.
-  `,
-    github: "https://github.com/usc-cisco/hermes-site",
-    live_demo: "https://queue.dcism.org",
-    technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
-    position: "-mt-1",
-    featureIndex: 2,
-  },
-  {
-    imgs: ["swipeats.png"],
-    category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "SwipEats",
-    main_description: `
-    SwipEats is a mobile-first web app that helps groups decide where to eat by swiping and voting on nearby restaurants.
-  `,
-    long_description: `
-SwipEats is a mobile-first web application that allows groups to swipe and vote on nearby restaurants — inspired by the Tinder swipe experience. It solves the common problem of group indecision by turning restaurant selection into a fast, collaborative, and interactive process.
-
-Users can create or join group sessions, discover location-based restaurant options, and swipe right or left to vote. Votes are synchronized in real time using WebSockets, allowing all members to instantly see updates and final results once a match is found.
-
-The frontend is built with Angular and TailwindCSS, optimized for a smooth mobile experience. The backend is written in Go, using Gorilla WebSocket for real-time communication alongside REST endpoints for session and restaurant management. The project follows a clean separation between client and server, with dedicated documentation covering architecture, API references, and system diagrams.
-
-The application is deployed using Apache for the backend and static hosting for the Angular frontend. While the project is no longer maintained, it remains a strong example of real-time system design, WebSocket implementation, and full-stack architecture using Go and Angular.
-  `,
-    github: "https://github.com/SwipEats/SwipEats",
-    live_demo: "https://swipeats.dcism.org",
-    technologies: [
-      "Angular",
-      "TailwindCSS",
-      "Go",
-      "REST API",
-      "WebSockets",
-      "Apache",
-    ],
-    position: "-mt-1",
-    featureIndex: 3,
-  },
-  {
     imgs: ["skillstacker.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "SkillStacker",
@@ -149,8 +149,8 @@ This project focuses strictly on the admin-side implementation based on provided
       ".NET 6.0",
       "C#",
       "Razor Pages",
-      "Entity Framework Core",
       "SQL Server",
+      "Entity Framework Core",
       "Tailwind CSS",
     ],
     position: "-mt-11",

@@ -2,7 +2,6 @@ import { IProject } from "@/data/projects";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
-import { Badge } from "../ui/badge";
 
 interface ProjectGridCardProps {
   project: IProject;
@@ -25,20 +24,23 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
             className={`w-full h-auto object-cover object-center ${project.position || ""}`}
           />
         </div>
-        <div className="w-full text-white font-kanit p-4">
-          <p className="text-lg md:text-xl font-semibold mb-2">
-            {project.title}
-          </p>
+        <div className="w-full text-white font-kanit p-6">
+          <p className="text-lg md:text-xl font-semibold">{project.title}</p>
           <p className="w-full text-gray-400 font-extralight text-xs md:text-sm line-clamp-2">
             {project.main_description.trim()}
           </p>
-          <div className="mt-3">
-            <Badge
-              variant={"outline"}
-              className="text-xs border-zinc-800 border-opacity-20"
-            >
-              {project.category}
-            </Badge>
+          <div className="mt-6">
+            <p className="font-light text-sm">Technologies Used:</p>
+            <div className="flex flex-wrap gap-1 my-2">
+              {project.technologies.slice(0, 4).map((tech, i) => (
+                <p
+                  key={i}
+                  className="text-xs font-extralight rounded-xl border px-2 border-zinc-800 border-opacity-20"
+                >
+                  {tech}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
