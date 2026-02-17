@@ -130,18 +130,29 @@ The application is deployed using Apache for the backend and static hosting for 
   {
     imgs: ["skillstacker.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "Skill Stacker",
+    title: "SkillStacker",
     main_description: `
-        Skill Stacker is a training management system for authors to publish, and for learners to learn.
-        `,
-    long_description: `Skill Stacker is a comprehensive training management system designed for authors to publish educational content and for learners to access structured learning materials. This platform bridges the gap between content creators and learners in a seamless, user-friendly environment.
+    SkillStacker is an admin-side training management system built in C# for managing users, trainings, and categories.
+  `,
+    long_description: `
+SkillStacker is a C# web application developed for the Alliance Software Inc. Summer Bridge Program. It serves as the admin-side interface of a knowledge and training platform, enabling administrators to manage users, training categories, and training content efficiently.
 
-Authors can create, organize, and publish courses with multimedia content including videos, documents, quizzes, and assignments. The system includes features for course management, student enrollment tracking, progress monitoring, and certification generation. Learners benefit from a structured curriculum, interactive content, progress tracking, and achievement badges.
+The system supports full CRUD (Create, Read, Update, Delete) functionality for user accounts, training categories, trainings, and topics. It includes authentication features such as login and forgot/change password, along with master screens for managing structured training data. Administrators can add, edit, delete, search, view, and rate trainings within the system.
 
-Built with ASP.NET MVC, the platform provides a robust server-side architecture with secure authentication and authorization. Tailwind CSS ensures a modern, responsive design that works beautifully on all devices. SQL Server handles complex data relationships for courses, users, and progress tracking, while Supabase integration provides additional real-time capabilities and storage solutions.`,
-    github: "https://github.com/SwipEats/SwipEats",
-    live_demo: "https://swipeats.dcism.org",
-    technologies: ["ASP.NET MVC", "Tailwind CSS", "SQL Server", "Supabase"],
+Built using .NET 6.0 and Razor Pages, the application follows a clean server-rendered architecture. Entity Framework Core handles database interactions, while SQL Server (managed through SQL Server Management Studio) stores relational data. Tailwind CSS is used for responsive and modern UI styling.
+
+This project focuses strictly on the admin-side implementation based on provided functional specifications and does not include the public-facing learner interface.
+  `,
+    github: "",
+    live_demo: "",
+    technologies: [
+      ".NET 6.0",
+      "C#",
+      "Razor Pages",
+      "Entity Framework Core",
+      "SQL Server",
+      "Tailwind CSS",
+    ],
     position: "-mt-11",
   },
   {
