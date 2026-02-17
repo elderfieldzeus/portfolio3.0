@@ -123,7 +123,7 @@ const TimelineRow: React.FC<TimelineRowProps> = ({
               className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
             >
               <div className="overflow-hidden">
-                <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-4">
+                <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-2">
                   {bullets!.map((bullet, idx) => (
                     <div
                       key={idx}

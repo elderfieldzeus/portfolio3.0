@@ -60,7 +60,7 @@ export const educations: IEducation[] = [
     institution: "University of San Carlos",
     url: "https://www.usc.edu.ph",
     icon: "usc.jpg",
-    degree: "Bachelor's of Science Computer Science",
+    degree: "Bachelor of Science Computer Science",
     startDate: "2022-08",
     endDate: "Present",
     highlights: [

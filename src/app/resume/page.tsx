@@ -15,8 +15,7 @@ import EducationItem from "@/components/resume/EducationItem";
 import LandingButton from "@/components/custom-ui/LandingButton";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";
-import AchievementGridCard from "@/components/resume/AchievementGridCard";
-import CertificationGridCard from "@/components/resume/CertificationGridCard";
+import ResumeGridCard from "@/components/resume/ResumeGridCard";
 import AchievementModal from "@/components/resume/AchievementModal";
 import CertificationModal from "@/components/resume/CertificationModal";
 import { IAchievement, ICertification } from "@/data/resume";
@@ -132,9 +131,9 @@ export default function ResumePage() {
             </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {achievements.map((achievement, index) => (
-                <AchievementGridCard
+                <ResumeGridCard
                   key={index}
-                  achievement={achievement}
+                  item={achievement}
                   onClick={() => handleAchievementClick(achievement)}
                 />
               ))}
@@ -153,9 +152,9 @@ export default function ResumePage() {
             </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
               {certifications.map((certification, index) => (
-                <CertificationGridCard
+                <ResumeGridCard
                   key={index}
-                  certification={certification}
+                  item={certification}
                   onClick={() => handleCertificationClick(certification)}
                 />
               ))}
