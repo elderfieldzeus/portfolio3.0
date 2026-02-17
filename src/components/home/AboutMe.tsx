@@ -100,7 +100,7 @@ const AboutMe: React.FC = () => {
                 <p className="text-gray-300 text-sm">Currently Learning</p>
               </div>
               <div className="w-full h-28 flex items-center justify-center  text-white mb-4">
-                <CurrentlyLearning size={100} />
+                <CurrentlyLearning size={75} />
               </div>
             </MagicCard>
           </BlurFade>

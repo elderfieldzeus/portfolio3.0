@@ -1,6 +1,6 @@
-import { JavaOriginal } from "devicons-react";
+import { SiOpenai } from "react-icons/si";
 
-export const CurrentlyLearning: React.ElementType = JavaOriginal;
+export const CurrentlyLearning: React.ElementType = SiOpenai;
 
 export interface ITechStack {
   img: string;
