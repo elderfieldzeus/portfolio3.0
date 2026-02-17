@@ -56,7 +56,21 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
               <div
                 className={`relative z-10 mb-2 ${!isFirstPosition ? "opacity-0" : ""}`}
               >
-                <div className="size-14 rounded-full border-2 border-white bg-black flex items-center justify-center"></div>
+                <div className="size-14 rounded-full border border-white bg-white flex items-center justify-center overflow-hidden">
+                  {experience.company.icon ? (
+                    <img
+                      src={
+                        "/images/resume/experience/" + experience.company.icon
+                      }
+                      alt={`${experience.company.name} logo`}
+                      className="w-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-xs text-gray-500">
+                      {experience.company.name.charAt(0).toUpperCase()}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* Timeline Line */}
@@ -104,7 +118,9 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
                   <div className="flex items-center gap-2">
                     <p className="text-xs font-extralight text-gray-400 rounded-xl border px-3 py-1 border-zinc-800 border-opacity-20">
                       {formatDate(position.startDate)} -{" "}
-                      {formatDate(position.endDate)}
+                      {position.endDate
+                        ? formatDate(position.endDate)
+                        : "Present"}
                     </p>
                   </div>
                 </div>

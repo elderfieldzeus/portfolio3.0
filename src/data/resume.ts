@@ -24,7 +24,7 @@ export interface ICertification {
 export interface IExperiencePosition {
   title: string;
   startDate: string;
-  endDate: string;
+  endDate?: string;
   contributions?: string[];
 }
 
@@ -46,13 +46,12 @@ export const experiences: IExperience[] = [
       id: "oboda",
       name: "oboda",
       url: "https://oboda.com",
-      icon: "/images/placeholder-company.png", // Placeholder
+      icon: "oboda.jpg", // Placeholder
     },
     positions: [
       {
         title: "Software/AI Engineer Intern",
-        startDate: "2025-01",
-        endDate: "2025-03",
+        startDate: "2025-09",
         contributions: [
           "Developed AI-powered features using machine learning algorithms",
           "Collaborated with cross-functional teams to implement new functionalities",
@@ -63,16 +62,15 @@ export const experiences: IExperience[] = [
   },
   {
     company: {
-      id: "alliance-software",
-      name: "Alliance Software Inc.",
-      url: "https://www.alliance.com.ph",
-      icon: "/images/placeholder-company.png",
+      id: "usc-cisco",
+      name: "Computer and Information Sciences Council",
+      url: "https://face",
+      icon: "cisco.jpg",
     },
     positions: [
       {
-        title: "Software Developer Intern",
-        startDate: "2025-01",
-        endDate: "2025-02",
+        title: "Vice President for Information",
+        startDate: "2025-06",
         contributions: [
           "Built and maintained web applications using modern frameworks",
           "Participated in code reviews and agile development practices",
@@ -86,17 +84,37 @@ export const experiences: IExperience[] = [
       id: "todays-carolinian",
       name: "Today's Carolinian",
       url: "https://todayscarolinian.com",
-      icon: "/images/placeholder-company.png",
+      icon: "tc.jpg",
     },
     positions: [
       {
         title: "Web Developer",
-        startDate: "2025-01",
+        startDate: "2025-02",
         endDate: "Present",
         contributions: [
           "Maintained and updated the organization's website",
           "Implemented responsive design improvements",
           "Managed content updates and technical issues",
+        ],
+      },
+    ],
+  },
+  {
+    company: {
+      id: "alliance-software",
+      name: "Alliance Software Inc.",
+      url: "https://www.alliance.com.ph",
+      icon: "alliance.png",
+    },
+    positions: [
+      {
+        title: "Software Developer Intern",
+        startDate: "2025-06",
+        endDate: "2025-07",
+        contributions: [
+          "Built and maintained web applications using modern frameworks",
+          "Participated in code reviews and agile development practices",
+          "Fixed bugs and implemented new features based on client requirements",
         ],
       },
     ],
