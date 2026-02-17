@@ -32,7 +32,7 @@ const AchievementModal: React.FC<AchievementModalProps> = ({
                   {achievement.title}
                 </DialogTitle>
                 <DialogDescription className="text-gray-400 font-kanit">
-                  {achievement.subtitle} • {achievement.year}
+                  {achievement.subtitle} • {achievement.date}
                 </DialogDescription>
               </DialogHeader>
             </div>
