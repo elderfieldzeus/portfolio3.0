@@ -7,7 +7,7 @@ export interface IResumeEvent {
 export interface IAchievement {
   title: string;
   subtitle: string;
-  year: string;
+  date: string;
   imgs: string[];
   description?: string;
   isFeatured?: true;
@@ -16,7 +16,7 @@ export interface IAchievement {
 export interface ICertification {
   title: string;
   subtitle: string;
-  year: string;
+  date: string;
   imgs: string[];
   description?: string;
   url?: string;
@@ -60,7 +60,7 @@ export const educations: IEducation[] = [
     institution: "University of San Carlos",
     url: "https://www.usc.edu.ph",
     icon: "usc.jpg",
-    degree: "BS Computer Science",
+    degree: "Bachelor's of Science Computer Science",
     startDate: "2022-08",
     endDate: "Present",
     highlights: [
@@ -72,6 +72,7 @@ export const educations: IEducation[] = [
   {
     id: "shs-adc",
     institution: "Sacred Heart School - Ateneo de Cebu",
+    url: "https://shs-adc.edu.ph",
     icon: "ateneo.jpg",
     degree: "High School Diploma",
     startDate: "2020-06",
@@ -172,7 +173,7 @@ export const achievements: IAchievement[] = [
     isFeatured: true,
     title: "Top 3 Score (Philippines)",
     subtitle: "PhilNITS",
-    year: "2025",
+    date: "2025",
     imgs: ["mrbean-phone.gif"],
     description:
       "Achieved top 3 score in the Philippines for the PhilNITS examination.",
@@ -181,7 +182,7 @@ export const achievements: IAchievement[] = [
     isFeatured: true,
     title: "1st Place",
     subtitle: "National CS/IT Skills Competition",
-    year: "2025",
+    date: "2025",
     imgs: ["mrbean-phone.gif"],
     description: "Won first place in the National CS/IT Skills Competition.",
   },
@@ -189,7 +190,7 @@ export const achievements: IAchievement[] = [
     isFeatured: true,
     title: "3rd Place",
     subtitle: "Codechum National Programming Competition - Group 2",
-    year: "2024",
+    date: "2024",
     imgs: ["mrbean-phone.gif"],
     description:
       "Secured third place in the Codechum National Programming Competition - Group 2.",
@@ -201,7 +202,7 @@ export const certifications: ICertification[] = [
     isFeatured: true,
     title: "TOPCIT Level III",
     subtitle: "Ministry of Science and ICT, South Korea",
-    year: "2025",
+    date: "2025",
     imgs: ["mrbean-phone.gif"],
     description:
       "Achieved TOPCIT Level III certification from the Ministry of Science and ICT, South Korea.",
@@ -211,7 +212,7 @@ export const certifications: ICertification[] = [
     isFeatured: true,
     title: "Fundamental IT Engineer",
     subtitle: "PhilNITS",
-    year: "2025",
+    date: "2025",
     imgs: ["mrbean-phone.gif"],
     description:
       "Earned the Fundamental IT Engineer certification from PhilNITS.",
@@ -220,7 +221,7 @@ export const certifications: ICertification[] = [
     isFeatured: true,
     title: "Software Engineer",
     subtitle: "HackerRank",
-    year: "2025",
+    date: "2025",
     imgs: ["mrbean-phone.gif"],
     description: "Completed the Software Engineer certification on HackerRank.",
     url: "https://www.hackerrank.com/certificates",
@@ -247,7 +248,7 @@ export const getHomePageAchievements = (): IResumeEvent[] => {
     .map((achievement) => ({
       title: achievement.title,
       subtitle: achievement.subtitle,
-      year: achievement.year,
+      year: achievement.date,
     }));
 };
 
@@ -257,6 +258,6 @@ export const getHomePageCertifications = (): IResumeEvent[] => {
     .map((certification) => ({
       title: certification.title,
       subtitle: certification.subtitle,
-      year: certification.year,
+      year: certification.date,
     }));
 };

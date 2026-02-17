@@ -2,6 +2,8 @@ import { ICertification } from "@/data/resume";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
+import { formatDate } from "@/lib/utils";
 
 interface CertificationGridCardProps {
   certification: ICertification;
@@ -32,9 +34,12 @@ const CertificationGridCard: React.FC<CertificationGridCardProps> = ({
             {certification.subtitle}
           </p>
           <div>
-            <span className="text-xs text-gray-500 font-light">
-              {certification.year}
-            </span>
+            <Badge
+              variant={"outline"}
+              className="text-xs text-gray-500 font-light"
+            >
+              {formatDate(certification.date)}
+            </Badge>
           </div>
         </div>
       </div>

@@ -3,31 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-
-export const formatDate = (dateString: string): string => {
-  if (dateString.toLowerCase() === "present") {
-    return "Present";
-  }
-
-  const [year, month] = dateString.split("-");
-  const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  const monthIndex = parseInt(month, 10) - 1;
-  return `${monthNames[monthIndex]} ${year}`;
-};
+import { formatDate } from "@/lib/utils";
 
 interface TimelineRowProps {
   icon?: string;
@@ -86,7 +62,9 @@ const TimelineRow: React.FC<TimelineRowProps> = ({
 
         {/* Timeline Line */}
         {shortenLine ? (
-          <div className={`absolute w-0.5 bg-zinc-600 top-12 bottom-2`}></div>
+          <div
+            className={`absolute w-0.5 bg-zinc-600 top-12 bottom-2 transition-all ${isOpen ? "h-[75%]" : "h-0"}`}
+          ></div>
         ) : (
           <div className={`absolute w-0.5 h-[120%] bg-zinc-600 top-12`}></div>
         )}
@@ -145,13 +123,13 @@ const TimelineRow: React.FC<TimelineRowProps> = ({
               className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
             >
               <div className="overflow-hidden">
-                <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-2">
+                <div className="mt-3 pl-4 border-l-2 border-zinc-800 space-y-4">
                   {bullets!.map((bullet, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-2 text-sm text-gray-300 font-light"
+                      className="flex items-center gap-2 text-sm text-gray-300 font-light"
                     >
-                      <span className="text-gray-500 mt-1">•</span>
+                      <span className="text-gray-500">•</span>
                       <span>{bullet}</span>
                     </div>
                   ))}

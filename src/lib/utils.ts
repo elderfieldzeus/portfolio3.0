@@ -40,3 +40,30 @@ export const handleHrefRoute = (href: string, router: AppRouterInstance) => {
     window.open(href, "_blank");
   }
 };
+
+export const formatDate = (dateString: string): string => {
+  if (dateString.toLowerCase() === "present") {
+    return "Present";
+  }
+
+  const [year, month] = dateString.split("-");
+  if (!month) return year!;
+
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const monthIndex = parseInt(month, 10) - 1;
+  return `${monthNames[monthIndex]} ${year}`;
+};

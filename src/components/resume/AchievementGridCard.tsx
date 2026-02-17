@@ -2,6 +2,8 @@ import { IAchievement } from "@/data/resume";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
+import { formatDate } from "@/lib/utils";
 
 interface AchievementGridCardProps {
   achievement: IAchievement;
@@ -28,13 +30,16 @@ const AchievementGridCard: React.FC<AchievementGridCardProps> = ({
           <p className="text-lg md:text-xl font-semibold mb-2">
             {achievement.title}
           </p>
-          <p className="w-full text-gray-400 font-extralight text-xs md:text-sm line-clamp-2 mb-2">
+          <p className="w-full text-gray-400 font-extralight text-xs md:text-sm line-clamp-2 mb-2 truncate">
             {achievement.subtitle}
           </p>
           <div>
-            <span className="text-xs text-gray-500 font-light">
-              {achievement.year}
-            </span>
+            <Badge
+              variant={"outline"}
+              className="text-xs text-gray-500 font-light"
+            >
+              {formatDate(achievement.date)}
+            </Badge>
           </div>
         </div>
       </div>
