@@ -9,9 +9,13 @@ import Link from "next/link";
 
 interface ProjectCardProps {
   project: IProject;
+  maxTechnologies?: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  project,
+  maxTechnologies,
+}) => {
   return (
     <MagicCard className="w-full bg-black border rounded-lg border-opacity-20 overflow-hidden">
       <div className="aspect-2/1 w-full h-auto overflow-hidden">
@@ -31,7 +35,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="mt-6">
           <p className="font-light text-sm">Technologies Used:</p>
           <div className="flex flex-wrap gap-1 my-2">
-            {project.technologies.map((tech, i) => {
+            {(maxTechnologies
+              ? project.technologies.slice(0, maxTechnologies)
+              : project.technologies
+            ).map((tech, i) => {
               return (
                 <p
                   key={i}

@@ -5,6 +5,8 @@ import { projects } from "@/data/projects";
 import BlurFade from "@/components/ui/blur-fade";
 import ViewMore from "../custom-ui/ViewMore";
 
+const MAX_TECHNOLOGIES = 4;
+
 export default function Projects() {
   const featuredProjects = projects
     .filter((project) => project.featureIndex !== undefined)
@@ -23,7 +25,13 @@ export default function Projects() {
         className={`grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-4 max-w-200 w-(--w-max) md:w-full mx-[10vw]`}
       >
         {featuredProjects.map((project, index) => {
-          return <ProjectCard key={index} project={project} />;
+          return (
+            <ProjectCard
+              key={index}
+              project={project}
+              maxTechnologies={MAX_TECHNOLOGIES}
+            />
+          );
         })}
       </BlurFade>
       <BlurFade delay={0.25} inView>
