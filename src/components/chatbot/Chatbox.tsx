@@ -55,7 +55,16 @@ const Chatbox = ({ handleClose }: ChatboxProps) => {
       });
 
       if (!res.ok) {
-        throw new Error("Network response error");
+        const errorText = await res.text();
+        setMessages((prev) => [
+          ...prev.slice(0, -1),
+          {
+            role: "assistant",
+            content: errorText || "Something went wrong. Please try again.",
+          },
+        ]);
+        setIsLoading(false);
+        return;
       }
 
       const decoder = new TextDecoder();
@@ -92,6 +101,14 @@ const Chatbox = ({ handleClose }: ChatboxProps) => {
       }
     } catch (error) {
       console.error("Error:", error);
+      setMessages((prev) => [
+        ...prev.slice(0, -1),
+        {
+          role: "assistant",
+          content: "Something went wrong. Please try again.",
+        },
+      ]);
+      setIsLoading(false);
     }
   };
 

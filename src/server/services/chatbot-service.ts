@@ -8,7 +8,8 @@ import {
 import { StoredConversation } from "../types/chatbot";
 import { projects } from "@/data/projects";
 import { achievements, certifications, experiences } from "@/data/resume";
-import { BASE_PROMPT } from "../utils/prompt";
+import { BASE_PROMPT } from "../utils/prompts/base";
+import { FUN_FACTS_PROMPT } from "../utils/prompts/fun-facts";
 
 class ChatbotService {
   static CONVO_TTL_MS = 60 * 60 * 1000; // 60m * 60s * 1000ms
@@ -37,42 +38,20 @@ class ChatbotService {
     }
   }
 
-  static generateChatbotPrompt() {
-    const aboutSectionPropmpt =
-      `
-        About Zeus Elderfield:\n
-        ` +
-      JSON.stringify(aboutData) +
-      `\n` +
-      `Tech Stack:\n` +
-      [...frontend, ...backend, ...dsml, ...devopsAndTools].join(", ") +
-      `\n`;
-
-    const projectSectionPrompt =
-      `
-        Zeus Elderfield's Projects:\n
-        ` +
-      JSON.stringify(projects) +
-      `\n`;
-
-    const resumeSectionPrompt =
-      `
-        Zeus Elderfield's Resume:\n
-        ` +
-      JSON.stringify({
-        experiences,
-        achievements,
-        certifications,
-      }) +
-      `\n`;
-
-    return (
-      BASE_PROMPT +
-      aboutSectionPropmpt +
-      projectSectionPrompt +
-      resumeSectionPrompt
-    );
-  }
+  static readonly CHATBOT_PROMPT =
+    BASE_PROMPT +
+    `\nAbout Zeus Elderfield:\n` +
+    JSON.stringify(aboutData) +
+    FUN_FACTS_PROMPT +
+    `\nTech Stack:\n` +
+    [...frontend, ...backend, ...dsml, ...devopsAndTools].join(", ") +
+    `\n` +
+    `\nZeus Elderfield's Projects:\n` +
+    JSON.stringify(projects) +
+    `\n` +
+    `\nZeus Elderfield's Resume:\n` +
+    JSON.stringify({ experiences, achievements, certifications }) +
+    `\n`;
 }
 
 export default ChatbotService;

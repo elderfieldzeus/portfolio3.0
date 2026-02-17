@@ -36,13 +36,16 @@ export const POST = async (req: Request) => {
       contents: [
         {
           role: "user",
-          parts: [{ text: ChatbotService.generateChatbotPrompt() }],
+          parts: [{ text: ChatbotService.CHATBOT_PROMPT }],
         },
-        ...contents,
+        ...(ChatbotService.getConversation(convoId)?.messages.map(
+          (message) => ({
+            role: message.role === "assistant" ? "model" : "user",
+            parts: [{ text: message.content }],
+          }),
+        ) || []),
       ],
     });
-
-    console.log(upstream);
 
     const encoder = new TextEncoder();
 
@@ -68,6 +71,17 @@ export const POST = async (req: Request) => {
       },
     });
   } catch (e) {
+    const message = e instanceof Error ? e.message : String(e);
+    if (
+      message.includes("429") ||
+      message.includes("RESOURCE_EXHAUSTED") ||
+      message.includes("quota")
+    ) {
+      return new Response(
+        "I've hit my daily usage limit. Please try again tomorrow!",
+        { status: 429 },
+      );
+    }
     console.error("Error in chat route:", e);
     return new Response("Internal server error", { status: 500 });
   }
