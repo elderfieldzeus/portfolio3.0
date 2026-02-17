@@ -47,18 +47,32 @@ export const projects: IProject[] = [
   {
     imgs: ["gainz.png"],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
-    title: "Gainz",
+    title: "Gainz API",
     main_description: `
-        Gainz is a simple, powerful workout tracker to help you crush your fitness goals.
-        `,
-    long_description: `Gainz is a simple, powerful workout tracker designed to help you crush your fitness goals. This full-stack application provides comprehensive workout management with an intuitive interface and robust backend architecture.
+    Gainz API is a secure, extensible Workout Tracker REST API built with Java 21 and Spring Boot 3, featuring JWT authentication.
+  `,
+    long_description: `
+Gainz API is a secure and extensible Workout Tracker REST API built using Java 21 and Spring Boot 3. It enables users to register, authenticate via JWT, and manage their workout sessions through a clean RESTful architecture.
 
-The platform allows users to create custom workout routines, track exercises, sets, and reps, and monitor their progress over time. Users can log their workouts, view detailed statistics, and analyze their performance trends. The application includes features for managing multiple workout programs, setting personal records, and tracking body measurements.
+The API supports user registration and login, workout CRUD operations, and secure endpoint access using Spring Security with JWT authentication. Designed with scalability and maintainability in mind, the project follows a modular architecture separating configuration, controllers, services, repositories, DTOs, and models.
 
-Built with Spring Boot and Spring Security, Gainz ensures secure user authentication and data protection. The application features a responsive design that works seamlessly across desktop and mobile devices, making it easy to log workouts at the gym or at home. With Hibernate ORM and MySQL database, the platform efficiently manages complex workout data and user information.`,
+The system uses Spring Data JPA (Hibernate) for database interaction and supports MySQL in production, with planned support for PostgreSQL and MariaDB. Environment variables are managed using Dotenv, and OpenAPI/Swagger UI is integrated for API documentation and testing.
+
+Although the project is no longer actively maintained, it serves as a strong foundation for secure backend API development using modern Spring Boot practices.
+  `,
     github: "https://github.com/elderfieldzeus/gainz-api",
-    live_demo: "https://gainz.zoos.dev",
-    technologies: ["Spring Boot", "Spring Security", "Hibernate", "MySQL"],
+    live_demo: "",
+    technologies: [
+      "Java 21",
+      "Spring Boot 3",
+      "Spring Security (JWT)",
+      "Spring Data JPA (Hibernate)",
+      "MySQL",
+      "Maven",
+      "Lombok",
+      "OpenAPI/Swagger",
+      "Dotenv",
+    ],
     position: "",
     featureIndex: 4,
   },
