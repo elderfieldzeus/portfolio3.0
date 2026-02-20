@@ -206,7 +206,7 @@ export const achievements: IAchievement[] = [
     subtitle: "Codechum National Programming Competition - Group 2",
     date: "2024",
     imgs: [
-      { path: "codechum-logo.png", style: "h-full w-auto" },
+      { path: "codechum-logo.png", style: "w-full h-auto" },
       { path: "codechum-3rd.jpeg", style: "h-full w-auto" },
       { path: "codechum-with-medals.jpg", style: "h-full w-auto" },
       { path: "codechum-congrats.jpg", style: "h-full w-auto" },
