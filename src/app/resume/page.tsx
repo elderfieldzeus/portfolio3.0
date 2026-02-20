@@ -15,7 +15,9 @@ import EducationItem from "@/components/resume/EducationItem";
 import LandingButton from "@/components/custom-ui/LandingButton";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";
-import ResumeGridCard from "@/components/resume/ResumeGridCard";
+import ResumeGridCard, {
+  ResumeGridCardType,
+} from "@/components/resume/ResumeGridCard";
 import AchievementModal from "@/components/resume/AchievementModal";
 import CertificationModal from "@/components/resume/CertificationModal";
 import { IAchievement, ICertification } from "@/data/resume";
@@ -134,6 +136,7 @@ export default function ResumePage() {
                 <ResumeGridCard
                   key={index}
                   item={achievement}
+                  type={ResumeGridCardType.Accomplishment}
                   onClick={() => handleAchievementClick(achievement)}
                 />
               ))}
@@ -155,6 +158,7 @@ export default function ResumePage() {
                 <ResumeGridCard
                   key={index}
                   item={certification}
+                  type={ResumeGridCardType.Certification}
                   onClick={() => handleCertificationClick(certification)}
                 />
               ))}

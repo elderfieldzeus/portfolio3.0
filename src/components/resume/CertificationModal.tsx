@@ -45,7 +45,7 @@ const CertificationModal: React.FC<CertificationModalProps> = ({
                 <ImageCarousel
                   images={certification.imgs}
                   title={certification.title}
-                  imageBasePath="/images/"
+                  imageBasePath="/images/resume/certifications/"
                 />
               </div>
 

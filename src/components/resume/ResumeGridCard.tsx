@@ -4,6 +4,11 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { formatDate } from "@/lib/utils";
 
+export enum ResumeGridCardType {
+  Accomplishment = "accomplishment",
+  Certification = "certification",
+}
+
 interface ResumeGridCardItem {
   title: string;
   subtitle: string;
@@ -13,16 +18,28 @@ interface ResumeGridCardItem {
 
 interface ResumeGridCardProps {
   item: ResumeGridCardItem;
+  type: ResumeGridCardType;
   onClick: () => void;
 }
 
-const ResumeGridCard: React.FC<ResumeGridCardProps> = ({ item, onClick }) => {
+const getImagePath = (type: ResumeGridCardType, img: string) => {
+  if (type === ResumeGridCardType.Accomplishment) {
+    return `/images/resume/accomplishments/${img}`;
+  }
+  return `/images/resume/certifications/${img}`;
+};
+
+const ResumeGridCard: React.FC<ResumeGridCardProps> = ({
+  item,
+  type,
+  onClick,
+}) => {
   return (
     <MagicCard className="w-full bg-black border rounded-lg border-opacity-20 overflow-hidden hover:border-opacity-40 transition-all cursor-pointer">
       <div onClick={onClick} className="w-full h-full">
         <div className="aspect-2/1 w-full h-auto overflow-hidden bg-zinc-900 flex items-center justify-center">
           <Image
-            src={`/images/${item.imgs[0]!}`}
+            src={getImagePath(type, item.imgs[0]!)}
             alt={item.title}
             width={1000}
             height={1000}

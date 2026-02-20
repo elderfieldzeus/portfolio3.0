@@ -41,7 +41,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <div className="relative w-full">
-      <div className="aspect-2/1 w-full h-auto overflow-hidden rounded-lg relative group">
+      <div className="aspect-2/1 w-full h-auto overflow-hidden rounded-lg relative group flex items-center justify-center">
         <Image
           src={`${imageBasePath}${images[currentIndex]}`}
           alt={`${title} - Image ${currentIndex + 1}`}

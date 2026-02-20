@@ -43,7 +43,7 @@ const AchievementModal: React.FC<AchievementModalProps> = ({
                 <ImageCarousel
                   images={achievement.imgs}
                   title={achievement.title}
-                  imageBasePath="/images/"
+                  imageBasePath="/images/resume/accomplishments/"
                 />
               </div>
 

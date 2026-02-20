@@ -187,7 +187,7 @@ export const achievements: IAchievement[] = [
     title: "1st Place",
     subtitle: "National CS/IT Skills Competition",
     date: "2025",
-    imgs: ["mrbean-phone.gif"],
+    imgs: ["sikaptala.jpeg"],
     description: "Won first place in the National CS/IT Skills Competition.",
   },
   {
@@ -195,7 +195,7 @@ export const achievements: IAchievement[] = [
     title: "3rd Place",
     subtitle: "Codechum National Programming Competition - Group 2",
     date: "2024",
-    imgs: ["mrbean-phone.gif"],
+    imgs: ["codechum-3rd.jpeg"],
     description:
       "Secured third place in the Codechum National Programming Competition - Group 2.",
   },
