@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../ui/dialog";
-import ImageCarousel from "../projects/ImageCarousel";
+import ImageCarousel from "../custom-ui/ImageCarousel";
 import LandingButton from "../custom-ui/LandingButton";
 import Link from "next/link";
 

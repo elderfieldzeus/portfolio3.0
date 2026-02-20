@@ -4,8 +4,13 @@ export enum ProjectCategoryEnum {
   DATA_SCIENCE = "Data Science",
 }
 
+export interface IImg {
+  path: string;
+  style?: string;
+}
+
 export interface IProject {
-  imgs: string[];
+  imgs: IImg[];
   category: ProjectCategoryEnum;
   title: string;
   mainDescription: string;
@@ -14,13 +19,12 @@ export interface IProject {
   github?: string;
   liveDemo?: string;
   technologies: string[];
-  position?: string;
   featureIndex?: number;
 }
 
 export const projects: IProject[] = [
   {
-    imgs: ["ciscode.jpg"],
+    imgs: [{ path: "ciscode.jpg", style: "-mt-5" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Ciscode",
     mainDescription: `
@@ -33,7 +37,7 @@ export const projects: IProject[] = [
     Built entirely with Next.js as a fullstack framework (handling both frontend and API backend), Ciscode integrates MySQL as its database and Sequelize as its ORM for efficient data management. The application delivers a fast and modern UI experience while maintaining scalable backend functionality.
 
     This project is intended for educational purposes under USC-CISCO and welcomes contributions from students and developers.
-    
+
     To test out the site, you can use a test account with the following credentials:
     Username: testuser
     Password: testpassword
@@ -41,11 +45,10 @@ export const projects: IProject[] = [
     github: "https://github.com/usc-cisco/ciscode",
     liveDemo: "https://ciscode.dcism.org",
     technologies: ["Next.js", "MySQL", "Sequelize", "Node.js"],
-    position: "-mt-5",
     featureIndex: 1,
   },
   {
-    imgs: ["hermes.png"],
+    imgs: [{ path: "hermes.png", style: "-mt-1" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Hermes",
     mainDescription: `
@@ -63,11 +66,10 @@ Built with React and Mantine UI, Hermes delivers a responsive and user-friendly 
     github: "https://github.com/usc-cisco/hermes-site",
     liveDemo: "https://queue.dcism.org",
     technologies: ["React", "Mantine UI", "ElysiaJS", "SQLite"],
-    position: "-mt-1",
     featureIndex: 2,
   },
   {
-    imgs: ["swipeats.png"],
+    imgs: [{ path: "swipeats.png", style: "-mt-1" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "SwipEats",
     mainDescription: `
@@ -92,11 +94,10 @@ The application is deployed using Apache for the backend and static hosting for 
       "WebSockets",
       "Apache",
     ],
-    position: "-mt-1",
     featureIndex: 3,
   },
   {
-    imgs: ["gainz.png"],
+    imgs: [{ path: "gainz.png" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Gainz API",
     mainDescription: `
@@ -124,11 +125,10 @@ Although the project is no longer actively maintained, it serves as a strong fou
       "OpenAPI/Swagger",
       "Dotenv",
     ],
-    position: "",
     featureIndex: 4,
   },
   {
-    imgs: ["skillstacker.png"],
+    imgs: [{ path: "skillstacker.png", style: "-mt-11" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "SkillStacker",
     mainDescription: `
@@ -151,10 +151,9 @@ This project focuses strictly on the admin-side implementation based on provided
       "Entity Framework Core",
       "Tailwind CSS",
     ],
-    position: "-mt-11",
   },
   {
-    imgs: ["twerkout.png"],
+    imgs: [{ path: "twerkout.png", style: "-mt-1" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Twerkout",
     mainDescription: `
@@ -172,10 +171,9 @@ Twerkout is open source and available under the MIT License.
     github: "https://github.com/elderfieldzeus/twerkout",
     liveDemo: "https://twerkout.zoos.dev",
     technologies: ["TypeScript", "React", "Vite", "Tailwind CSS", "Firebase"],
-    position: "-mt-1",
   },
   {
-    imgs: ["vintage-royale.png"],
+    imgs: [{ path: "vintage-royale.png", style: "-mt-2" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Vintage Royale",
     mainDescription: `
@@ -189,10 +187,9 @@ Built with TypeScript and React, the application delivers a fast, responsive use
     github: "https://github.com/elderfieldzeus/vintage-royale",
     liveDemo: "https://vintage-royale.zoos.dev",
     technologies: ["Typescript", "React", "Tailwind CSS", "Supabase"],
-    position: "-mt-2",
   },
   {
-    imgs: ["foamfusion.png"],
+    imgs: [{ path: "foamfusion.png", style: "-mt-2" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "FoamFusion",
     mainDescription: `A full-stack product management system for FoamFusion Soaps, enhancing end-to-end operations.`,
@@ -204,10 +201,9 @@ Built with PHP for server-side logic, the application provides robust backend fu
     github: "https://github.com/elderfieldzeus/foamfusion",
     liveDemo: "https://foamfusion.dcism.org/",
     technologies: ["PHP", "Tailwind CSS", "MySQL", "JavaScript", "HTML"],
-    position: "-mt-2",
   },
   {
-    imgs: ["basher.png"],
+    imgs: [{ path: "basher.png", style: "-mt-2" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Basher",
     mainDescription: `
@@ -221,10 +217,9 @@ Built with TypeScript and React, Basher provides a modern, interactive user inte
     github: "https://github.com/DestinEcarma/basher-frontend",
     liveDemo: "https://basher-ph-dpbf.shuttle.app/",
     technologies: ["Typescript", "React", "Tailwind CSS", "Axios", "GraphQL"],
-    position: "-mt-2",
   },
   {
-    imgs: ["philnits-mock-exam.png"],
+    imgs: [{ path: "philnits-mock-exam.png" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Philnits Mock Exam",
     mainDescription: `
@@ -238,10 +233,9 @@ Built with Next.js and TypeScript, the application provides server-side renderin
     github: "https://github.com/usc-cisco/philnits-mock",
     liveDemo: "https://philnits.zoos.dev/",
     technologies: ["Next.js", "Typescript", "Tailwind CSS"],
-    position: "",
   },
   {
-    imgs: ["schedaddle.png"],
+    imgs: [{ path: "schedaddle.png" }],
     category: ProjectCategoryEnum.WEB_DEVELOPMENT,
     title: "Schedaddle",
     mainDescription: `A web application that generates and visualizes optimal class schedules based on offered courses.`,
@@ -253,14 +247,13 @@ Built with TypeScript and React, Schedaddle leverages type-safe, maintainable co
     github: "https://github.com/elderfieldzeus/schedaddle",
     liveDemo: "https://schedaddle.zoos.dev/",
     technologies: ["TypeScript", "React", "Tailwind CSS", "Vite"],
-    position: "",
   },
   {
-    imgs: ["datacamp.png"],
+    imgs: [{ path: "datacamp.png" }],
     category: ProjectCategoryEnum.DATA_SCIENCE,
     title: "Datacamp Projects",
     mainDescription: `
-        Compilation of all my Data-related projects from my DataCamp scholarship. 
+        Compilation of all my Data-related projects from my DataCamp scholarship.
         `,
     longDescription: `This is a compilation of all my data-related projects completed during my DataCamp scholarship. These projects demonstrate proficiency in data analysis, data manipulation, statistical analysis, and data visualization using Python and SQL.
 
@@ -272,7 +265,7 @@ All projects are implemented using Python with libraries such as pandas, numpy, 
     technologies: ["Python", "SQL"],
   },
   {
-    imgs: ["house-predict.jpg"],
+    imgs: [{ path: "house-predict.jpg" }],
     category: ProjectCategoryEnum.DATA_SCIENCE,
     title: "House Price Prediction",
     mainDescription: `

@@ -4,11 +4,13 @@ export interface IResumeEvent {
   year: string;
 }
 
+import { IImg } from "./projects";
+
 export interface IAchievement {
   title: string;
   subtitle: string;
   date: string;
-  imgs: string[];
+  imgs: IImg[];
   description?: string;
   isFeatured?: true;
 }
@@ -17,7 +19,7 @@ export interface ICertification {
   title: string;
   subtitle: string;
   date: string;
-  imgs: string[];
+  imgs: IImg[];
   description?: string;
   url?: string;
   isFeatured?: true;
@@ -176,9 +178,14 @@ export const achievements: IAchievement[] = [
   {
     isFeatured: true,
     title: "Top 3 Score (Philippines)",
-    subtitle: "PhilNITS",
+    subtitle:
+      "Philippine National Information Technology Standards Foundation, Inc",
     date: "2025",
-    imgs: ["philnits-cisco.jpeg", "philnits-top-3.jpeg"],
+    imgs: [
+      { path: "philnits-logo.png", style: "w-full h-auto" },
+      { path: "philnits-cisco.jpeg", style: "h-full w-auto" },
+      { path: "philnits-top-3.jpeg" },
+    ],
     description:
       "Achieved top 3 score in the Philippines for the PhilNITS examination.",
   },
@@ -187,7 +194,11 @@ export const achievements: IAchievement[] = [
     title: "1st Place",
     subtitle: "National CS/IT Skills Competition",
     date: "2025",
-    imgs: ["sikaptala.jpeg"],
+    imgs: [
+      { path: "sikaptala-logo.jpg", style: "mt-10 h-full w-auto" },
+      { path: "sikaptala-rank.jpg", style: "h-full w-auto" },
+      { path: "sikaptala-cert.jpeg", style: "h-full w-auto" },
+    ],
     description: "Won first place in the National CS/IT Skills Competition.",
   },
   {
@@ -195,7 +206,12 @@ export const achievements: IAchievement[] = [
     title: "3rd Place",
     subtitle: "Codechum National Programming Competition - Group 2",
     date: "2024",
-    imgs: ["codechum-3rd.jpeg"],
+    imgs: [
+      { path: "codechum-logo.png", style: "h-full w-auto" },
+      { path: "codechum-3rd.jpeg", style: "h-full w-auto" },
+      { path: "codechum-with-medals.jpg", style: "h-full w-auto" },
+      { path: "codechum-congrats.jpg", style: "h-full w-auto" },
+    ],
     description:
       "Secured third place in the Codechum National Programming Competition - Group 2.",
   },
@@ -207,7 +223,10 @@ export const certifications: ICertification[] = [
     title: "TOPCIT Level III",
     subtitle: "Ministry of Science and ICT, South Korea",
     date: "2025",
-    imgs: ["mrbean-phone.gif"],
+    imgs: [
+      { path: "topcit-logo.png", style: "mt-2" },
+      { path: "topcit-score.jpg", style: "h-full w-auto" },
+    ],
     description:
       "Achieved TOPCIT Level III certification from the Ministry of Science and ICT, South Korea.",
     url: "/pdf/Elderfield-Zeus-TOPCIT-Certificate.pdf",
@@ -215,9 +234,9 @@ export const certifications: ICertification[] = [
   {
     isFeatured: true,
     title: "Fundamental IT Engineer",
-    subtitle: "PhilNITS",
+    subtitle: "Information Technology Professionals Examination Council",
     date: "2025",
-    imgs: ["mrbean-phone.gif"],
+    imgs: [{ path: "itpec-logo.jpg", style: "w-full h-auto" }],
     description:
       "Earned the Fundamental IT Engineer certification from PhilNITS.",
   },
@@ -226,7 +245,7 @@ export const certifications: ICertification[] = [
     title: "Software Engineer",
     subtitle: "HackerRank",
     date: "2025",
-    imgs: ["mrbean-phone.gif"],
+    imgs: [{ path: "hackerrank-logo.png", style: "w-full h-auto" }],
     description: "Completed the Software Engineer certification on HackerRank.",
     url: "https://www.hackerrank.com/certificates",
   },

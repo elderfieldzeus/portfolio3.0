@@ -2,6 +2,7 @@ import { IProject } from "@/data/projects";
 import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface ProjectGridCardProps {
   project: IProject;
@@ -17,11 +18,15 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
       <div onClick={onClick} className="w-full h-full">
         <div className="aspect-2/1 w-full h-auto overflow-hidden">
           <Image
-            src={`/images/projects/${project.imgs[0]!}`}
+            src={`/images/projects/${project.imgs[0]!.path}`}
             alt={project.title}
             width={1000}
             height={1000}
-            className={`w-full h-auto object-cover object-center ${project.position || ""}`}
+            className={cn(
+              "object-cover object-center",
+              project.imgs[0]?.style,
+              "w-full h-auto",
+            )}
           />
         </div>
         <div className="w-full text-white font-kanit p-6">

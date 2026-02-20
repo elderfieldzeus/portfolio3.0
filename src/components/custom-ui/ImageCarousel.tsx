@@ -3,19 +3,19 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { IImg } from "@/data/projects";
 
 interface ImageCarouselProps {
-  images: string[];
+  images: IImg[];
   title: string;
-  position?: string;
-  imageBasePath?: string;
+  imageBasePath: string;
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   title,
-  position = "",
-  imageBasePath = "/images/projects/",
+  imageBasePath,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -43,11 +43,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     <div className="relative w-full">
       <div className="aspect-2/1 w-full h-auto overflow-hidden rounded-lg relative group flex items-center justify-center">
         <Image
-          src={`${imageBasePath}${images[currentIndex]}`}
+          src={`${imageBasePath}${images[currentIndex]!.path}`}
           alt={`${title} - Image ${currentIndex + 1}`}
           width={1000}
           height={1000}
-          className={`w-full h-auto object-cover object-center ${position}`}
+          className={cn(
+            "w-full h-auto object-cover object-center",
+            images[currentIndex]!.style,
+            "mt-0 mb-0 ml-0 mr-0",
+          )}
           priority={currentIndex === 0}
         />
 

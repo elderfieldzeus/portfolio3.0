@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
 import LandingButton from "../custom-ui/LandingButton";
-import ImageCarousel from "./ImageCarousel";
+import ImageCarousel from "../custom-ui/ImageCarousel";
 import { Badge } from "../ui/badge";
 import {
   Tooltip,
@@ -59,7 +59,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 <ImageCarousel
                   images={project.imgs}
                   title={project.title}
-                  position={project.position}
+                  imageBasePath="/images/projects/"
                 />
               </div>
 

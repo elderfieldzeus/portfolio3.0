@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: IProject;
@@ -20,11 +21,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <MagicCard className="w-full bg-black border rounded-lg border-opacity-20 overflow-hidden">
       <div className="aspect-2/1 w-full h-auto overflow-hidden">
         <Image
-          src={`/images/projects/${project.imgs[0]!}`}
+          src={`/images/projects/${project.imgs[0]!.path}`}
           alt={project.title}
           width={1000}
           height={1000}
-          className={`w-full h-auto object-cover object-center ${project.position}`}
+          className={cn(
+            "w-full h-auto object-cover object-center",
+            project.imgs[0]?.style,
+          )}
         />
       </div>
       <div className="w-full text-white font-kanit p-6">

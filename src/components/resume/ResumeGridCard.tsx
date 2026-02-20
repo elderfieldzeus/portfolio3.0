@@ -2,7 +2,8 @@ import React from "react";
 import { MagicCard } from "../ui/magic-card";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
+import { IImg } from "@/data/projects";
 
 export enum ResumeGridCardType {
   Accomplishment = "accomplishment",
@@ -13,7 +14,7 @@ interface ResumeGridCardItem {
   title: string;
   subtitle: string;
   date: string;
-  imgs: string[];
+  imgs: IImg[];
 }
 
 interface ResumeGridCardProps {
@@ -22,11 +23,11 @@ interface ResumeGridCardProps {
   onClick: () => void;
 }
 
-const getImagePath = (type: ResumeGridCardType, img: string) => {
+const getImagePath = (type: ResumeGridCardType, img: IImg) => {
   if (type === ResumeGridCardType.Accomplishment) {
-    return `/images/resume/accomplishments/${img}`;
+    return `/images/resume/accomplishments/${img.path}`;
   }
-  return `/images/resume/certifications/${img}`;
+  return `/images/resume/certifications/${img.path}`;
 };
 
 const ResumeGridCard: React.FC<ResumeGridCardProps> = ({
@@ -43,7 +44,11 @@ const ResumeGridCard: React.FC<ResumeGridCardProps> = ({
             alt={item.title}
             width={1000}
             height={1000}
-            className="w-full h-auto object-cover object-center"
+            className={cn(
+              "object-cover object-center",
+              item.imgs[0]?.style,
+              "w-full h-auto",
+            )}
           />
         </div>
         <div className="w-full text-white font-kanit p-4">

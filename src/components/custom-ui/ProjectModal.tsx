@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
 import LandingButton from "./LandingButton";
-import ImageCarousel from "../projects/ImageCarousel";
+import ImageCarousel from "./ImageCarousel";
 import {
   Tooltip,
   TooltipContent,
@@ -50,11 +50,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto px-6 py-4 space-y-6 scroll-smooth scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
               <div className="w-full">
-                <ImageCarousel
-                  images={project.imgs}
-                  title={project.title}
-                  position={project.position}
-                />
+                <ImageCarousel images={project.imgs} title={project.title} />
               </div>
 
               <div className="space-y-4 font-kanit">
