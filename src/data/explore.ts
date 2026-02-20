@@ -1,4 +1,4 @@
-import { ImageIcon } from "lucide-react";
+import { ImageIcon, NotebookPen } from "lucide-react";
 import { IconType } from "react-icons/lib";
 
 export interface Section {
@@ -17,5 +17,12 @@ export const sections = [
     icon: ImageIcon,
     href: "/gallery",
     className: "md:col-span-2",
+  },
+  {
+    title: "Blog",
+    description:
+      "Thoughts, writeups, and notes on tech, projects, and things I find interesting.",
+    icon: NotebookPen,
+    href: "/blog",
   },
 ];
