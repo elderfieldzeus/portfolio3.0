@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IImg } from "@/data/projects";
+import ImageWithLoader from "./ImageWithLoader";
 
 interface ImageCarouselProps {
   images: IImg[];
@@ -42,11 +42,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <div className="relative w-full">
       <div className="aspect-2/1 w-full h-auto overflow-hidden rounded-lg relative group flex items-center justify-center">
-        <Image
+        <ImageWithLoader
+          key={currentIndex}
           src={`${imageBasePath}${images[currentIndex]!.path}`}
           alt={`${title} - Image ${currentIndex + 1}`}
-          width={1000}
-          height={1000}
           className={cn(
             "w-full h-auto object-cover object-center",
             images[currentIndex]!.style,
