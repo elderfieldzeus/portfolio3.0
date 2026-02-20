@@ -178,8 +178,7 @@ export const achievements: IAchievement[] = [
   {
     isFeatured: true,
     title: "Top 3 Score (Philippines)",
-    subtitle:
-      "Philippine National Information Technology Standards Foundation, Inc",
+    subtitle: "Philippine National IT Standards Foundation, Inc",
     date: "2025",
     imgs: [
       { path: "philnits-logo.png", style: "w-full h-auto" },
