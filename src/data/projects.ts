@@ -112,7 +112,7 @@ The system uses Spring Data JPA (Hibernate) for database interaction and support
 Although the project is no longer actively maintained, it serves as a strong foundation for secure backend API development using modern Spring Boot practices.
   `,
     github: "https://github.com/elderfieldzeus/gainz-api",
-    liveDemo: "",
+    liveDemo: "https://gainz.zoos.dev",
     technologies: [
       "Spring Boot",
       "MySQL",
